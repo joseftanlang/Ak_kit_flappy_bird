@@ -78,7 +78,7 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 	case AC_DISPLAY_BUTTON_UP_RELEASED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_RELEASED\n");
 		if (menu_index == 0) {
-			menu_index = 2;
+			menu_index = 3;
 		}
 		else {
 			menu_index--;

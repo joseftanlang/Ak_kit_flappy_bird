@@ -10,7 +10,7 @@
 #define pillar_start_x 90
 #define pillar_start_y 0
 #define pillar_width 10
-#define pillar_height 22
+#define pillar_type_count 3
 
 // The Bird image and actions
 #define bird_height 15
@@ -27,9 +27,12 @@
 static int bird_x = bird_start_x;
 static int bird_y = bird_start_y;
 static int bird_vy = 0;
-static int pillar_gap = 50; /* gap height between top and bottom pillar */
+static int pillar_gap = 50;      /* gap height between top and bottom pillar */
+static int pillar_gap_top = 7;   /* y-position where the gap starts */
 static int pillar_x = pillar_start_x;
 static int prev_pillar_x = pillar_x;
+static int pillar_type = 0;
+static int pillar_speed_base = 1;
 static int pillar_speed = 1;
 static int score = 0;
 static int best_score = 0;
@@ -39,6 +42,9 @@ static ar_game_score_t flappy_scores;
 static void view_scr_flappy_bird();
 static void flappy_score_save();
 static void flappy_load_settings();
+static void flappy_set_pillar_variant(int type_idx);
+static void flappy_next_pillar_variant();
+static void flappy_apply_difficulty();
 
 view_dynamic_t dyn_view_item_flappy_bird = {
     {
@@ -57,19 +63,63 @@ view_screen_t scr_flappy_bird = {
 // The bottom pillar for the bird to passs trhought
 void flappy_bird_pilliar_below()
 {
-    /* Draw bottom pillar from the bottom of screen upwards */
-    int bottom_pillar_y = SCREEN_HEIGHT - pillar_height;
-    view_render.fillRect(pillar_x, bottom_pillar_y, pillar_width, pillar_height, WHITE);
-    view_render.fillRect(pillar_x - 3, bottom_pillar_y, pillar_width + 6, 3, WHITE);
+    /* Draw bottom pillar from gap bottom to the bottom of screen */
+    int bottom_pillar_y = pillar_gap_top + pillar_gap;
+    int bottom_pillar_height = SCREEN_HEIGHT - bottom_pillar_y;
+    if (bottom_pillar_height > 0)
+    {
+        view_render.fillRect(pillar_x, bottom_pillar_y, pillar_width, bottom_pillar_height, WHITE);
+        view_render.fillRect(pillar_x - 3, bottom_pillar_y, pillar_width + 6, 3, WHITE);
+    }
 }
 
 // The top pillar for the bird to passs trhought
 void flappy_bird_pilliar_top()
 {
-    /* Draw top pillar from top, with a gap in the middle for the bird to pass through */
-    int top_pillar_height = SCREEN_HEIGHT - pillar_height - pillar_gap;
+    /* Draw top pillar from top to gap start */
+    int top_pillar_height = pillar_gap_top;
     view_render.fillRect(pillar_x, pillar_start_y, pillar_width, top_pillar_height, WHITE);
     view_render.fillRect(pillar_x - 3, top_pillar_height - 3, pillar_width + 6, 3, WHITE);
+}
+
+static void flappy_set_pillar_variant(int type_idx)
+{
+    static const int gap_size[pillar_type_count] = {42, 48, 38};
+    static const int gap_top[pillar_type_count] = {6, 14, 22};
+    static const int spawn_offset_x[pillar_type_count] = {0, 10, 18};
+
+    if (type_idx < 0)
+    {
+        type_idx = 0;
+    }
+    pillar_type = type_idx % pillar_type_count;
+
+    pillar_gap = gap_size[pillar_type];
+    pillar_gap_top = gap_top[pillar_type];
+    pillar_x = SCREEN_WIDTH + spawn_offset_x[pillar_type];
+    prev_pillar_x = pillar_x;
+}
+
+static void flappy_next_pillar_variant()
+{
+    /* deterministic rotate by score => 3 distinct repeating styles */
+    flappy_set_pillar_variant(score % pillar_type_count);
+}
+
+static void flappy_apply_difficulty()
+{
+    int challenge_speed = pillar_speed_base + (score / 2);
+
+    if (challenge_speed < AR_GAME_SETTING_METEOROID_SPEED_MIN)
+    {
+        challenge_speed = AR_GAME_SETTING_METEOROID_SPEED_MIN;
+    }
+    if (challenge_speed > AR_GAME_SETTING_METEOROID_SPEED_MAX)
+    {
+        challenge_speed = AR_GAME_SETTING_METEOROID_SPEED_MAX;
+    }
+
+    pillar_speed = challenge_speed;
 }
 
 static void update_bird()
@@ -97,21 +147,13 @@ static void update_pillar()
             score++;
             if (score > best_score)
                 best_score = score;
+            flappy_apply_difficulty();
         }
     }
 
     if (pillar_x < -pillar_width)
     {
-        pillar_x = SCREEN_WIDTH;
-        /* randomize gap a little without extra dependencies */
-        int delta = ((score % 3) - 1) * 3; /* -3, 0, +3 */
-        // Pillar gap size
-        int new_gap = pillar_gap + delta;
-        if (new_gap < 45)
-            new_gap = 45;
-        if (new_gap > 55)
-            new_gap = 55;
-        pillar_gap = new_gap;
+        flappy_next_pillar_variant();
     }
 }
 
@@ -128,10 +170,8 @@ static void check_collision()
     if (bird_right > pillar_left && bird_left < pillar_right)
     {
         /* within pillar x-range; check gap */
-        /* Gap is in the middle: from top_pillar_height to top_pillar_height + pillar_gap */
-        int top_pillar_height = SCREEN_HEIGHT - pillar_height - pillar_gap;
-        int gap_top = top_pillar_height;
-        int gap_bottom = top_pillar_height + pillar_gap;
+        int gap_top = pillar_gap_top;
+        int gap_bottom = pillar_gap_top + pillar_gap;
         int bird_top = bird_y;
         int bird_bottom = bird_y + bird_height;
         if (bird_top < gap_top || bird_bottom > gap_bottom)
@@ -148,15 +188,17 @@ static void flappy_load_settings()
 {
     APP_DBG_SIG("Load settings\n");
     ar_game_setting_read(&settingdata);
-    pillar_speed = settingdata.meteoroid_speed;
-    if (pillar_speed < AR_GAME_SETTING_METEOROID_SPEED_MIN)
+    pillar_speed_base = settingdata.meteoroid_speed;
+    if (pillar_speed_base < AR_GAME_SETTING_METEOROID_SPEED_MIN)
     {
-        pillar_speed = AR_GAME_SETTING_METEOROID_SPEED_MIN;
+        pillar_speed_base = AR_GAME_SETTING_METEOROID_SPEED_MIN;
     }
-    if (pillar_speed > AR_GAME_SETTING_METEOROID_SPEED_MAX)
+    if (pillar_speed_base > AR_GAME_SETTING_METEOROID_SPEED_MAX)
     {
-        pillar_speed = AR_GAME_SETTING_METEOROID_SPEED_MAX;
+        pillar_speed_base = AR_GAME_SETTING_METEOROID_SPEED_MAX;
     }
+
+    flappy_apply_difficulty();
 }
 
 static void flappy_score_save()
@@ -237,20 +279,19 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
         flappy_load_settings();
         ar_game_score_read(&flappy_scores);
         best_score = flappy_scores.score_1st;
-        /* start fast periodic flappy update (60 FPS = 16ms) for responsive gameplay */
-        timer_set(AC_TASK_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK, 16, TIMER_PERIODIC);
-        view_scr_flappy_bird();
+        flappy_set_pillar_variant(0);
+        timer_set(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK, AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS, TIMER_PERIODIC);
         break;
     }
 
     case SCREEN_EXIT:
     {
         /* stop periodic updates when leaving screen */
-        timer_remove_attr(AC_TASK_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
+        timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
         break;
     }
 
-    case AC_DISPLAY_BUTTON_UP_RELEASED:
+    case AC_DISPLAY_BUTTON_UP_PRESSED:
     {
         APP_DBG_SIG("Press Up Button\n");
         if (game_over)
@@ -261,24 +302,24 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
             bird_x = bird_start_x;
             bird_y = bird_start_y;
             bird_vy = 0;
-            pillar_x = pillar_start_x;
+            flappy_set_pillar_variant(0);
             flappy_load_settings();
         }
         else
         {
             flappy_bird_flap();
-
-            break;
         }
+        break;
+    }
 
-    case AC_DISPLAY_BUTTON_DOWN_RELEASED:
+    case AC_DISPLAY_BUTTON_DOWN_PRESSED:
     {
         APP_DBG_SIG("Press Down Button\n");
         SCREEN_TRAN(scr_idle_handle, &scr_idle);
         break;
     }
 
-    case AC_DISPLAY_BUTTON_MODE_RELEASED:
+    case AC_DISPLAY_BUTTON_MODE_PRESSED:
     {
         APP_DBG_SIG("Press Mode Button\n");
         if (game_over)
@@ -294,13 +335,11 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
 
     case AC_DISPLAY_FLAPPY_TICK:
     {
-        /* periodic update tick */
-        view_scr_flappy_bird();
+        /* periodic update tick: rendering is handled by screen manager dispatch */
         break;
     }
 
     default:
         break;
-    }
     }
 }

@@ -186,7 +186,7 @@ ak_msg_t* get_pure_msg() {
 		free_list_pure_used++;
 		if (free_list_pure_used >= free_list_pure_used_max) {
 			free_list_pure_used_max = free_list_pure_used;
-		}
+		}	
 	}
 
 	reset_msg_ref_count(allocate_message);

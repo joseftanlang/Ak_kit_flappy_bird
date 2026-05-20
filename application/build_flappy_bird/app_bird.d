@@ -75,4 +75,29 @@ build_flappy_bird/app_bird.o: sources/app/app_bird.cpp \
  sources/platform/stm32l/Libraries/CMSIS/Device/ST/STM32L1xx/Include/system_stm32l1xx.h \
  sources/common/container/ring_buffer.h \
  sources/driver/buzzer/buzzer_music.h sources/app/app_dbg.h \
+ sources/common/screen_manager.h sources/common/view_render.h \
+ sources/common/view_item.h \
+ sources/driver/Adafruit_oled_drv/Adafruit_oled_drv.h \
+ sources/driver/Adafruit_oled_drv/Adafruit_GFX.h \
+ sources/platform/stm32l/arduino/cores/Arduino.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/math.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/cmath \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/bits/cpp_type_traits.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/c++/10.3.1/ext/type_traits.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/math.h \
+ sources/sys/sys_ctrl.h sources/sys/sys_io.h \
+ sources/platform/stm32l/sys_cfg.h \
+ sources/platform/stm32l/arduino/cores/Print.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdio.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/types.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/_pthreadtypes.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/machine/types.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/sys/stdio.h \
+ sources/platform/stm32l/arduino/cores/Printable.h \
+ sources/platform/stm32l/arduino/cores/Print.h \
+ sources/platform/stm32l/arduino/cores/WString.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/ctype.h \
+ sources/platform/stm32l/arduino/cores/stm32/pgmspace.h \
+ /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/inttypes.h \
  sources/app/task_list.h
