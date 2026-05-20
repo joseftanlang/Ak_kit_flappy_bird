@@ -1,6 +1,6 @@
 sources/app/screens/scr_flappy_bird.cpp:147:13:void flappy_load_settings()	8	static
-sources/app/screens/scr_flappy_bird.cpp:304:1:cpp)	0	static
+sources/app/screens/scr_flappy_bird.cpp:306:1:cpp)	0	static
 sources/app/screens/scr_flappy_bird.cpp:58:6:void flappy_bird_pilliar_below()	24	static
 sources/app/screens/scr_flappy_bird.cpp:67:6:void flappy_bird_pilliar_top()	32	static
-sources/app/screens/scr_flappy_bird.cpp:185:13:void view_scr_flappy_bird()	48	static
-sources/app/screens/scr_flappy_bird.cpp:228:6:void scr_flappy_bird_handle(ak_msg_t*)	8	static
+sources/app/screens/scr_flappy_bird.cpp:187:13:void view_scr_flappy_bird()	48	static
+sources/app/screens/scr_flappy_bird.cpp:230:6:void scr_flappy_bird_handle(ak_msg_t*)	8	static

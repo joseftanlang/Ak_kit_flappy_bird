@@ -1,2 +1,2 @@
-sources/app/screens/scr_startup.cpp:34:6:void view_scr_startup()	64	static
-sources/app/screens/scr_startup.cpp:107:6:void scr_startup_handle(ak_msg_t*)	32	static
+sources/app/screens/scr_startup.cpp:34:6:void view_scr_startup()	88	static
+sources/app/screens/scr_startup.cpp:96:6:void scr_startup_handle(ak_msg_t*)	32	static

@@ -32,74 +32,63 @@ view_screen_t scr_startup = {
 };
 
 void view_scr_startup() {
-#define AK_LOGO_AXIS_X		(23)
-#define AK_LOGO_TEXT		(AK_LOGO_AXIS_X + 4)
+#define TITLE_X    28
 	view_render.clear();
 	view_render.setTextSize(1);
 	view_render.setTextColor(WHITE);
 
-	// Animated background: sparse randomized dots to suggest texture without lines
+	// simple noisy sky background (subtle)
 	for (int y = 0; y < 64; y++) {
-		for (int x = 0; x < 128; x++) {
-			// lightweight hash to avoid straight diagonal lines
-			int v = (x * 13) ^ (y * 7) ^ (startup_anim_frame * 3);
-			if ((v & 31) == 0) view_render.drawPixel(x, y, WHITE);
+		for (int x = 0; x < 128; x += 8) {
+			int v = (x * 7) ^ (y * 3) ^ (startup_anim_frame);
+			if ((v & 63) == 0) view_render.drawPixel(x + ((v >> 3) & 7), y, WHITE);
 		}
 	}
 
-	// Logo slide-in with bounce easing
-	int logo_x = -48;
-	if (startup_phase >= 1) {
-		int t = phase_counter; // phase_counter drives the logo animation now
-		const int duration = 20; // frames to finish slide
-		if (t > duration) t = duration;
-		int prog = (t * 255) / duration; // 0..255
-		// ease-out (quadratic) : eased = 1 - (1 - u)^2  with u = prog/255
-		int inv = 255 - prog;
-		int eased = 255 - ((inv * inv) >> 8); // 0..255
-		int start = -48;
-		int end = AK_LOGO_AXIS_X;
-		logo_x = start + (((end - start) * eased) >> 8);
-		// apply a small one-time bounce when first settled
-		if (t == duration && !logo_settled) { logo_bounce = 6; logo_settled = 1; }
-		if (logo_bounce) {
-			int b = (int)(logo_bounce);
-			logo_x += ((b & 3) - 2); // small oscillation
+	// moving pipes (parallax) - non-interactive animation for startup
+	const int p_w = 10;
+	// create a few pipe columns with offsets based on frame
+	for (int i = 0; i < 3; i++) {
+		int speed = 1 + (i & 1); // slight speed variation
+		int base_x = 128 - ((startup_anim_frame * speed) % 150) + i * 48;
+		int gap = 36 + ((i * 7 + startup_anim_frame) % 12); // vary gap a bit
+		int top_h = 8 + ((i * 3 + startup_anim_frame) % 18);
+		// only draw if on screen
+		if (base_x > -p_w && base_x < 128) {
+			view_render.fillRect(base_x, 0, p_w, top_h, WHITE);
+			view_render.fillRect(base_x - 3, top_h - 3, p_w + 6, 3, WHITE);
+			int bottom_y = top_h + gap;
+			view_render.fillRect(base_x, bottom_y, p_w, 64 - bottom_y, WHITE);
+			view_render.fillRect(base_x - 3, bottom_y, p_w + 6, 3, WHITE);
 		}
 	}
 
-	// Particles / sparkles (background, very light)
-	for (int i = 0; i < STARTUP_PARTICLES; i++) {
-		if (particles[i].life > 0) {
-			// draw behind logo: single pixel, no trail
-			view_render.drawPixel(particles[i].x, particles[i].y, WHITE);
-		}
-	}
+	// bird bob + simple wing-flap effect (vertical oscillation)
+	extern const unsigned char PROGMEM bitmap_flappy_bird[];
+	int bird_x = 18;
+	int bob = ((startup_anim_frame & 7) < 4) ? -1 : 1;
+	int bird_y = 22 + ((startup_anim_frame >> 2) & 3) - 1 + bob;
+	view_render.drawBitmap(80, bird_y + 5, bitmap_flappy_bird, 15, 15, 1);
 
-	// draw ASCII logo at logo_x
-	view_render.setCursor(logo_x, 3);
-	view_render.print("   __    _  _ ");
-	view_render.setCursor(logo_x, 10);
-	view_render.print("  /__\\  ( )/ )");
-	view_render.setCursor(logo_x, 20);
-	view_render.print(" /(__)\\ (   (");
-	view_render.setCursor(logo_x, 30);
-	view_render.print("(__)(__)(_)\\_)");
+	// big title: FLAPPY BIRD with pulse when logo settles
+	int pulse = (startup_anim_frame >> 2) & 3;
+	int title_y = 6 + ((pulse == 1) ? 1 : 0);
+	view_render.setTextSize(2);
+	view_render.setCursor(TITLE_X, title_y);
+	view_render.print("FLAPPY");
+	view_render.setTextSize(1);
+	view_render.setCursor(TITLE_X + 2, title_y + 18);
+	view_render.print("BIRD");
 
-
-	// neon title pulse (subtle vertical nudge to simulate pulse)
-	int pulse = (startup_anim_frame >> 3) & 3;
-	int title_y = 42 + ((pulse == 1) ? 1 : 0);
-	view_render.setCursor(AK_LOGO_TEXT, title_y);
-	view_render.print("Active Kernel");
-	// subtitle typed reveal
-	static const char* subtitle = "Power On!";
-	int reveal = (startup_phase >= 3) ? (phase_counter / 1) : (startup_anim_frame / 3);
+	// subtitle / hint
+	static const char* subtitle = "Press to start";
+	int reveal = (startup_phase >= 3) ? (phase_counter / 1) : (startup_anim_frame / 4);
 	if (reveal > (int)strlen(subtitle)) reveal = strlen(subtitle);
 	char buf[32];
 	memcpy(buf, subtitle, reveal);
 	buf[reveal] = '\0';
-	view_render.setCursor(28, 52);
+	view_render.setTextSize(1);
+	view_render.setCursor(14, 54);
 	view_render.print(buf);
 
 	view_render.update();

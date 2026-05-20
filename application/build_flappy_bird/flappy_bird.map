@@ -2820,7 +2820,7 @@ Linker script and memory map
                 0x0000000008003000                isr_vector
                 0x00000000080030f4                . = ALIGN (0x4)
 
-.text           0x00000000080030f8     0xcb70
+.text           0x00000000080030f8     0xcbe8
                 0x00000000080030f8                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080030f8       0xec /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcpy.o)
@@ -3646,647 +3646,647 @@ Linker script and memory map
                 0x0000000008008384       0xdc build_flappy_bird/scr_game_setting.o
                 0x0000000008008384                scr_game_setting_handle(ak_msg_t*)
  .text._ZL16view_scr_startupv
-                0x0000000008008460      0x1d4 build_flappy_bird/scr_startup.o
+                0x0000000008008460      0x1fc build_flappy_bird/scr_startup.o
  .text._Z18scr_startup_handleP8ak_msg_t
-                0x0000000008008634      0x210 build_flappy_bird/scr_startup.o
-                0x0000000008008634                scr_startup_handle(ak_msg_t*)
+                0x000000000800865c      0x210 build_flappy_bird/scr_startup.o
+                0x000000000800865c                scr_startup_handle(ak_msg_t*)
  .text._ZL20view_scr_charts_gamev
-                0x0000000008008844      0x100 build_flappy_bird/scr_charts_game.o
+                0x000000000800886c      0x100 build_flappy_bird/scr_charts_game.o
  .text._Z22scr_charts_game_handleP8ak_msg_t
-                0x0000000008008944       0xc0 build_flappy_bird/scr_charts_game.o
-                0x0000000008008944                scr_charts_game_handle(ak_msg_t*)
+                0x000000000800896c       0xc0 build_flappy_bird/scr_charts_game.o
+                0x000000000800896c                scr_charts_game_handle(ak_msg_t*)
  .text._ZL20flappy_load_settingsv
-                0x0000000008008a04       0x28 build_flappy_bird/scr_flappy_bird.o
+                0x0000000008008a2c       0x30 build_flappy_bird/scr_flappy_bird.o
  .text._Z25flappy_bird_pilliar_belowv
-                0x0000000008008a2c       0x40 build_flappy_bird/scr_flappy_bird.o
-                0x0000000008008a2c                flappy_bird_pilliar_below()
+                0x0000000008008a5c       0x40 build_flappy_bird/scr_flappy_bird.o
+                0x0000000008008a5c                flappy_bird_pilliar_below()
  .text._Z23flappy_bird_pilliar_topv
-                0x0000000008008a6c       0x4c build_flappy_bird/scr_flappy_bird.o
-                0x0000000008008a6c                flappy_bird_pilliar_top()
+                0x0000000008008a9c       0x4c build_flappy_bird/scr_flappy_bird.o
+                0x0000000008008a9c                flappy_bird_pilliar_top()
  .text._ZL20view_scr_flappy_birdv
-                0x0000000008008ab8      0x200 build_flappy_bird/scr_flappy_bird.o
+                0x0000000008008ae8      0x208 build_flappy_bird/scr_flappy_bird.o
  .text._Z22scr_flappy_bird_handleP8ak_msg_t
-                0x0000000008008cb8      0x10c build_flappy_bird/scr_flappy_bird.o
-                0x0000000008008cb8                scr_flappy_bird_handle(ak_msg_t*)
+                0x0000000008008cf0      0x10c build_flappy_bird/scr_flappy_bird.o
+                0x0000000008008cf0                scr_flappy_bird_handle(ak_msg_t*)
  .text._Z11task_systemP8ak_msg_t
-                0x0000000008008dc4       0x44 build_flappy_bird/task_system.o
-                0x0000000008008dc4                task_system(ak_msg_t*)
+                0x0000000008008dfc       0x44 build_flappy_bird/task_system.o
+                0x0000000008008dfc                task_system(ak_msg_t*)
  .text.ar_game_score_read
-                0x0000000008008e08       0x54 build_flappy_bird/app_eeprom.o
-                0x0000000008008e08                ar_game_score_read
+                0x0000000008008e40       0x54 build_flappy_bird/app_eeprom.o
+                0x0000000008008e40                ar_game_score_read
  .text.ar_game_score_write
-                0x0000000008008e5c       0x40 build_flappy_bird/app_eeprom.o
-                0x0000000008008e5c                ar_game_score_write
+                0x0000000008008e94       0x40 build_flappy_bird/app_eeprom.o
+                0x0000000008008e94                ar_game_score_write
  .text._Z27ar_game_setting_set_defaultP17ar_game_setting_t
-                0x0000000008008e9c       0x12 build_flappy_bird/app_eeprom.o
-                0x0000000008008e9c                ar_game_setting_set_default(ar_game_setting_t*)
- *fill*         0x0000000008008eae        0x2 
+                0x0000000008008ed4       0x12 build_flappy_bird/app_eeprom.o
+                0x0000000008008ed4                ar_game_setting_set_default(ar_game_setting_t*)
+ *fill*         0x0000000008008ee6        0x2 
  .text.ar_game_setting_read
-                0x0000000008008eb0       0x54 build_flappy_bird/app_eeprom.o
-                0x0000000008008eb0                ar_game_setting_read
+                0x0000000008008ee8       0x54 build_flappy_bird/app_eeprom.o
+                0x0000000008008ee8                ar_game_setting_read
  .text.ar_game_setting_write
-                0x0000000008008f04       0x44 build_flappy_bird/app_eeprom.o
-                0x0000000008008f04                ar_game_setting_write
+                0x0000000008008f3c       0x44 build_flappy_bird/app_eeprom.o
+                0x0000000008008f3c                ar_game_setting_write
  .text.main_app
-                0x0000000008008f48      0x1b0 build_flappy_bird/app.o
-                0x0000000008008f48                main_app
+                0x0000000008008f80      0x1b0 build_flappy_bird/app.o
+                0x0000000008008f80                main_app
  .text._Z20task_polling_consolev
-                0x00000000080090f8       0xd8 build_flappy_bird/app.o
-                0x00000000080090f8                task_polling_console()
+                0x0000000008009130       0xd8 build_flappy_bird/app.o
+                0x0000000008009130                task_polling_console()
  .text.sys_irq_timer_10ms
-                0x00000000080091d0       0x24 build_flappy_bird/app.o
-                0x00000000080091d0                sys_irq_timer_10ms
+                0x0000000008009208       0x24 build_flappy_bird/app.o
+                0x0000000008009208                sys_irq_timer_10ms
  .text._Z17btn_mode_callbackPv
-                0x00000000080091f4       0x64 build_flappy_bird/app_bsp.o
-                0x00000000080091f4                btn_mode_callback(void*)
+                0x000000000800922c       0x64 build_flappy_bird/app_bsp.o
+                0x000000000800922c                btn_mode_callback(void*)
  .text._Z15btn_up_callbackPv
-                0x0000000008009258       0x64 build_flappy_bird/app_bsp.o
-                0x0000000008009258                btn_up_callback(void*)
+                0x0000000008009290       0x64 build_flappy_bird/app_bsp.o
+                0x0000000008009290                btn_up_callback(void*)
  .text._Z17btn_down_callbackPv
-                0x00000000080092bc       0x64 build_flappy_bird/app_bsp.o
-                0x00000000080092bc                btn_down_callback(void*)
+                0x00000000080092f4       0x64 build_flappy_bird/app_bsp.o
+                0x00000000080092f4                btn_down_callback(void*)
  .text._Z7bird_idP8ak_msg_t
-                0x0000000008009320        0x2 build_flappy_bird/app_bird.o
-                0x0000000008009320                bird_id(ak_msg_t*)
+                0x0000000008009358        0x2 build_flappy_bird/app_bird.o
+                0x0000000008009358                bird_id(ak_msg_t*)
  .text._Z14bird_up_buttonP8ak_msg_t
-                0x0000000008009322        0x8 build_flappy_bird/app_bird.o
-                0x0000000008009322                bird_up_button(ak_msg_t*)
+                0x000000000800935a        0x8 build_flappy_bird/app_bird.o
+                0x000000000800935a                bird_up_button(ak_msg_t*)
  .text._Z11bird_pillarP8ak_msg_t
-                0x000000000800932a       0x12 build_flappy_bird/app_bird.o
-                0x000000000800932a                bird_pillar(ak_msg_t*)
+                0x0000000008009362       0x12 build_flappy_bird/app_bird.o
+                0x0000000008009362                bird_pillar(ak_msg_t*)
  .text._Z10bird_scoreP8ak_msg_t
-                0x000000000800933c       0x12 build_flappy_bird/app_bird.o
-                0x000000000800933c                bird_score(ak_msg_t*)
- *fill*         0x000000000800934e        0x2 
+                0x0000000008009374       0x12 build_flappy_bird/app_bird.o
+                0x0000000008009374                bird_score(ak_msg_t*)
+ *fill*         0x0000000008009386        0x2 
  .text._ZL19str_parser_get_attrh
-                0x0000000008009350       0x1c build_flappy_bird/shell.o
+                0x0000000008009388       0x1c build_flappy_bird/shell.o
  .text._Z9shell_sttPh
-                0x000000000800936c        0x4 build_flappy_bird/shell.o
-                0x000000000800936c                shell_stt(unsigned char*)
+                0x00000000080093a4        0x4 build_flappy_bird/shell.o
+                0x00000000080093a4                shell_stt(unsigned char*)
  .text._Z9shell_psvPh
-                0x0000000008009370       0x14 build_flappy_bird/shell.o
-                0x0000000008009370                shell_psv(unsigned char*)
+                0x00000000080093a8       0x14 build_flappy_bird/shell.o
+                0x00000000080093a8                shell_psv(unsigned char*)
  .text._Z11shell_resetPh
-                0x0000000008009384       0x10 build_flappy_bird/shell.o
-                0x0000000008009384                shell_reset(unsigned char*)
+                0x00000000080093bc       0x10 build_flappy_bird/shell.o
+                0x00000000080093bc                shell_reset(unsigned char*)
  .text._Z10shell_helpPh
-                0x0000000008009394       0x30 build_flappy_bird/shell.o
-                0x0000000008009394                shell_help(unsigned char*)
+                0x00000000080093cc       0x30 build_flappy_bird/shell.o
+                0x00000000080093cc                shell_help(unsigned char*)
  .text._Z9shell_verPh
-                0x00000000080093c4      0x118 build_flappy_bird/shell.o
-                0x00000000080093c4                shell_ver(unsigned char*)
+                0x00000000080093fc      0x118 build_flappy_bird/shell.o
+                0x00000000080093fc                shell_ver(unsigned char*)
  .text._Z12shell_rebootPh
-                0x00000000080094dc       0x10 build_flappy_bird/shell.o
-                0x00000000080094dc                shell_reboot(unsigned char*)
+                0x0000000008009514       0x10 build_flappy_bird/shell.o
+                0x0000000008009514                shell_reboot(unsigned char*)
  .text._ZL10str_parserPc
-                0x00000000080094ec       0x60 build_flappy_bird/shell.o
+                0x0000000008009524       0x60 build_flappy_bird/shell.o
  .text._Z11shell_flashPh
-                0x000000000800954c      0x150 build_flappy_bird/shell.o
-                0x000000000800954c                shell_flash(unsigned char*)
+                0x0000000008009584      0x150 build_flappy_bird/shell.o
+                0x0000000008009584                shell_flash(unsigned char*)
  .text._ZL26shell_lcd_dump_framebufferv
-                0x000000000800969c       0x8c build_flappy_bird/shell.o
+                0x00000000080096d4       0x8c build_flappy_bird/shell.o
  .text._Z11shell_fatalPh
-                0x0000000008009728      0x360 build_flappy_bird/shell.o
-                0x0000000008009728                shell_fatal(unsigned char*)
+                0x0000000008009760      0x360 build_flappy_bird/shell.o
+                0x0000000008009760                shell_fatal(unsigned char*)
  .text._Z9shell_epsPh
-                0x0000000008009a88       0xd0 build_flappy_bird/shell.o
-                0x0000000008009a88                shell_eps(unsigned char*)
+                0x0000000008009ac0       0xd0 build_flappy_bird/shell.o
+                0x0000000008009ac0                shell_eps(unsigned char*)
  .text._Z9shell_ramPh
-                0x0000000008009b58      0x20c build_flappy_bird/shell.o
-                0x0000000008009b58                shell_ram(unsigned char*)
+                0x0000000008009b90      0x20c build_flappy_bird/shell.o
+                0x0000000008009b90                shell_ram(unsigned char*)
  .text._Z10shell_bootPh
-                0x0000000008009d64       0xdc build_flappy_bird/shell.o
-                0x0000000008009d64                shell_boot(unsigned char*)
+                0x0000000008009d9c       0xdc build_flappy_bird/shell.o
+                0x0000000008009d9c                shell_boot(unsigned char*)
  .text._Z9shell_fwuPh
-                0x0000000008009e40       0x34 build_flappy_bird/shell.o
-                0x0000000008009e40                shell_fwu(unsigned char*)
+                0x0000000008009e78       0x34 build_flappy_bird/shell.o
+                0x0000000008009e78                shell_fwu(unsigned char*)
  .text._Z12shell_buzzerPh
-                0x0000000008009e74       0x84 build_flappy_bird/shell.o
-                0x0000000008009e74                shell_buzzer(unsigned char*)
+                0x0000000008009eac       0x84 build_flappy_bird/shell.o
+                0x0000000008009eac                shell_buzzer(unsigned char*)
  .text._Z9shell_dbgPh
-                0x0000000008009ef8       0x38 build_flappy_bird/shell.o
-                0x0000000008009ef8                shell_dbg(unsigned char*)
+                0x0000000008009f30       0x38 build_flappy_bird/shell.o
+                0x0000000008009f30                shell_dbg(unsigned char*)
  .text._Z12shell_modbusPh
-                0x0000000008009f30        0x4 build_flappy_bird/shell.o
-                0x0000000008009f30                shell_modbus(unsigned char*)
+                0x0000000008009f68        0x4 build_flappy_bird/shell.o
+                0x0000000008009f68                shell_modbus(unsigned char*)
  .text._Z9shell_epiPh
-                0x0000000008009f34        0x4 build_flappy_bird/shell.o
-                0x0000000008009f34                shell_epi(unsigned char*)
+                0x0000000008009f6c        0x4 build_flappy_bird/shell.o
+                0x0000000008009f6c                shell_epi(unsigned char*)
  .text._Z9shell_lcdPh
-                0x0000000008009f38      0x1d4 build_flappy_bird/shell.o
-                0x0000000008009f38                shell_lcd(unsigned char*)
+                0x0000000008009f70      0x1d4 build_flappy_bird/shell.o
+                0x0000000008009f70                shell_lcd(unsigned char*)
  .text.sys_irq_shell
-                0x000000000800a10c       0x2c build_flappy_bird/task_shell.o
-                0x000000000800a10c                sys_irq_shell
+                0x000000000800a144       0x2c build_flappy_bird/task_shell.o
+                0x000000000800a144                sys_irq_shell
  .text._Z10task_shellP8ak_msg_t
-                0x000000000800a138       0x7c build_flappy_bird/task_shell.o
-                0x000000000800a138                task_shell(ak_msg_t*)
+                0x000000000800a170       0x7c build_flappy_bird/task_shell.o
+                0x000000000800a170                task_shell(ak_msg_t*)
  .text._Z9task_lifeP8ak_msg_t
-                0x000000000800a1b4       0x20 build_flappy_bird/task_life.o
-                0x000000000800a1b4                task_life(ak_msg_t*)
+                0x000000000800a1ec       0x20 build_flappy_bird/task_life.o
+                0x000000000800a1ec                task_life(ak_msg_t*)
  .text._Z7task_fwP8ak_msg_t
-                0x000000000800a1d4      0x490 build_flappy_bird/task_fw.o
-                0x000000000800a1d4                task_fw(ak_msg_t*)
+                0x000000000800a20c      0x490 build_flappy_bird/task_fw.o
+                0x000000000800a20c                task_fw(ak_msg_t*)
  .text._Z12task_displayP8ak_msg_t
-                0x000000000800a664        0x4 build_flappy_bird/task_display.o
-                0x000000000800a664                task_display(ak_msg_t*)
+                0x000000000800a69c        0x4 build_flappy_bird/task_display.o
+                0x000000000800a69c                task_display(ak_msg_t*)
  .text._Z7task_ifP8ak_msg_t
-                0x000000000800a668       0x98 build_flappy_bird/task_if.o
-                0x000000000800a668                task_if(ak_msg_t*)
+                0x000000000800a6a0       0x98 build_flappy_bird/task_if.o
+                0x000000000800a6a0                task_if(ak_msg_t*)
  .text._Z12task_uart_ifP8ak_msg_t
-                0x000000000800a700       0xc4 build_flappy_bird/task_uart_if.o
-                0x000000000800a700                task_uart_if(ak_msg_t*)
+                0x000000000800a738       0xc4 build_flappy_bird/task_uart_if.o
+                0x000000000800a738                task_uart_if(ak_msg_t*)
  .text._ZL19view_render_dynamicPv
-                0x000000000800a7c4        0xa build_flappy_bird/view_render.o
- *fill*         0x000000000800a7ce        0x2 
+                0x000000000800a7fc        0xa build_flappy_bird/view_render.o
+ *fill*         0x000000000800a806        0x2 
  .text._Z22view_render_display_onv
-                0x000000000800a7d0        0xc build_flappy_bird/view_render.o
-                0x000000000800a7d0                view_render_display_on()
+                0x000000000800a808        0xc build_flappy_bird/view_render.o
+                0x000000000800a808                view_render_display_on()
  .text.startup._GLOBAL__sub_I_view_render
-                0x000000000800a7dc        0xc build_flappy_bird/view_render.o
+                0x000000000800a814        0xc build_flappy_bird/view_render.o
  .text.exit._GLOBAL__sub_D_view_render
-                0x000000000800a7e8        0xc build_flappy_bird/view_render.o
+                0x000000000800a820        0xc build_flappy_bird/view_render.o
  .text._Z18view_render_screenP13view_screen_t
-                0x000000000800a7f4       0x68 build_flappy_bird/view_render.o
-                0x000000000800a7f4                view_render_screen(view_screen_t*)
+                0x000000000800a82c       0x68 build_flappy_bird/view_render.o
+                0x000000000800a82c                view_render_screen(view_screen_t*)
  .text._ZL21view_render_rectanglePv
-                0x000000000800a85c       0xe8 build_flappy_bird/view_render.o
+                0x000000000800a894       0xe8 build_flappy_bird/view_render.o
  .text._ZL21scr_mng_render_screenv
-                0x000000000800a944       0x44 build_flappy_bird/screen_manager.o
+                0x000000000800a97c       0x44 build_flappy_bird/screen_manager.o
  .text._Z12scr_mng_ctorP9scr_mng_tPFvP8ak_msg_tEP13view_screen_t
-                0x000000000800a988       0x20 build_flappy_bird/screen_manager.o
-                0x000000000800a988                scr_mng_ctor(scr_mng_t*, void (*)(ak_msg_t*), view_screen_t*)
+                0x000000000800a9c0       0x20 build_flappy_bird/screen_manager.o
+                0x000000000800a9c0                scr_mng_ctor(scr_mng_t*, void (*)(ak_msg_t*), view_screen_t*)
  .text._Z16scr_mng_dispatchP8ak_msg_t
-                0x000000000800a9a8       0x30 build_flappy_bird/screen_manager.o
-                0x000000000800a9a8                scr_mng_dispatch(ak_msg_t*)
+                0x000000000800a9e0       0x30 build_flappy_bird/screen_manager.o
+                0x000000000800a9e0                scr_mng_dispatch(ak_msg_t*)
  .text._Z12scr_mng_tranPFvP8ak_msg_tEP13view_screen_t
-                0x000000000800a9d8       0x40 build_flappy_bird/screen_manager.o
-                0x000000000800a9d8                scr_mng_tran(void (*)(ak_msg_t*), view_screen_t*)
+                0x000000000800aa10       0x40 build_flappy_bird/screen_manager.o
+                0x000000000800aa10                scr_mng_tran(void (*)(ak_msg_t*), view_screen_t*)
  .text._ZN12Adafruit_GFX8drawLineEsssst
-                0x000000000800aa18       0xbe build_flappy_bird/Adafruit_GFX.o
-                0x000000000800aa18                Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
+                0x000000000800aa50       0xbe build_flappy_bird/Adafruit_GFX.o
+                0x000000000800aa50                Adafruit_GFX::drawLine(short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX8drawRectEsssst
-                0x000000000800aad6       0x68 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800aad6                Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
+                0x000000000800ab0e       0x68 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800ab0e                Adafruit_GFX::drawRect(short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX13drawFastVLineEssst
-                0x000000000800ab3e       0x1c build_flappy_bird/Adafruit_GFX.o
-                0x000000000800ab3e                Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
+                0x000000000800ab76       0x1c build_flappy_bird/Adafruit_GFX.o
+                0x000000000800ab76                Adafruit_GFX::drawFastVLine(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX13drawFastHLineEssst
-                0x000000000800ab5a       0x1a build_flappy_bird/Adafruit_GFX.o
-                0x000000000800ab5a                Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
+                0x000000000800ab92       0x1a build_flappy_bird/Adafruit_GFX.o
+                0x000000000800ab92                Adafruit_GFX::drawFastHLine(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX8fillRectEsssst
-                0x000000000800ab74       0x38 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800ab74                Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
+                0x000000000800abac       0x38 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800abac                Adafruit_GFX::fillRect(short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX10fillScreenEt
-                0x000000000800abac       0x1c build_flappy_bird/Adafruit_GFX.o
-                0x000000000800abac                Adafruit_GFX::fillScreen(unsigned short)
+                0x000000000800abe4       0x1c build_flappy_bird/Adafruit_GFX.o
+                0x000000000800abe4                Adafruit_GFX::fillScreen(unsigned short)
  .text._ZN12Adafruit_GFXC2Ess
-                0x000000000800abc8       0x28 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800abc8                Adafruit_GFX::Adafruit_GFX(short, short)
-                0x000000000800abc8                Adafruit_GFX::Adafruit_GFX(short, short)
+                0x000000000800ac00       0x28 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800ac00                Adafruit_GFX::Adafruit_GFX(short, short)
+                0x000000000800ac00                Adafruit_GFX::Adafruit_GFX(short, short)
  .text._ZN12Adafruit_GFX10drawCircleEssst
-                0x000000000800abf0      0x172 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800abf0                Adafruit_GFX::drawCircle(short, short, short, unsigned short)
+                0x000000000800ac28      0x172 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800ac28                Adafruit_GFX::drawCircle(short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX16fillCircleHelperEssshst
-                0x000000000800ad62      0x124 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800ad62                Adafruit_GFX::fillCircleHelper(short, short, short, unsigned char, short, unsigned short)
+                0x000000000800ad9a      0x124 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800ad9a                Adafruit_GFX::fillCircleHelper(short, short, short, unsigned char, short, unsigned short)
  .text._ZN12Adafruit_GFX13fillRoundRectEssssst
-                0x000000000800ae86       0x88 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800ae86                Adafruit_GFX::fillRoundRect(short, short, short, short, short, unsigned short)
+                0x000000000800aebe       0x88 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800aebe                Adafruit_GFX::fillRoundRect(short, short, short, short, short, unsigned short)
  .text._ZN12Adafruit_GFX10drawBitmapEssPKhsst
-                0x000000000800af0e       0x92 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800af0e                Adafruit_GFX::drawBitmap(short, short, unsigned char const*, short, short, unsigned short)
+                0x000000000800af46       0x92 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800af46                Adafruit_GFX::drawBitmap(short, short, unsigned char const*, short, short, unsigned short)
  .text._ZN12Adafruit_GFX8drawCharEsshtth
-                0x000000000800afa0      0x108 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800afa0                Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char)
+                0x000000000800afd8      0x108 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800afd8                Adafruit_GFX::drawChar(short, short, unsigned char, unsigned short, unsigned short, unsigned char)
  .text._ZN12Adafruit_GFX5writeEh
-                0x000000000800b0a8       0x64 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800b0a8                Adafruit_GFX::write(unsigned char)
+                0x000000000800b0e0       0x64 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800b0e0                Adafruit_GFX::write(unsigned char)
  .text._ZN12Adafruit_GFX9setCursorEss
-                0x000000000800b10c        0x6 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800b10c                Adafruit_GFX::setCursor(short, short)
+                0x000000000800b144        0x6 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800b144                Adafruit_GFX::setCursor(short, short)
  .text._ZN12Adafruit_GFX11setTextSizeEh
-                0x000000000800b112        0xa build_flappy_bird/Adafruit_GFX.o
-                0x000000000800b112                Adafruit_GFX::setTextSize(unsigned char)
+                0x000000000800b14a        0xa build_flappy_bird/Adafruit_GFX.o
+                0x000000000800b14a                Adafruit_GFX::setTextSize(unsigned char)
  .text._ZN12Adafruit_GFX12setTextColorEt
-                0x000000000800b11c        0x6 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800b11c                Adafruit_GFX::setTextColor(unsigned short)
+                0x000000000800b154        0x6 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800b154                Adafruit_GFX::setTextColor(unsigned short)
  .text._ZN12Adafruit_GFX5widthEv
-                0x000000000800b122        0x6 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800b122                Adafruit_GFX::width()
+                0x000000000800b15a        0x6 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800b15a                Adafruit_GFX::width()
  .text._ZN12Adafruit_GFX6heightEv
-                0x000000000800b128        0x6 build_flappy_bird/Adafruit_GFX.o
-                0x000000000800b128                Adafruit_GFX::height()
+                0x000000000800b160        0x6 build_flappy_bird/Adafruit_GFX.o
+                0x000000000800b160                Adafruit_GFX::height()
  .text._ZN17Adafruit_oled_drv9updateRowEii
-                0x000000000800b12e       0x1e build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b12e                Adafruit_oled_drv::updateRow(int, int)
+                0x000000000800b166       0x1e build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b166                Adafruit_oled_drv::updateRow(int, int)
  .text._ZN17Adafruit_oled_drv9drawPixelEsst
-                0x000000000800b14c       0x52 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b14c                Adafruit_oled_drv::drawPixel(short, short, unsigned short)
- *fill*         0x000000000800b19e        0x2 
+                0x000000000800b184       0x52 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b184                Adafruit_oled_drv::drawPixel(short, short, unsigned short)
+ *fill*         0x000000000800b1d6        0x2 
  .text._ZN17Adafruit_oled_drvC2Ev
-                0x000000000800b1a0       0x28 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b1a0                Adafruit_oled_drv::Adafruit_oled_drv()
-                0x000000000800b1a0                Adafruit_oled_drv::Adafruit_oled_drv()
+                0x000000000800b1d8       0x28 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b1d8                Adafruit_oled_drv::Adafruit_oled_drv()
+                0x000000000800b1d8                Adafruit_oled_drv::Adafruit_oled_drv()
  .text._ZN17Adafruit_oled_drvD2Ev
-                0x000000000800b1c8        0x2 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b1c8                Adafruit_oled_drv::~Adafruit_oled_drv()
-                0x000000000800b1c8                Adafruit_oled_drv::~Adafruit_oled_drv()
+                0x000000000800b200        0x2 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b200                Adafruit_oled_drv::~Adafruit_oled_drv()
+                0x000000000800b200                Adafruit_oled_drv::~Adafruit_oled_drv()
  .text._ZN17Adafruit_oled_drv5clearEb
-                0x000000000800b1ca       0x22 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b1ca                Adafruit_oled_drv::clear(bool)
+                0x000000000800b202       0x22 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b202                Adafruit_oled_drv::clear(bool)
  .text._ZNK17Adafruit_oled_drv14getFrameBufferEv
-                0x000000000800b1ec        0x4 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b1ec                Adafruit_oled_drv::getFrameBuffer() const
+                0x000000000800b224        0x4 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b224                Adafruit_oled_drv::getFrameBuffer() const
  .text._ZNK17Adafruit_oled_drv18getFrameBufferSizeEv
-                0x000000000800b1f0        0x6 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b1f0                Adafruit_oled_drv::getFrameBufferSize() const
+                0x000000000800b228        0x6 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b228                Adafruit_oled_drv::getFrameBufferSize() const
  .text._ZN17Adafruit_oled_drv9writeByteEh
-                0x000000000800b1f6       0x54 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b1f6                Adafruit_oled_drv::writeByte(unsigned char)
+                0x000000000800b22e       0x54 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b22e                Adafruit_oled_drv::writeByte(unsigned char)
  .text._ZN17Adafruit_oled_drv8startIICEv
-                0x000000000800b24a       0x2c build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b24a                Adafruit_oled_drv::startIIC()
+                0x000000000800b282       0x2c build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b282                Adafruit_oled_drv::startIIC()
  .text._ZN17Adafruit_oled_drv7stopIICEv
-                0x000000000800b276       0x2c build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b276                Adafruit_oled_drv::stopIIC()
+                0x000000000800b2ae       0x2c build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b2ae                Adafruit_oled_drv::stopIIC()
  .text._ZN17Adafruit_oled_drv12writeCommandEh
-                0x000000000800b2a2       0x2c build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b2a2                Adafruit_oled_drv::writeCommand(unsigned char)
- *fill*         0x000000000800b2ce        0x2 
+                0x000000000800b2da       0x2c build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b2da                Adafruit_oled_drv::writeCommand(unsigned char)
+ *fill*         0x000000000800b306        0x2 
  .text._ZN17Adafruit_oled_drv10initializeEv
-                0x000000000800b2d0      0x120 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b2d0                Adafruit_oled_drv::initialize()
+                0x000000000800b308      0x120 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b308                Adafruit_oled_drv::initialize()
  .text._ZN17Adafruit_oled_drv10display_onEv
-                0x000000000800b3f0        0x6 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b3f0                Adafruit_oled_drv::display_on()
+                0x000000000800b428        0x6 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b428                Adafruit_oled_drv::display_on()
  .text._ZN17Adafruit_oled_drv11display_offEv
-                0x000000000800b3f6        0x6 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b3f6                Adafruit_oled_drv::display_off()
+                0x000000000800b42e        0x6 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b42e                Adafruit_oled_drv::display_off()
  .text._ZN17Adafruit_oled_drv17startDataSequenceEv
-                0x000000000800b3fc       0x1c build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b3fc                Adafruit_oled_drv::startDataSequence()
+                0x000000000800b434       0x1c build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b434                Adafruit_oled_drv::startDataSequence()
  .text._ZN17Adafruit_oled_drv6updateEv
-                0x000000000800b418       0x70 build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b418                Adafruit_oled_drv::update()
+                0x000000000800b450       0x70 build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b450                Adafruit_oled_drv::update()
  .text._ZN17Adafruit_oled_drv9updateRowEi
-                0x000000000800b488       0x6c build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800b488                Adafruit_oled_drv::updateRow(int)
+                0x000000000800b4c0       0x6c build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800b4c0                Adafruit_oled_drv::updateRow(int)
  .text.eeprom_read
-                0x000000000800b4f4        0x4 build_flappy_bird/eeprom.o
-                0x000000000800b4f4                eeprom_read
+                0x000000000800b52c        0x4 build_flappy_bird/eeprom.o
+                0x000000000800b52c                eeprom_read
  .text.eeprom_write
-                0x000000000800b4f8        0x4 build_flappy_bird/eeprom.o
-                0x000000000800b4f8                eeprom_write
+                0x000000000800b530        0x4 build_flappy_bird/eeprom.o
+                0x000000000800b530                eeprom_write
  .text.eeprom_erase
-                0x000000000800b4fc        0x4 build_flappy_bird/eeprom.o
-                0x000000000800b4fc                eeprom_erase
+                0x000000000800b534        0x4 build_flappy_bird/eeprom.o
+                0x000000000800b534                eeprom_erase
  .text._ZL19link_hal_write_byteh
-                0x000000000800b500        0x2 build_flappy_bird/link_hal.o
+                0x000000000800b538        0x2 build_flappy_bird/link_hal.o
  .text._ZL17link_hal_rev_byteh
-                0x000000000800b502        0x4 build_flappy_bird/link_hal.o
- *fill*         0x000000000800b506        0x2 
+                0x000000000800b53a        0x4 build_flappy_bird/link_hal.o
+ *fill*         0x000000000800b53e        0x2 
  .text._Z23link_hal_reg_write_bytePFhhE
-                0x000000000800b508       0x28 build_flappy_bird/link_hal.o
-                0x000000000800b508                link_hal_reg_write_byte(unsigned char (*)(unsigned char))
+                0x000000000800b540       0x28 build_flappy_bird/link_hal.o
+                0x000000000800b540                link_hal_reg_write_byte(unsigned char (*)(unsigned char))
  .text._Z21link_hal_reg_rev_bytePFhhE
-                0x000000000800b530       0x28 build_flappy_bird/link_hal.o
-                0x000000000800b530                link_hal_reg_rev_byte(unsigned char (*)(unsigned char))
+                0x000000000800b568       0x28 build_flappy_bird/link_hal.o
+                0x000000000800b568                link_hal_reg_rev_byte(unsigned char (*)(unsigned char))
  .text._ZL21fsm_link_state_handleP8ak_msg_t
-                0x000000000800b558      0x2b0 build_flappy_bird/link.o
+                0x000000000800b590      0x2b0 build_flappy_bird/link.o
  .text._ZL19fsm_link_state_initP8ak_msg_t
-                0x000000000800b808       0x80 build_flappy_bird/link.o
+                0x000000000800b840       0x80 build_flappy_bird/link.o
  .text._Z9task_linkP8ak_msg_t
-                0x000000000800b888        0xc build_flappy_bird/link.o
-                0x000000000800b888                task_link(ak_msg_t*)
+                0x000000000800b8c0        0xc build_flappy_bird/link.o
+                0x000000000800b8c0                task_link(ak_msg_t*)
  .text._Z23link_init_state_machinev
-                0x000000000800b894       0x2c build_flappy_bird/link.o
-                0x000000000800b894                link_init_state_machine()
+                0x000000000800b8cc       0x2c build_flappy_bird/link.o
+                0x000000000800b8cc                link_init_state_machine()
  .text._ZL23link_mac_frame_send_reqv
-                0x000000000800b8c0       0x3c build_flappy_bird/link_mac.o
+                0x000000000800b8f8       0x3c build_flappy_bird/link_mac.o
  .text._ZL23link_mac_frame_send_endv
-                0x000000000800b8fc       0x34 build_flappy_bird/link_mac.o
+                0x000000000800b934       0x34 build_flappy_bird/link_mac.o
  .text._ZL28link_mac_frame_cals_checksumP16link_mac_frame_t.constprop.0
-                0x000000000800b930       0x38 build_flappy_bird/link_mac.o
+                0x000000000800b968       0x38 build_flappy_bird/link_mac.o
  .text._Z25fsm_link_mac_state_handleP8ak_msg_t
-                0x000000000800b968      0x2b8 build_flappy_bird/link_mac.o
-                0x000000000800b968                fsm_link_mac_state_handle(ak_msg_t*)
+                0x000000000800b9a0      0x2b8 build_flappy_bird/link_mac.o
+                0x000000000800b9a0                fsm_link_mac_state_handle(ak_msg_t*)
  .text._Z13task_link_macP8ak_msg_t
-                0x000000000800bc20        0xc build_flappy_bird/link_mac.o
-                0x000000000800bc20                task_link_mac(ak_msg_t*)
+                0x000000000800bc58        0xc build_flappy_bird/link_mac.o
+                0x000000000800bc58                task_link_mac(ak_msg_t*)
  .text._Z23fsm_link_mac_state_initP8ak_msg_t
-                0x000000000800bc2c       0x88 build_flappy_bird/link_mac.o
-                0x000000000800bc2c                fsm_link_mac_state_init(ak_msg_t*)
+                0x000000000800bc64       0x88 build_flappy_bird/link_mac.o
+                0x000000000800bc64                fsm_link_mac_state_init(ak_msg_t*)
  .text._ZL26link_phy_frame_write_blockPhm
-                0x000000000800bcb4       0x1c build_flappy_bird/link_phy.o
+                0x000000000800bcec       0x1c build_flappy_bird/link_phy.o
  .text._ZL20link_phy_frame_writeP16link_phy_frame_t
-                0x000000000800bcd0       0x1c build_flappy_bird/link_phy.o
+                0x000000000800bd08       0x1c build_flappy_bird/link_phy.o
  .text._ZL28link_phy_frame_cals_checksumP16link_phy_frame_t
-                0x000000000800bcec       0x38 build_flappy_bird/link_phy.o
+                0x000000000800bd24       0x38 build_flappy_bird/link_phy.o
  .text._ZL25link_phy_frame_write_byteh
-                0x000000000800bd24        0xc build_flappy_bird/link_phy.o
+                0x000000000800bd5c        0xc build_flappy_bird/link_phy.o
  .text._ZL26ac_link_phy_frame_rev_byteh
-                0x000000000800bd30      0x100 build_flappy_bird/link_phy.o
+                0x000000000800bd68      0x100 build_flappy_bird/link_phy.o
  .text._ZL19link_phy_frame_sendv
-                0x000000000800be30       0x2c build_flappy_bird/link_phy.o
+                0x000000000800be68       0x2c build_flappy_bird/link_phy.o
  .text._Z25fsm_link_phy_state_handleP8ak_msg_t
-                0x000000000800be5c      0x1f0 build_flappy_bird/link_phy.o
-                0x000000000800be5c                fsm_link_phy_state_handle(ak_msg_t*)
+                0x000000000800be94      0x1f0 build_flappy_bird/link_phy.o
+                0x000000000800be94                fsm_link_phy_state_handle(ak_msg_t*)
  .text._Z13task_link_phyP8ak_msg_t
-                0x000000000800c04c        0xc build_flappy_bird/link_phy.o
-                0x000000000800c04c                task_link_phy(ak_msg_t*)
+                0x000000000800c084        0xc build_flappy_bird/link_phy.o
+                0x000000000800c084                task_link_phy(ak_msg_t*)
  .text._Z23fsm_link_phy_state_initP8ak_msg_t
-                0x000000000800c058       0x90 build_flappy_bird/link_phy.o
-                0x000000000800c058                fsm_link_phy_state_init(ak_msg_t*)
+                0x000000000800c090       0x90 build_flappy_bird/link_phy.o
+                0x000000000800c090                fsm_link_phy_state_init(ak_msg_t*)
  .text._Z26link_phy_get_send_frame_tov
-                0x000000000800c0e8       0x10 build_flappy_bird/link_phy.o
-                0x000000000800c0e8                link_phy_get_send_frame_to()
+                0x000000000800c120       0x10 build_flappy_bird/link_phy.o
+                0x000000000800c120                link_phy_get_send_frame_to()
  .text._Z13link_pdu_initv
-                0x000000000800c0f8       0x54 build_flappy_bird/link_data.o
-                0x000000000800c0f8                link_pdu_init()
+                0x000000000800c130       0x54 build_flappy_bird/link_data.o
+                0x000000000800c130                link_pdu_init()
  .text._Z15link_pdu_mallocv
-                0x000000000800c14c       0x24 build_flappy_bird/link_data.o
-                0x000000000800c14c                link_pdu_malloc()
+                0x000000000800c184       0x24 build_flappy_bird/link_data.o
+                0x000000000800c184                link_pdu_malloc()
  .text._Z12link_pdu_getm
-                0x000000000800c170       0x3c build_flappy_bird/link_data.o
-                0x000000000800c170                link_pdu_get(unsigned long)
+                0x000000000800c1a8       0x3c build_flappy_bird/link_data.o
+                0x000000000800c1a8                link_pdu_get(unsigned long)
  .text._Z13link_pdu_freem
-                0x000000000800c1ac       0x4c build_flappy_bird/link_data.o
-                0x000000000800c1ac                link_pdu_free(unsigned long)
+                0x000000000800c1e4       0x4c build_flappy_bird/link_data.o
+                0x000000000800c1e4                link_pdu_free(unsigned long)
  .text._Z17link_get_src_addrv
-                0x000000000800c1f8       0x18 build_flappy_bird/link_data.o
-                0x000000000800c1f8                link_get_src_addr()
+                0x000000000800c230       0x18 build_flappy_bird/link_data.o
+                0x000000000800c230                link_get_src_addr()
  .text._Z17link_get_des_addrv
-                0x000000000800c210       0x18 build_flappy_bird/link_data.o
-                0x000000000800c210                link_get_des_addr()
+                0x000000000800c248       0x18 build_flappy_bird/link_data.o
+                0x000000000800c248                link_get_des_addr()
  .text._Z7pinModehh
-                0x000000000800c228       0x84 build_flappy_bird/wiring_digital.o
-                0x000000000800c228                pinMode(unsigned char, unsigned char)
+                0x000000000800c260       0x84 build_flappy_bird/wiring_digital.o
+                0x000000000800c260                pinMode(unsigned char, unsigned char)
  .text._Z12digitalWritehh
-                0x000000000800c2ac       0x78 build_flappy_bird/wiring_digital.o
-                0x000000000800c2ac                digitalWrite(unsigned char, unsigned char)
+                0x000000000800c2e4       0x78 build_flappy_bird/wiring_digital.o
+                0x000000000800c2e4                digitalWrite(unsigned char, unsigned char)
  .text._ZN5Print5writeEPKhj
-                0x000000000800c324       0x22 build_flappy_bird/Print.o
-                0x000000000800c324                Print::write(unsigned char const*, unsigned int)
+                0x000000000800c35c       0x22 build_flappy_bird/Print.o
+                0x000000000800c35c                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5writeEPKc
-                0x000000000800c346       0x20 build_flappy_bird/Print.o
-                0x000000000800c346                Print::write(char const*)
+                0x000000000800c37e       0x20 build_flappy_bird/Print.o
+                0x000000000800c37e                Print::write(char const*)
  .text._ZN5Print5printEPKc
-                0x000000000800c366        0x8 build_flappy_bird/Print.o
-                0x000000000800c366                Print::print(char const*)
+                0x000000000800c39e        0x8 build_flappy_bird/Print.o
+                0x000000000800c39e                Print::print(char const*)
  .text._ZN5Print5printEc
-                0x000000000800c36e        0x6 build_flappy_bird/Print.o
-                0x000000000800c36e                Print::print(char)
+                0x000000000800c3a6        0x6 build_flappy_bird/Print.o
+                0x000000000800c3a6                Print::print(char)
  .text._ZN5Print11printNumberEmh
-                0x000000000800c374       0x3a build_flappy_bird/Print.o
-                0x000000000800c374                Print::printNumber(unsigned long, unsigned char)
+                0x000000000800c3ac       0x3a build_flappy_bird/Print.o
+                0x000000000800c3ac                Print::printNumber(unsigned long, unsigned char)
  .text._ZN5Print5printEli.part.0
-                0x000000000800c3ae       0x28 build_flappy_bird/Print.o
+                0x000000000800c3e6       0x28 build_flappy_bird/Print.o
  .text._ZN5Print5printEli
-                0x000000000800c3d6       0x20 build_flappy_bird/Print.o
-                0x000000000800c3d6                Print::print(long, int)
+                0x000000000800c40e       0x20 build_flappy_bird/Print.o
+                0x000000000800c40e                Print::print(long, int)
  .text._ZN5Print5printEii
-                0x000000000800c3f6        0x4 build_flappy_bird/Print.o
-                0x000000000800c3f6                Print::print(int, int)
+                0x000000000800c42e        0x4 build_flappy_bird/Print.o
+                0x000000000800c42e                Print::print(int, int)
  .text._ZN5Print5printEmi
-                0x000000000800c3fa       0x16 build_flappy_bird/Print.o
-                0x000000000800c3fa                Print::print(unsigned long, int)
+                0x000000000800c432       0x16 build_flappy_bird/Print.o
+                0x000000000800c432                Print::print(unsigned long, int)
  .text._ZN5Print5printEhi
-                0x000000000800c410        0x4 build_flappy_bird/Print.o
-                0x000000000800c410                Print::print(unsigned char, int)
+                0x000000000800c448        0x4 build_flappy_bird/Print.o
+                0x000000000800c448                Print::print(unsigned char, int)
  .text._ZN14HardwareSerial9availableEv
-                0x000000000800c414        0xa build_flappy_bird/HardwareSerial.o
-                0x000000000800c414                HardwareSerial::available()
+                0x000000000800c44c        0xa build_flappy_bird/HardwareSerial.o
+                0x000000000800c44c                HardwareSerial::available()
  .text._ZN14HardwareSerial4peekEv
-                0x000000000800c41e       0x14 build_flappy_bird/HardwareSerial.o
-                0x000000000800c41e                HardwareSerial::peek()
+                0x000000000800c456       0x14 build_flappy_bird/HardwareSerial.o
+                0x000000000800c456                HardwareSerial::peek()
  .text._ZN14HardwareSerial4readEv
-                0x000000000800c432       0x20 build_flappy_bird/HardwareSerial.o
-                0x000000000800c432                HardwareSerial::read()
+                0x000000000800c46a       0x20 build_flappy_bird/HardwareSerial.o
+                0x000000000800c46a                HardwareSerial::read()
  .text._ZN14HardwareSerial5flushEv
-                0x000000000800c452        0x2 build_flappy_bird/HardwareSerial.o
-                0x000000000800c452                HardwareSerial::flush()
+                0x000000000800c48a        0x2 build_flappy_bird/HardwareSerial.o
+                0x000000000800c48a                HardwareSerial::flush()
  .text._ZN14HardwareSerial17availableForWriteEv
-                0x000000000800c454       0x26 build_flappy_bird/HardwareSerial.o
-                0x000000000800c454                HardwareSerial::availableForWrite()
+                0x000000000800c48c       0x26 build_flappy_bird/HardwareSerial.o
+                0x000000000800c48c                HardwareSerial::availableForWrite()
  .text._ZN14HardwareSerial5writeEh
-                0x000000000800c47a       0x30 build_flappy_bird/HardwareSerial.o
-                0x000000000800c47a                HardwareSerial::write(unsigned char)
- *fill*         0x000000000800c4aa        0x2 
+                0x000000000800c4b2       0x30 build_flappy_bird/HardwareSerial.o
+                0x000000000800c4b2                HardwareSerial::write(unsigned char)
+ *fill*         0x000000000800c4e2        0x2 
  .text._ZL20serial2_trigger_putcv
-                0x000000000800c4ac       0x10 build_flappy_bird/HardwareSerial2.o
+                0x000000000800c4e4       0x10 build_flappy_bird/HardwareSerial2.o
  .text.startup._GLOBAL__sub_I_Serial2
-                0x000000000800c4bc       0x34 build_flappy_bird/HardwareSerial2.o
+                0x000000000800c4f4       0x34 build_flappy_bird/HardwareSerial2.o
  .text._ZN8SPIClass9io_configEv
-                0x000000000800c4f0       0x68 build_flappy_bird/SPI.o
-                0x000000000800c4f0                SPIClass::io_config()
+                0x000000000800c528       0x68 build_flappy_bird/SPI.o
+                0x000000000800c528                SPIClass::io_config()
  .text._ZN8SPIClass5beginEv
-                0x000000000800c558       0xd0 build_flappy_bird/SPI.o
-                0x000000000800c558                SPIClass::begin()
+                0x000000000800c590       0xd0 build_flappy_bird/SPI.o
+                0x000000000800c590                SPIClass::begin()
  .text.startup._GLOBAL__sub_I__ZN8SPIClassC2Ev
-                0x000000000800c628       0x14 build_flappy_bird/SPI.o
+                0x000000000800c660       0x14 build_flappy_bird/SPI.o
  .text._ZN7TwoWire9availableEv
-                0x000000000800c63c       0x14 build_flappy_bird/Wire.o
-                0x000000000800c63c                TwoWire::available()
+                0x000000000800c674       0x14 build_flappy_bird/Wire.o
+                0x000000000800c674                TwoWire::available()
  .text._ZN7TwoWire4readEv
-                0x000000000800c650       0x28 build_flappy_bird/Wire.o
-                0x000000000800c650                TwoWire::read()
+                0x000000000800c688       0x28 build_flappy_bird/Wire.o
+                0x000000000800c688                TwoWire::read()
  .text._ZN7TwoWire4peekEv
-                0x000000000800c678       0x24 build_flappy_bird/Wire.o
-                0x000000000800c678                TwoWire::peek()
+                0x000000000800c6b0       0x24 build_flappy_bird/Wire.o
+                0x000000000800c6b0                TwoWire::peek()
  .text._ZN7TwoWire5flushEv
-                0x000000000800c69c        0x2 build_flappy_bird/Wire.o
-                0x000000000800c69c                TwoWire::flush()
- *fill*         0x000000000800c69e        0x2 
+                0x000000000800c6d4        0x2 build_flappy_bird/Wire.o
+                0x000000000800c6d4                TwoWire::flush()
+ *fill*         0x000000000800c6d6        0x2 
  .text._ZN7TwoWire5writeEh
-                0x000000000800c6a0       0x54 build_flappy_bird/Wire.o
-                0x000000000800c6a0                TwoWire::write(unsigned char)
+                0x000000000800c6d8       0x54 build_flappy_bird/Wire.o
+                0x000000000800c6d8                TwoWire::write(unsigned char)
  .text._ZN7TwoWire5writeEPKhj
-                0x000000000800c6f4       0x34 build_flappy_bird/Wire.o
-                0x000000000800c6f4                TwoWire::write(unsigned char const*, unsigned int)
+                0x000000000800c72c       0x34 build_flappy_bird/Wire.o
+                0x000000000800c72c                TwoWire::write(unsigned char const*, unsigned int)
  .text.startup._GLOBAL__sub_I__ZN7TwoWire8rxBufferE
-                0x000000000800c728       0x1c build_flappy_bird/Wire.o
+                0x000000000800c760       0x1c build_flappy_bird/Wire.o
  .text._Z12twi_transmitPKhh
-                0x000000000800c744       0x44 build_flappy_bird/twi.o
-                0x000000000800c744                twi_transmit(unsigned char const*, unsigned char)
+                0x000000000800c77c       0x44 build_flappy_bird/twi.o
+                0x000000000800c77c                twi_transmit(unsigned char const*, unsigned char)
  .text.__cxa_pure_virtual
-                0x000000000800c788       0x1c build_flappy_bird/mini_cpp.o
-                0x000000000800c788                __cxa_pure_virtual
- .text._Znwj    0x000000000800c7a4        0x4 build_flappy_bird/mini_cpp.o
-                0x000000000800c7a4                operator new(unsigned int)
- .text._ZdlPv   0x000000000800c7a8        0x4 build_flappy_bird/mini_cpp.o
-                0x000000000800c7a8                operator delete(void*)
- .text._sbrk    0x000000000800c7ac       0x1c build_flappy_bird/mini_cpp.o
-                0x000000000800c7ac                _sbrk
- .text.malloc   0x000000000800c7c8       0x10 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
-                0x000000000800c7c8                malloc
- .text.free     0x000000000800c7d8       0x10 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
-                0x000000000800c7d8                free
+                0x000000000800c7c0       0x1c build_flappy_bird/mini_cpp.o
+                0x000000000800c7c0                __cxa_pure_virtual
+ .text._Znwj    0x000000000800c7dc        0x4 build_flappy_bird/mini_cpp.o
+                0x000000000800c7dc                operator new(unsigned int)
+ .text._ZdlPv   0x000000000800c7e0        0x4 build_flappy_bird/mini_cpp.o
+                0x000000000800c7e0                operator delete(void*)
+ .text._sbrk    0x000000000800c7e4       0x1c build_flappy_bird/mini_cpp.o
+                0x000000000800c7e4                _sbrk
+ .text.malloc   0x000000000800c800       0x10 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
+                0x000000000800c800                malloc
+ .text.free     0x000000000800c810       0x10 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-malloc.o)
+                0x000000000800c810                free
  .text._malloc_r
-                0x000000000800c7e8      0x558 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
-                0x000000000800c7e8                _malloc_r
- .text.memcmp   0x000000000800cd40       0x68 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcmp.o)
-                0x000000000800cd40                memcmp
- .text.memset   0x000000000800cda8       0xa4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
-                0x000000000800cda8                memset
+                0x000000000800c820      0x558 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mallocr.o)
+                0x000000000800c820                _malloc_r
+ .text.memcmp   0x000000000800cd78       0x68 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memcmp.o)
+                0x000000000800cd78                memcmp
+ .text.memset   0x000000000800cde0       0xa4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-memset.o)
+                0x000000000800cde0                memset
  .text.__malloc_lock
-                0x000000000800ce4c        0xc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
-                0x000000000800ce4c                __malloc_lock
+                0x000000000800ce84        0xc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
+                0x000000000800ce84                __malloc_lock
  .text.__malloc_unlock
-                0x000000000800ce58        0xc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
-                0x000000000800ce58                __malloc_unlock
- .text.rand     0x000000000800ce64       0x38 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-rand.o)
-                0x000000000800ce64                rand
- .text._sbrk_r  0x000000000800ce9c       0x24 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-sbrkr.o)
-                0x000000000800ce9c                _sbrk_r
- .text.strcpy   0x000000000800cec0       0xbc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcpy.o)
-                0x000000000800cec0                strcpy
- .text.strlen   0x000000000800cf7c       0x5c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x000000000800cf7c                strlen
+                0x000000000800ce90        0xc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-mlock.o)
+                0x000000000800ce90                __malloc_unlock
+ .text.rand     0x000000000800ce9c       0x38 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-rand.o)
+                0x000000000800ce9c                rand
+ .text._sbrk_r  0x000000000800ced4       0x24 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-sbrkr.o)
+                0x000000000800ced4                _sbrk_r
+ .text.strcpy   0x000000000800cef8       0xbc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strcpy.o)
+                0x000000000800cef8                strcpy
+ .text.strlen   0x000000000800cfb4       0x5c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x000000000800cfb4                strlen
  .text._strtol_l.part.0
-                0x000000000800cfd8      0x120 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
- .text.strtol   0x000000000800d0f8       0x2c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
-                0x000000000800d0f8                strtol
- .text.__errno  0x000000000800d124        0xc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-errno.o)
-                0x000000000800d124                __errno
+                0x000000000800d010      0x120 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
+ .text.strtol   0x000000000800d130       0x2c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-strtol.o)
+                0x000000000800d130                strtol
+ .text.__errno  0x000000000800d15c        0xc /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-errno.o)
+                0x000000000800d15c                __errno
  .text._malloc_trim_r
-                0x000000000800d130       0xa0 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
-                0x000000000800d130                _malloc_trim_r
- .text._free_r  0x000000000800d1d0      0x200 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
-                0x000000000800d1d0                _free_r
+                0x000000000800d168       0xa0 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
+                0x000000000800d168                _malloc_trim_r
+ .text._free_r  0x000000000800d208      0x200 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-freer.o)
+                0x000000000800d208                _free_r
  .text.__retarget_lock_acquire_recursive
-                0x000000000800d3d0        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
-                0x000000000800d3d0                __retarget_lock_acquire_recursive
+                0x000000000800d408        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
+                0x000000000800d408                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x000000000800d3d4        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
-                0x000000000800d3d4                __retarget_lock_release_recursive
- .text.abort    0x000000000800d3d8       0x10 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-abort.o)
-                0x000000000800d3d8                abort
- .text.raise    0x000000000800d3e8       0x5c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-signal.o)
-                0x000000000800d3e8                raise
- .text._kill_r  0x000000000800d444       0x28 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-signalr.o)
-                0x000000000800d444                _kill_r
+                0x000000000800d40c        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-lock.o)
+                0x000000000800d40c                __retarget_lock_release_recursive
+ .text.abort    0x000000000800d410       0x10 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-abort.o)
+                0x000000000800d410                abort
+ .text.raise    0x000000000800d420       0x5c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-signal.o)
+                0x000000000800d420                raise
+ .text._kill_r  0x000000000800d47c       0x28 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-signalr.o)
+                0x000000000800d47c                _kill_r
  .text._getpid_r
-                0x000000000800d46c        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-signalr.o)
-                0x000000000800d46c                _getpid_r
- .text.atan     0x000000000800d470      0x31c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
-                0x000000000800d470                atan
- .text.fabs     0x000000000800d78c        0x8 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
-                0x000000000800d78c                fabs
+                0x000000000800d4a4        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-signalr.o)
+                0x000000000800d4a4                _getpid_r
+ .text.atan     0x000000000800d4a8      0x31c /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
+                0x000000000800d4a8                atan
+ .text.fabs     0x000000000800d7c4        0x8 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_fabs.o)
+                0x000000000800d7c4                fabs
  .text.unlikely._ZSt20__throw_length_errorPKc
-                0x000000000800d794        0x6 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(functexcept.o)
-                0x000000000800d794                std::__throw_length_error(char const*)
- *fill*         0x000000000800d79a        0x2 
- .text._getpid  0x000000000800d79c        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(syscalls.o)
-                0x000000000800d79c                _getpid
- .text._exit    0x000000000800d7a0       0x14 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(_exit.o)
-                0x000000000800d7a0                _exit
- .text._kill    0x000000000800d7b4        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(_kill.o)
-                0x000000000800d7b4                _kill
+                0x000000000800d7cc        0x6 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libstdc++_nano.a(functexcept.o)
+                0x000000000800d7cc                std::__throw_length_error(char const*)
+ *fill*         0x000000000800d7d2        0x2 
+ .text._getpid  0x000000000800d7d4        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(syscalls.o)
+                0x000000000800d7d4                _getpid
+ .text._exit    0x000000000800d7d8       0x14 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(_exit.o)
+                0x000000000800d7d8                _exit
+ .text._kill    0x000000000800d7ec        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(_kill.o)
+                0x000000000800d7ec                _kill
  .text._kill_shared
-                0x000000000800d7b8        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(_kill.o)
-                0x000000000800d7b8                _kill_shared
+                0x000000000800d7f0        0x4 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/librdpmon.a(_kill.o)
+                0x000000000800d7f0                _kill_shared
  *(.rodata)
  *(.rodata*)
  .rodata.task_create.str1.1
-                0x000000000800d7bc        0x3 build_flappy_bird/task.o
+                0x000000000800d7f4        0x3 build_flappy_bird/task.o
  .rodata.task_run.str1.1
-                0x000000000800d7bf       0x25 build_flappy_bird/task.o
+                0x000000000800d7f7       0x25 build_flappy_bird/task.o
  .rodata.timer_set.str1.1
-                0x000000000800d7e4        0x3 build_flappy_bird/timer.o
+                0x000000000800d81c        0x3 build_flappy_bird/timer.o
  .rodata.msg_force_free.str1.1
-                0x000000000800d7e7        0x3 build_flappy_bird/message.o
+                0x000000000800d81f        0x3 build_flappy_bird/message.o
  .rodata.ak_malloc.str1.1
-                0x000000000800d7ea        0xa build_flappy_bird/message.o
+                0x000000000800d822        0xa build_flappy_bird/message.o
  .rodata.fifo_put.str1.1
-                0x000000000800d7f4        0x5 build_flappy_bird/fifo.o
+                0x000000000800d82c        0x5 build_flappy_bird/fifo.o
  .rodata.xvfprintf.str1.1
-                0x000000000800d7f9        0xb build_flappy_bird/xprintf.o
+                0x000000000800d831        0xb build_flappy_bird/xprintf.o
                                           0xc (size before relaxing)
  .rodata.buzzer_music_table
-                0x000000000800d804       0x80 build_flappy_bird/buzzer.o
+                0x000000000800d83c       0x80 build_flappy_bird/buzzer.o
  .rodata.tones_3beep
-                0x000000000800d884       0x18 build_flappy_bird/buzzer_music.o
-                0x000000000800d884                tones_3beep
+                0x000000000800d8bc       0x18 build_flappy_bird/buzzer_music.o
+                0x000000000800d8bc                tones_3beep
  .rodata.tones_bang
-                0x000000000800d89c        0xc build_flappy_bird/buzzer_music.o
-                0x000000000800d89c                tones_bang
+                0x000000000800d8d4        0xc build_flappy_bird/buzzer_music.o
+                0x000000000800d8d4                tones_bang
  .rodata.tones_click
-                0x000000000800d8a8        0x8 build_flappy_bird/buzzer_music.o
-                0x000000000800d8a8                tones_click
+                0x000000000800d8e0        0x8 build_flappy_bird/buzzer_music.o
+                0x000000000800d8e0                tones_click
  .rodata.tones_goodbye
-                0x000000000800d8b0       0x14 build_flappy_bird/buzzer_music.o
-                0x000000000800d8b0                tones_goodbye
+                0x000000000800d8e8       0x14 build_flappy_bird/buzzer_music.o
+                0x000000000800d8e8                tones_goodbye
  .rodata.tones_highscore
-                0x000000000800d8c4       0x20 build_flappy_bird/buzzer_music.o
-                0x000000000800d8c4                tones_highscore
+                0x000000000800d8fc       0x20 build_flappy_bird/buzzer_music.o
+                0x000000000800d8fc                tones_highscore
  .rodata.tones_jingle_bells
-                0x000000000800d8e4      0x11c build_flappy_bird/buzzer_music.o
-                0x000000000800d8e4                tones_jingle_bells
+                0x000000000800d91c      0x11c build_flappy_bird/buzzer_music.o
+                0x000000000800d91c                tones_jingle_bells
  .rodata.tones_lets_go
-                0x000000000800da00       0x28 build_flappy_bird/buzzer_music.o
-                0x000000000800da00                tones_lets_go
+                0x000000000800da38       0x28 build_flappy_bird/buzzer_music.o
+                0x000000000800da38                tones_lets_go
  .rodata.tones_lowscore
-                0x000000000800da28       0x14 build_flappy_bird/buzzer_music.o
-                0x000000000800da28                tones_lowscore
+                0x000000000800da60       0x14 build_flappy_bird/buzzer_music.o
+                0x000000000800da60                tones_lowscore
  .rodata.tones_mario_kart
-                0x000000000800da3c      0x110 build_flappy_bird/buzzer_music.o
-                0x000000000800da3c                tones_mario_kart
+                0x000000000800da74      0x110 build_flappy_bird/buzzer_music.o
+                0x000000000800da74                tones_mario_kart
  .rodata.tones_pirates
-                0x000000000800db4c      0x17c build_flappy_bird/buzzer_music.o
-                0x000000000800db4c                tones_pirates
+                0x000000000800db84      0x17c build_flappy_bird/buzzer_music.o
+                0x000000000800db84                tones_pirates
  .rodata.tones_smb
-                0x000000000800dcc8      0x104 build_flappy_bird/buzzer_music.o
-                0x000000000800dcc8                tones_smb
+                0x000000000800dd00      0x104 build_flappy_bird/buzzer_music.o
+                0x000000000800dd00                tones_smb
  .rodata.tones_startup
-                0x000000000800ddcc       0x28 build_flappy_bird/buzzer_music.o
-                0x000000000800ddcc                tones_startup
+                0x000000000800de04       0x28 build_flappy_bird/buzzer_music.o
+                0x000000000800de04                tones_startup
  .rodata.tones_usb_connected
-                0x000000000800ddf4       0x10 build_flappy_bird/buzzer_music.o
-                0x000000000800ddf4                tones_usb_connected
+                0x000000000800de2c       0x10 build_flappy_bird/buzzer_music.o
+                0x000000000800de2c                tones_usb_connected
  .rodata.tones_usb_disconnected
-                0x000000000800de04       0x10 build_flappy_bird/buzzer_music.o
-                0x000000000800de04                tones_usb_disconnected
+                0x000000000800de3c       0x10 build_flappy_bird/buzzer_music.o
+                0x000000000800de3c                tones_usb_disconnected
  .rodata.tones_welcome
-                0x000000000800de14       0x14 build_flappy_bird/buzzer_music.o
-                0x000000000800de14                tones_welcome
+                0x000000000800de4c       0x14 build_flappy_bird/buzzer_music.o
+                0x000000000800de4c                tones_welcome
  .rodata.sys_dbg_cpu_dump.str1.1
-                0x000000000800de28       0x5f build_flappy_bird/sys_dbg.o
+                0x000000000800de60       0x5f build_flappy_bird/sys_dbg.o
  .rodata.sys_dbg_stack_space_dump.str1.1
-                0x000000000800de87       0x2f build_flappy_bird/sys_dbg.o
+                0x000000000800debf       0x2f build_flappy_bird/sys_dbg.o
  .rodata.sys_dbg_fatal.str1.1
-                0x000000000800deb6      0x25f build_flappy_bird/sys_dbg.o
+                0x000000000800deee      0x25f build_flappy_bird/sys_dbg.o
                                         0x261 (size before relaxing)
  .rodata.exit_critical.str1.1
-                0x000000000800e115        0x4 build_flappy_bird/platform.o
+                0x000000000800e14d        0x4 build_flappy_bird/platform.o
  .rodata.default_handler.str1.1
-                0x000000000800e119        0x3 build_flappy_bird/system.o
+                0x000000000800e151        0x3 build_flappy_bird/system.o
  .rodata.sys_cfg_update_info.str1.1
-                0x000000000800e11c       0x62 build_flappy_bird/sys_cfg.o
+                0x000000000800e154       0x62 build_flappy_bird/sys_cfg.o
                                          0x64 (size before relaxing)
  .rodata.sys_ctrl_soft_watchdog_increase_counter.str1.1
-                0x000000000800e17e        0x5 build_flappy_bird/sys_cfg.o
+                0x000000000800e1b6        0x5 build_flappy_bird/sys_cfg.o
  .rodata.flash_transfer.str1.1
-                0x000000000800e183        0x4 build_flappy_bird/io_cfg.o
+                0x000000000800e1bb        0x4 build_flappy_bird/io_cfg.o
  .rodata._ZNSt6vectorI4ballSaIS0_EE17_M_realloc_insertIJRKS0_EEEvN9__gnu_cxx17__normal_iteratorIPS0_S2_EEDpOT_.str1.1
-                0x000000000800e187       0x1a build_flappy_bird/scr_idle.o
+                0x000000000800e1bf       0x1a build_flappy_bird/scr_idle.o
  .rodata._Z15scr_idle_handleP8ak_msg_t.str1.1
-                0x000000000800e1a1       0x8b build_flappy_bird/scr_idle.o
+                0x000000000800e1d9       0x8b build_flappy_bird/scr_idle.o
  .rodata._ZL18view_scr_menu_gamev.str1.1
-                0x000000000800e22c        0x5 build_flappy_bird/scr_menu_game.o
+                0x000000000800e264        0x5 build_flappy_bird/scr_menu_game.o
  .rodata._Z20scr_menu_game_handleP8ak_msg_t.str1.1
-                0x000000000800e231       0x8b build_flappy_bird/scr_menu_game.o
+                0x000000000800e269       0x8b build_flappy_bird/scr_menu_game.o
  .rodata.str1.1
-                0x000000000800e231       0x1f build_flappy_bird/scr_menu_game.o
+                0x000000000800e269       0x1f build_flappy_bird/scr_menu_game.o
  .rodata._ZL10menu_items
-                0x000000000800e250       0x10 build_flappy_bird/scr_menu_game.o
+                0x000000000800e288       0x10 build_flappy_bird/scr_menu_game.o
  .rodata._ZL21view_scr_game_settingv.str1.1
-                0x000000000800e260       0x2c build_flappy_bird/scr_game_setting.o
+                0x000000000800e298       0x2c build_flappy_bird/scr_game_setting.o
  .rodata._Z23scr_game_setting_handleP8ak_msg_t.str1.1
-                0x000000000800e28c       0x2c build_flappy_bird/scr_game_setting.o
+                0x000000000800e2c4       0x2c build_flappy_bird/scr_game_setting.o
                                          0xb7 (size before relaxing)
  .rodata._ZL16view_scr_startupv.str1.1
-                0x000000000800e2b8       0x53 build_flappy_bird/scr_startup.o
+                0x000000000800e2f0       0x1b build_flappy_bird/scr_startup.o
  .rodata._Z18scr_startup_handleP8ak_msg_t.str1.1
                 0x000000000800e30b       0x76 build_flappy_bird/scr_startup.o
                                          0x9e (size before relaxing)
@@ -4304,178 +4304,180 @@ Linker script and memory map
  .rodata.icon_restart
                 0x000000000800e498       0x1e build_flappy_bird/screens_bitmap.o
                 0x000000000800e498                icon_restart
+ .rodata._ZL20flappy_load_settingsv.str1.1
+                0x000000000800e4b6       0x16 build_flappy_bird/scr_flappy_bird.o
  .rodata._ZL20view_scr_flappy_birdv.str1.1
-                0x000000000800e4b6       0x17 build_flappy_bird/scr_flappy_bird.o
+                0x000000000800e4cc       0x2b build_flappy_bird/scr_flappy_bird.o
  .rodata._Z22scr_flappy_bird_handleP8ak_msg_t.str1.1
-                0x000000000800e4cd       0x4c build_flappy_bird/scr_flappy_bird.o
+                0x000000000800e4f7       0x4c build_flappy_bird/scr_flappy_bird.o
                                          0x61 (size before relaxing)
  .rodata._Z11task_systemP8ak_msg_t.str1.1
-                0x000000000800e519       0x23 build_flappy_bird/task_system.o
+                0x000000000800e543       0x23 build_flappy_bird/task_system.o
  .rodata.main_app.str1.1
-                0x000000000800e53c       0x3a build_flappy_bird/app.o
+                0x000000000800e566       0x3a build_flappy_bird/app.o
  .rodata._Z20task_polling_consolev.str1.1
-                0x000000000800e576       0x31 build_flappy_bird/app.o
- *fill*         0x000000000800e5a7        0x1 
+                0x000000000800e5a0       0x31 build_flappy_bird/app.o
+ *fill*         0x000000000800e5d1        0x3 
  .rodata.app_info
-                0x000000000800e5a8        0x8 build_flappy_bird/app.o
-                0x000000000800e5a8                app_info
+                0x000000000800e5d4        0x8 build_flappy_bird/app.o
+                0x000000000800e5d4                app_info
  .rodata._Z17btn_mode_callbackPv.str1.1
-                0x000000000800e5b0       0x84 build_flappy_bird/app_bsp.o
+                0x000000000800e5dc       0x84 build_flappy_bird/app_bsp.o
  .rodata._Z15btn_up_callbackPv.str1.1
-                0x000000000800e634       0x10 build_flappy_bird/app_bsp.o
+                0x000000000800e660       0x10 build_flappy_bird/app_bsp.o
  .rodata._Z17btn_down_callbackPv.str1.1
-                0x000000000800e644       0x12 build_flappy_bird/app_bsp.o
+                0x000000000800e670       0x12 build_flappy_bird/app_bsp.o
  .rodata._Z11shell_resetPh.str1.1
-                0x000000000800e656        0x6 build_flappy_bird/shell.o
+                0x000000000800e682        0x6 build_flappy_bird/shell.o
  .rodata._Z10shell_helpPh.str1.1
-                0x000000000800e65c       0x24 build_flappy_bird/shell.o
+                0x000000000800e688       0x24 build_flappy_bird/shell.o
  .rodata._Z9shell_verPh.str1.1
-                0x000000000800e680      0x15d build_flappy_bird/shell.o
+                0x000000000800e6ac      0x15d build_flappy_bird/shell.o
                                         0x180 (size before relaxing)
  .rodata._Z11shell_flashPh.str1.1
-                0x000000000800e7dd       0x4f build_flappy_bird/shell.o
+                0x000000000800e809       0x4f build_flappy_bird/shell.o
                                          0x60 (size before relaxing)
  .rodata._ZL26shell_lcd_dump_framebufferv.str1.1
-                0x000000000800e82c       0x8e build_flappy_bird/shell.o
+                0x000000000800e858       0x8e build_flappy_bird/shell.o
  .rodata._Z11shell_fatalPh.str1.1
-                0x000000000800e8ba      0x17f build_flappy_bird/shell.o
+                0x000000000800e8e6      0x17f build_flappy_bird/shell.o
                                         0x338 (size before relaxing)
  .rodata._Z9shell_epsPh.str1.1
-                0x000000000800ea39       0x28 build_flappy_bird/shell.o
+                0x000000000800ea65       0x28 build_flappy_bird/shell.o
  .rodata._Z9shell_ramPh.str1.1
-                0x000000000800ea61       0x53 build_flappy_bird/shell.o
+                0x000000000800ea8d       0x53 build_flappy_bird/shell.o
  .rodata._Z10shell_bootPh.str1.1
-                0x000000000800eab4      0x166 build_flappy_bird/shell.o
+                0x000000000800eae0      0x166 build_flappy_bird/shell.o
  .rodata._Z12shell_buzzerPh.str1.1
-                0x000000000800ec1a      0x1c3 build_flappy_bird/shell.o
+                0x000000000800ec46      0x1c3 build_flappy_bird/shell.o
  .rodata._Z9shell_dbgPh.str1.1
-                0x000000000800eddd       0x1b build_flappy_bird/shell.o
+                0x000000000800ee09       0x1b build_flappy_bird/shell.o
  .rodata._Z9shell_lcdPh.str1.1
-                0x000000000800edf8       0x1e build_flappy_bird/shell.o
-                                         0x67 (size before relaxing)
+                0x000000000800ee24       0x67 build_flappy_bird/shell.o
  .rodata.str1.1
-                0x000000000800ee16       0xda build_flappy_bird/shell.o
+                0x000000000800ee8b       0xda build_flappy_bird/shell.o
                                          0xdf (size before relaxing)
+ *fill*         0x000000000800ef65        0x3 
  .rodata.lgn_cmd_table
-                0x000000000800eef0       0xd8 build_flappy_bird/shell.o
-                0x000000000800eef0                lgn_cmd_table
+                0x000000000800ef68       0xd8 build_flappy_bird/shell.o
+                0x000000000800ef68                lgn_cmd_table
  .rodata._Z10task_shellP8ak_msg_t.str1.1
-                0x000000000800efc8       0x43 build_flappy_bird/task_shell.o
+                0x000000000800f040       0x43 build_flappy_bird/task_shell.o
  .rodata._Z7task_fwP8ak_msg_t.str1.1
-                0x000000000800f00b      0x206 build_flappy_bird/task_fw.o
- *fill*         0x000000000800f211        0x3 
+                0x000000000800f083      0x206 build_flappy_bird/task_fw.o
+ *fill*         0x000000000800f289        0x3 
  .rodata.app_task_polling_table
-                0x000000000800f214       0x10 build_flappy_bird/task_list.o
-                0x000000000800f214                app_task_polling_table
+                0x000000000800f28c       0x10 build_flappy_bird/task_list.o
+                0x000000000800f28c                app_task_polling_table
  .rodata.app_task_table
-                0x000000000800f224       0x80 build_flappy_bird/task_list.o
-                0x000000000800f224                app_task_table
+                0x000000000800f29c       0x80 build_flappy_bird/task_list.o
+                0x000000000800f29c                app_task_table
  .rodata._Z7task_ifP8ak_msg_t.str1.1
-                0x000000000800f2a4       0xa9 build_flappy_bird/task_if.o
+                0x000000000800f31c       0xa9 build_flappy_bird/task_if.o
  .rodata._Z12task_uart_ifP8ak_msg_t.str1.1
-                0x000000000800f34d       0xdf build_flappy_bird/task_uart_if.o
+                0x000000000800f3c5       0xdf build_flappy_bird/task_uart_if.o
  .rodata._ZL11render_list
-                0x000000000800f42c        0x8 build_flappy_bird/view_render.o
+                0x000000000800f4a4        0x8 build_flappy_bird/view_render.o
  .rodata._Z16scr_mng_dispatchP8ak_msg_t.str1.1
-                0x000000000800f434        0x8 build_flappy_bird/screen_manager.o
+                0x000000000800f4ac        0x8 build_flappy_bird/screen_manager.o
  .rodata._ZL4font
-                0x000000000800f43c      0x4fb build_flappy_bird/Adafruit_GFX.o
- *fill*         0x000000000800f937        0x1 
+                0x000000000800f4b4      0x4fb build_flappy_bird/Adafruit_GFX.o
+ *fill*         0x000000000800f9af        0x1 
  .rodata._ZTV12Adafruit_GFX
-                0x000000000800f938       0x2c build_flappy_bird/Adafruit_GFX.o
-                0x000000000800f938                vtable for Adafruit_GFX
+                0x000000000800f9b0       0x2c build_flappy_bird/Adafruit_GFX.o
+                0x000000000800f9b0                vtable for Adafruit_GFX
  .rodata._ZTV17Adafruit_oled_drv
-                0x000000000800f964       0x3c build_flappy_bird/Adafruit_oled_drv.o
-                0x000000000800f964                vtable for Adafruit_oled_drv
+                0x000000000800f9dc       0x3c build_flappy_bird/Adafruit_oled_drv.o
+                0x000000000800f9dc                vtable for Adafruit_oled_drv
  .rodata._Z23link_hal_reg_write_bytePFhhE.str1.1
-                0x000000000800f9a0        0x9 build_flappy_bird/link_hal.o
+                0x000000000800fa18        0x9 build_flappy_bird/link_hal.o
  .rodata._ZL19fsm_link_state_initP8ak_msg_t.str1.1
-                0x000000000800f9a9      0x110 build_flappy_bird/link.o
+                0x000000000800fa21      0x110 build_flappy_bird/link.o
  .rodata._ZL23link_mac_frame_send_reqv.str1.1
-                0x000000000800fab9        0x9 build_flappy_bird/link_mac.o
+                0x000000000800fb31        0x9 build_flappy_bird/link_mac.o
  .rodata._Z25fsm_link_mac_state_handleP8ak_msg_t.str1.1
-                0x000000000800fac2        0x5 build_flappy_bird/link_mac.o
+                0x000000000800fb3a        0x5 build_flappy_bird/link_mac.o
  .rodata._Z25fsm_link_phy_state_handleP8ak_msg_t.str1.1
-                0x000000000800fac7        0x7 build_flappy_bird/link_phy.o
+                0x000000000800fb3f        0x7 build_flappy_bird/link_phy.o
  .rodata._Z13link_pdu_freeP10link_pdu_t.str1.1
-                0x000000000800face        0x9 build_flappy_bird/link_data.o
+                0x000000000800fb46        0x9 build_flappy_bird/link_data.o
  .rodata._Z7pinModehh.str1.1
-                0x000000000800fad7        0x3 build_flappy_bird/wiring_digital.o
- *fill*         0x000000000800fada        0x2 
+                0x000000000800fb4f        0x3 build_flappy_bird/wiring_digital.o
+ *fill*         0x000000000800fb52        0x2 
  .rodata._ZTV14HardwareSerial
-                0x000000000800fadc       0x24 build_flappy_bird/HardwareSerial.o
-                0x000000000800fadc                vtable for HardwareSerial
+                0x000000000800fb54       0x24 build_flappy_bird/HardwareSerial.o
+                0x000000000800fb54                vtable for HardwareSerial
  .rodata._ZTV7TwoWire
-                0x000000000800fb00       0x20 build_flappy_bird/Wire.o
-                0x000000000800fb00                vtable for TwoWire
+                0x000000000800fb78       0x20 build_flappy_bird/Wire.o
+                0x000000000800fb78                vtable for TwoWire
  .rodata.__cxa_pure_virtual.str1.1
-                0x000000000800fb20        0x4 build_flappy_bird/mini_cpp.o
+                0x000000000800fb98        0x4 build_flappy_bird/mini_cpp.o
  .rodata._ctype_
-                0x000000000800fb24      0x101 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-ctype_.o)
-                0x000000000800fb24                _ctype_
- *fill*         0x000000000800fc25        0x3 
+                0x000000000800fb9c      0x101 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-ctype_.o)
+                0x000000000800fb9c                _ctype_
+ *fill*         0x000000000800fc9d        0x3 
  .rodata.atanhi
-                0x000000000800fc28       0x20 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
+                0x000000000800fca0       0x20 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
  .rodata.atanlo
-                0x000000000800fc48       0x20 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
+                0x000000000800fcc0       0x20 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libm.a(lib_a-s_atan.o)
  *(.glue_7)
- .glue_7        0x000000000800fc68        0x0 linker stubs
+ .glue_7        0x000000000800fce0        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800fc68        0x0 linker stubs
+ .glue_7t       0x000000000800fce0        0x0 linker stubs
  *(.init)
  *(.fini)
-                0x000000000800fc68                . = ALIGN (0x4)
-                0x000000000800fc68                _etext = .
+                0x000000000800fce0                . = ALIGN (0x4)
+                0x000000000800fce0                _etext = .
 
-.vfp11_veneer   0x000000000800fc68        0x0
- .vfp11_veneer  0x000000000800fc68        0x0 linker stubs
+.vfp11_veneer   0x000000000800fce0        0x0
+ .vfp11_veneer  0x000000000800fce0        0x0 linker stubs
 
-.v4_bx          0x000000000800fc68        0x0
- .v4_bx         0x000000000800fc68        0x0 linker stubs
+.v4_bx          0x000000000800fce0        0x0
+ .v4_bx         0x000000000800fce0        0x0 linker stubs
 
-.iplt           0x000000000800fc68        0x0
- .iplt          0x000000000800fc68        0x0 build_flappy_bird/task.o
+.iplt           0x000000000800fce0        0x0
+ .iplt          0x000000000800fce0        0x0 build_flappy_bird/task.o
 
-.rel.dyn        0x000000000800fc68        0x0
- .rel.iplt      0x000000000800fc68        0x0 build_flappy_bird/task.o
+.rel.dyn        0x000000000800fce0        0x0
+ .rel.iplt      0x000000000800fce0        0x0 build_flappy_bird/task.o
 
-.ARM.exidx      0x000000000800fc68        0x8
- .ARM.exidx     0x000000000800fc68        0x8 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
+.ARM.exidx      0x000000000800fce0        0x8
+ .ARM.exidx     0x000000000800fce0        0x8 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a(_udivmoddi4.o)
 
-.preinit_array  0x000000000800fc70        0x0
-                0x000000000800fc70                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000000000800fce8        0x0
+                0x000000000800fce8                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  *(.preinit_array*)
-                0x000000000800fc70                PROVIDE (__preinit_array_end = .)
+                0x000000000800fce8                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000000000800fc70       0x14
-                0x000000000800fc70                PROVIDE (__init_array_start = .)
+.init_array     0x000000000800fce8       0x14
+                0x000000000800fce8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800fc70        0x4 build_flappy_bird/scr_idle.o
- .init_array    0x000000000800fc74        0x4 build_flappy_bird/view_render.o
- .init_array    0x000000000800fc78        0x4 build_flappy_bird/HardwareSerial2.o
- .init_array    0x000000000800fc7c        0x4 build_flappy_bird/SPI.o
- .init_array    0x000000000800fc80        0x4 build_flappy_bird/Wire.o
-                0x000000000800fc84                PROVIDE (__init_array_end = .)
+ .init_array    0x000000000800fce8        0x4 build_flappy_bird/scr_idle.o
+ .init_array    0x000000000800fcec        0x4 build_flappy_bird/view_render.o
+ .init_array    0x000000000800fcf0        0x4 build_flappy_bird/HardwareSerial2.o
+ .init_array    0x000000000800fcf4        0x4 build_flappy_bird/SPI.o
+ .init_array    0x000000000800fcf8        0x4 build_flappy_bird/Wire.o
+                0x000000000800fcfc                PROVIDE (__init_array_end = .)
 
-.fini_array     0x000000000800fc84        0x8
+.fini_array     0x000000000800fcfc        0x8
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(.fini_array*)
- .fini_array    0x000000000800fc84        0x4 build_flappy_bird/scr_idle.o
- .fini_array    0x000000000800fc88        0x4 build_flappy_bird/view_render.o
+ .fini_array    0x000000000800fcfc        0x4 build_flappy_bird/scr_idle.o
+ .fini_array    0x000000000800fd00        0x4 build_flappy_bird/view_render.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                        PROVIDE (__fini_array_end = .)
 
-.end_flash      0x000000000800fc8c        0x0
-                0x000000000800fc8c                _end_flash = .
+.end_flash      0x000000000800fd04        0x0
+                0x000000000800fd04                _end_flash = .
 
 .start_ram      0x0000000020000000        0x0
                 0x0000000020000000                _start_ram = .
 
-.data           0x0000000020000000      0x938 load address 0x000000000800fc8c
+.data           0x0000000020000000      0x938 load address 0x000000000800fd04
                 0x0000000020000000                _data = .
-                0x000000000800fc8c                _ldata = LOADADDR (.data)
+                0x000000000800fd04                _ldata = LOADADDR (.data)
  *(vtable)
  *(.data)
  *(.data*)
@@ -4575,10 +4577,10 @@ Linker script and memory map
  *(.ram_func*)
                 0x0000000020000938                _edata = .
 
-.igot.plt       0x0000000020000938        0x0 load address 0x00000000080105c4
+.igot.plt       0x0000000020000938        0x0 load address 0x000000000801063c
  .igot.plt      0x0000000020000938        0x0 build_flappy_bird/task.o
 
-.bss            0x0000000020000938     0x245c load address 0x00000000080105c4
+.bss            0x0000000020000938     0x245c load address 0x000000000801063c
                 0x0000000020000938                _bss = .
  *(.bss)
  *(.bss*)
@@ -4705,17 +4707,15 @@ Linker script and memory map
                 0x0000000020001b7d        0x1 build_flappy_bird/scr_game_setting.o
  .bss._ZL11logo_bounce
                 0x0000000020001b7e        0x1 build_flappy_bird/scr_startup.o
- .bss._ZL12logo_settled
-                0x0000000020001b7f        0x1 build_flappy_bird/scr_startup.o
  .bss._ZL13phase_counter
-                0x0000000020001b80        0x1 build_flappy_bird/scr_startup.o
+                0x0000000020001b7f        0x1 build_flappy_bird/scr_startup.o
  .bss._ZL13startup_phase
-                0x0000000020001b81        0x1 build_flappy_bird/scr_startup.o
+                0x0000000020001b80        0x1 build_flappy_bird/scr_startup.o
  .bss._ZL18startup_anim_frame
-                0x0000000020001b82        0x1 build_flappy_bird/scr_startup.o
+                0x0000000020001b81        0x1 build_flappy_bird/scr_startup.o
  .bss._ZL9particles
-                0x0000000020001b83       0x18 build_flappy_bird/scr_startup.o
- *fill*         0x0000000020001b9b        0x1 
+                0x0000000020001b82       0x18 build_flappy_bird/scr_startup.o
+ *fill*         0x0000000020001b9a        0x2 
  .bss._ZL16gamescore_charts
                 0x0000000020001b9c       0x10 build_flappy_bird/scr_charts_game.o
  .bss._ZL10best_score
@@ -4897,14 +4897,14 @@ Linker script and memory map
                 0x0000000020002d94                _ebss = .
                 0x0000000020002d94                end = .
 
-.heap           0x0000000020002d94      0x800 load address 0x0000000008012a20
+.heap           0x0000000020002d94      0x800 load address 0x0000000008012a98
                 0x0000000020002d94                __heap_start__ = .
                 0x0000000020003594                . = (. + HEAP_SIZE)
  *fill*         0x0000000020002d94      0x800 
                 0x0000000020003594                . = ALIGN (0x4)
                 0x0000000020003594                __heap_end__ = .
 
-.non_clear_ram  0x0000000020003594        0x4 load address 0x0000000008013220
+.non_clear_ram  0x0000000020003594        0x4 load address 0x0000000008013298
                 0x0000000020003594                _non_clear_ram = .
  *(.non_clear_ram)
  .non_clear_ram
@@ -5037,7 +5037,7 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
 LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libg.a
 LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/lib/gcc/arm-none-eabi/10.3.1/thumb/v7-m/nofp/libgcc.a
 
-.debug_info     0x0000000000000000    0x657f2
+.debug_info     0x0000000000000000    0x658a7
  .debug_info    0x0000000000000000      0x226 build_flappy_bird/fsm.o
  .debug_info    0x0000000000000226      0xe59 build_flappy_bird/task.o
  .debug_info    0x000000000000107f      0x82e build_flappy_bird/timer.o
@@ -5075,44 +5075,44 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_info    0x00000000000157a3     0x6488 build_flappy_bird/scr_idle.o
  .debug_info    0x000000000001bc2b     0x2668 build_flappy_bird/scr_menu_game.o
  .debug_info    0x000000000001e293     0x2660 build_flappy_bird/scr_game_setting.o
- .debug_info    0x00000000000208f3     0x2a83 build_flappy_bird/scr_startup.o
- .debug_info    0x0000000000023376     0x27fd build_flappy_bird/scr_charts_game.o
- .debug_info    0x0000000000025b73     0x2015 build_flappy_bird/screens_bitmap.o
- .debug_info    0x0000000000027b88     0x2b02 build_flappy_bird/scr_flappy_bird.o
- .debug_info    0x000000000002a68a      0xaf3 build_flappy_bird/task_system.o
- .debug_info    0x000000000002b17d      0xec8 build_flappy_bird/app_eeprom.o
- .debug_info    0x000000000002c045     0x4c61 build_flappy_bird/app.o
- .debug_info    0x0000000000030ca6      0x818 build_flappy_bird/app_non_clear_ram.o
- .debug_info    0x00000000000314be      0xdaf build_flappy_bird/app_bsp.o
- .debug_info    0x000000000003226d      0xa81 build_flappy_bird/app_bird.o
- .debug_info    0x0000000000032cee     0x4610 build_flappy_bird/shell.o
- .debug_info    0x00000000000372fe      0xc9c build_flappy_bird/task_shell.o
- .debug_info    0x0000000000037f9a      0xa49 build_flappy_bird/task_life.o
- .debug_info    0x00000000000389e3     0x16b3 build_flappy_bird/task_fw.o
- .debug_info    0x000000000003a096      0xa4f build_flappy_bird/task_list.o
- .debug_info    0x000000000003aae5     0x21d3 build_flappy_bird/task_display.o
- .debug_info    0x000000000003ccb8      0xa97 build_flappy_bird/task_if.o
- .debug_info    0x000000000003d74f      0xb5d build_flappy_bird/task_uart_if.o
- .debug_info    0x000000000003e2ac     0x2427 build_flappy_bird/view_render.o
- .debug_info    0x00000000000406d3     0x239e build_flappy_bird/screen_manager.o
- .debug_info    0x0000000000042a71     0x45cb build_flappy_bird/Adafruit_GFX.o
- .debug_info    0x000000000004703c     0x2fc7 build_flappy_bird/Adafruit_oled_drv.o
- .debug_info    0x000000000004a003      0x908 build_flappy_bird/eeprom.o
- .debug_info    0x000000000004a90b      0x995 build_flappy_bird/link_hal.o
- .debug_info    0x000000000004b2a0     0x149c build_flappy_bird/link.o
- .debug_info    0x000000000004c73c     0x17cf build_flappy_bird/link_mac.o
- .debug_info    0x000000000004df0b     0x1548 build_flappy_bird/link_phy.o
- .debug_info    0x000000000004f453      0xcd7 build_flappy_bird/link_data.o
- .debug_info    0x000000000005012a     0x2003 build_flappy_bird/wiring_digital.o
- .debug_info    0x000000000005212d     0x33d9 build_flappy_bird/Print.o
- .debug_info    0x0000000000055506     0x386b build_flappy_bird/HardwareSerial.o
- .debug_info    0x0000000000058d71     0x38e0 build_flappy_bird/HardwareSerial2.o
- .debug_info    0x000000000005c651      0xfb7 build_flappy_bird/SPI.o
- .debug_info    0x000000000005d608     0x4503 build_flappy_bird/Wire.o
- .debug_info    0x0000000000061b0b     0x2958 build_flappy_bird/twi.o
- .debug_info    0x0000000000064463     0x138f build_flappy_bird/mini_cpp.o
+ .debug_info    0x00000000000208f3     0x2b0a build_flappy_bird/scr_startup.o
+ .debug_info    0x00000000000233fd     0x27fd build_flappy_bird/scr_charts_game.o
+ .debug_info    0x0000000000025bfa     0x2015 build_flappy_bird/screens_bitmap.o
+ .debug_info    0x0000000000027c0f     0x2b30 build_flappy_bird/scr_flappy_bird.o
+ .debug_info    0x000000000002a73f      0xaf3 build_flappy_bird/task_system.o
+ .debug_info    0x000000000002b232      0xec8 build_flappy_bird/app_eeprom.o
+ .debug_info    0x000000000002c0fa     0x4c61 build_flappy_bird/app.o
+ .debug_info    0x0000000000030d5b      0x818 build_flappy_bird/app_non_clear_ram.o
+ .debug_info    0x0000000000031573      0xdaf build_flappy_bird/app_bsp.o
+ .debug_info    0x0000000000032322      0xa81 build_flappy_bird/app_bird.o
+ .debug_info    0x0000000000032da3     0x4610 build_flappy_bird/shell.o
+ .debug_info    0x00000000000373b3      0xc9c build_flappy_bird/task_shell.o
+ .debug_info    0x000000000003804f      0xa49 build_flappy_bird/task_life.o
+ .debug_info    0x0000000000038a98     0x16b3 build_flappy_bird/task_fw.o
+ .debug_info    0x000000000003a14b      0xa4f build_flappy_bird/task_list.o
+ .debug_info    0x000000000003ab9a     0x21d3 build_flappy_bird/task_display.o
+ .debug_info    0x000000000003cd6d      0xa97 build_flappy_bird/task_if.o
+ .debug_info    0x000000000003d804      0xb5d build_flappy_bird/task_uart_if.o
+ .debug_info    0x000000000003e361     0x2427 build_flappy_bird/view_render.o
+ .debug_info    0x0000000000040788     0x239e build_flappy_bird/screen_manager.o
+ .debug_info    0x0000000000042b26     0x45cb build_flappy_bird/Adafruit_GFX.o
+ .debug_info    0x00000000000470f1     0x2fc7 build_flappy_bird/Adafruit_oled_drv.o
+ .debug_info    0x000000000004a0b8      0x908 build_flappy_bird/eeprom.o
+ .debug_info    0x000000000004a9c0      0x995 build_flappy_bird/link_hal.o
+ .debug_info    0x000000000004b355     0x149c build_flappy_bird/link.o
+ .debug_info    0x000000000004c7f1     0x17cf build_flappy_bird/link_mac.o
+ .debug_info    0x000000000004dfc0     0x1548 build_flappy_bird/link_phy.o
+ .debug_info    0x000000000004f508      0xcd7 build_flappy_bird/link_data.o
+ .debug_info    0x00000000000501df     0x2003 build_flappy_bird/wiring_digital.o
+ .debug_info    0x00000000000521e2     0x33d9 build_flappy_bird/Print.o
+ .debug_info    0x00000000000555bb     0x386b build_flappy_bird/HardwareSerial.o
+ .debug_info    0x0000000000058e26     0x38e0 build_flappy_bird/HardwareSerial2.o
+ .debug_info    0x000000000005c706      0xfb7 build_flappy_bird/SPI.o
+ .debug_info    0x000000000005d6bd     0x4503 build_flappy_bird/Wire.o
+ .debug_info    0x0000000000061bc0     0x2958 build_flappy_bird/twi.o
+ .debug_info    0x0000000000064518     0x138f build_flappy_bird/mini_cpp.o
 
-.debug_abbrev   0x0000000000000000     0xeb32
+.debug_abbrev   0x0000000000000000     0xeb51
  .debug_abbrev  0x0000000000000000       0xdc build_flappy_bird/fsm.o
  .debug_abbrev  0x00000000000000dc      0x39d build_flappy_bird/task.o
  .debug_abbrev  0x0000000000000479      0x2fb build_flappy_bird/timer.o
@@ -5150,44 +5150,44 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_abbrev  0x0000000000004852      0xaa5 build_flappy_bird/scr_idle.o
  .debug_abbrev  0x00000000000052f7      0x4fc build_flappy_bird/scr_menu_game.o
  .debug_abbrev  0x00000000000057f3      0x49c build_flappy_bird/scr_game_setting.o
- .debug_abbrev  0x0000000000005c8f      0x4e5 build_flappy_bird/scr_startup.o
- .debug_abbrev  0x0000000000006174      0x482 build_flappy_bird/scr_charts_game.o
- .debug_abbrev  0x00000000000065f6      0x27c build_flappy_bird/screens_bitmap.o
- .debug_abbrev  0x0000000000006872      0x5a4 build_flappy_bird/scr_flappy_bird.o
- .debug_abbrev  0x0000000000006e16      0x229 build_flappy_bird/task_system.o
- .debug_abbrev  0x000000000000703f      0x39c build_flappy_bird/app_eeprom.o
- .debug_abbrev  0x00000000000073db      0x6cf build_flappy_bird/app.o
- .debug_abbrev  0x0000000000007aaa      0x1cf build_flappy_bird/app_non_clear_ram.o
- .debug_abbrev  0x0000000000007c79      0x2b8 build_flappy_bird/app_bsp.o
- .debug_abbrev  0x0000000000007f31      0x216 build_flappy_bird/app_bird.o
- .debug_abbrev  0x0000000000008147      0x564 build_flappy_bird/shell.o
- .debug_abbrev  0x00000000000086ab      0x2e8 build_flappy_bird/task_shell.o
- .debug_abbrev  0x0000000000008993      0x25f build_flappy_bird/task_life.o
- .debug_abbrev  0x0000000000008bf2      0x36f build_flappy_bird/task_fw.o
- .debug_abbrev  0x0000000000008f61      0x1e6 build_flappy_bird/task_list.o
- .debug_abbrev  0x0000000000009147      0x3ce build_flappy_bird/task_display.o
- .debug_abbrev  0x0000000000009515      0x268 build_flappy_bird/task_if.o
- .debug_abbrev  0x000000000000977d      0x238 build_flappy_bird/task_uart_if.o
- .debug_abbrev  0x00000000000099b5      0x425 build_flappy_bird/view_render.o
- .debug_abbrev  0x0000000000009dda      0x3a1 build_flappy_bird/screen_manager.o
- .debug_abbrev  0x000000000000a17b      0x7cb build_flappy_bird/Adafruit_GFX.o
- .debug_abbrev  0x000000000000a946      0x570 build_flappy_bird/Adafruit_oled_drv.o
- .debug_abbrev  0x000000000000aeb6      0x1ec build_flappy_bird/eeprom.o
- .debug_abbrev  0x000000000000b0a2      0x266 build_flappy_bird/link_hal.o
- .debug_abbrev  0x000000000000b308      0x3cc build_flappy_bird/link.o
- .debug_abbrev  0x000000000000b6d4      0x4bc build_flappy_bird/link_mac.o
- .debug_abbrev  0x000000000000bb90      0x5c7 build_flappy_bird/link_phy.o
- .debug_abbrev  0x000000000000c157      0x318 build_flappy_bird/link_data.o
- .debug_abbrev  0x000000000000c46f      0x2a8 build_flappy_bird/wiring_digital.o
- .debug_abbrev  0x000000000000c717      0x526 build_flappy_bird/Print.o
- .debug_abbrev  0x000000000000cc3d      0x52d build_flappy_bird/HardwareSerial.o
- .debug_abbrev  0x000000000000d16a      0x5a3 build_flappy_bird/HardwareSerial2.o
- .debug_abbrev  0x000000000000d70d      0x39f build_flappy_bird/SPI.o
- .debug_abbrev  0x000000000000daac      0x7a1 build_flappy_bird/Wire.o
- .debug_abbrev  0x000000000000e24d      0x47f build_flappy_bird/twi.o
- .debug_abbrev  0x000000000000e6cc      0x466 build_flappy_bird/mini_cpp.o
+ .debug_abbrev  0x0000000000005c8f      0x504 build_flappy_bird/scr_startup.o
+ .debug_abbrev  0x0000000000006193      0x482 build_flappy_bird/scr_charts_game.o
+ .debug_abbrev  0x0000000000006615      0x27c build_flappy_bird/screens_bitmap.o
+ .debug_abbrev  0x0000000000006891      0x5a4 build_flappy_bird/scr_flappy_bird.o
+ .debug_abbrev  0x0000000000006e35      0x229 build_flappy_bird/task_system.o
+ .debug_abbrev  0x000000000000705e      0x39c build_flappy_bird/app_eeprom.o
+ .debug_abbrev  0x00000000000073fa      0x6cf build_flappy_bird/app.o
+ .debug_abbrev  0x0000000000007ac9      0x1cf build_flappy_bird/app_non_clear_ram.o
+ .debug_abbrev  0x0000000000007c98      0x2b8 build_flappy_bird/app_bsp.o
+ .debug_abbrev  0x0000000000007f50      0x216 build_flappy_bird/app_bird.o
+ .debug_abbrev  0x0000000000008166      0x564 build_flappy_bird/shell.o
+ .debug_abbrev  0x00000000000086ca      0x2e8 build_flappy_bird/task_shell.o
+ .debug_abbrev  0x00000000000089b2      0x25f build_flappy_bird/task_life.o
+ .debug_abbrev  0x0000000000008c11      0x36f build_flappy_bird/task_fw.o
+ .debug_abbrev  0x0000000000008f80      0x1e6 build_flappy_bird/task_list.o
+ .debug_abbrev  0x0000000000009166      0x3ce build_flappy_bird/task_display.o
+ .debug_abbrev  0x0000000000009534      0x268 build_flappy_bird/task_if.o
+ .debug_abbrev  0x000000000000979c      0x238 build_flappy_bird/task_uart_if.o
+ .debug_abbrev  0x00000000000099d4      0x425 build_flappy_bird/view_render.o
+ .debug_abbrev  0x0000000000009df9      0x3a1 build_flappy_bird/screen_manager.o
+ .debug_abbrev  0x000000000000a19a      0x7cb build_flappy_bird/Adafruit_GFX.o
+ .debug_abbrev  0x000000000000a965      0x570 build_flappy_bird/Adafruit_oled_drv.o
+ .debug_abbrev  0x000000000000aed5      0x1ec build_flappy_bird/eeprom.o
+ .debug_abbrev  0x000000000000b0c1      0x266 build_flappy_bird/link_hal.o
+ .debug_abbrev  0x000000000000b327      0x3cc build_flappy_bird/link.o
+ .debug_abbrev  0x000000000000b6f3      0x4bc build_flappy_bird/link_mac.o
+ .debug_abbrev  0x000000000000bbaf      0x5c7 build_flappy_bird/link_phy.o
+ .debug_abbrev  0x000000000000c176      0x318 build_flappy_bird/link_data.o
+ .debug_abbrev  0x000000000000c48e      0x2a8 build_flappy_bird/wiring_digital.o
+ .debug_abbrev  0x000000000000c736      0x526 build_flappy_bird/Print.o
+ .debug_abbrev  0x000000000000cc5c      0x52d build_flappy_bird/HardwareSerial.o
+ .debug_abbrev  0x000000000000d189      0x5a3 build_flappy_bird/HardwareSerial2.o
+ .debug_abbrev  0x000000000000d72c      0x39f build_flappy_bird/SPI.o
+ .debug_abbrev  0x000000000000dacb      0x7a1 build_flappy_bird/Wire.o
+ .debug_abbrev  0x000000000000e26c      0x47f build_flappy_bird/twi.o
+ .debug_abbrev  0x000000000000e6eb      0x466 build_flappy_bird/mini_cpp.o
 
-.debug_loc      0x0000000000000000    0x14dff
+.debug_loc      0x0000000000000000    0x14c12
  .debug_loc     0x0000000000000000       0x4a build_flappy_bird/fsm.o
  .debug_loc     0x000000000000004a      0x73c build_flappy_bird/task.o
  .debug_loc     0x0000000000000786      0x379 build_flappy_bird/timer.o
@@ -5223,38 +5223,38 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_loc     0x000000000000b194     0x1051 build_flappy_bird/scr_idle.o
  .debug_loc     0x000000000000c1e5      0x10a build_flappy_bird/scr_menu_game.o
  .debug_loc     0x000000000000c2ef       0x99 build_flappy_bird/scr_game_setting.o
- .debug_loc     0x000000000000c388      0x53e build_flappy_bird/scr_startup.o
- .debug_loc     0x000000000000c8c6       0x99 build_flappy_bird/scr_charts_game.o
- .debug_loc     0x000000000000c95f      0x2ee build_flappy_bird/scr_flappy_bird.o
- .debug_loc     0x000000000000cc4d       0x25 build_flappy_bird/task_system.o
- .debug_loc     0x000000000000cc72      0x401 build_flappy_bird/app_eeprom.o
- .debug_loc     0x000000000000d073      0x288 build_flappy_bird/app_bsp.o
- .debug_loc     0x000000000000d2fb       0x89 build_flappy_bird/app_bird.o
- .debug_loc     0x000000000000d384     0x1098 build_flappy_bird/shell.o
- .debug_loc     0x000000000000e41c       0x61 build_flappy_bird/task_shell.o
- .debug_loc     0x000000000000e47d       0x32 build_flappy_bird/task_life.o
- .debug_loc     0x000000000000e4af      0x433 build_flappy_bird/task_fw.o
- .debug_loc     0x000000000000e8e2       0x25 build_flappy_bird/task_display.o
- .debug_loc     0x000000000000e907      0x18f build_flappy_bird/task_if.o
- .debug_loc     0x000000000000ea96       0xf8 build_flappy_bird/task_uart_if.o
- .debug_loc     0x000000000000eb8e      0x267 build_flappy_bird/view_render.o
- .debug_loc     0x000000000000edf5      0x14c build_flappy_bird/screen_manager.o
- .debug_loc     0x000000000000ef41     0x18c8 build_flappy_bird/Adafruit_GFX.o
- .debug_loc     0x0000000000010809      0x74a build_flappy_bird/Adafruit_oled_drv.o
- .debug_loc     0x0000000000010f53      0x128 build_flappy_bird/eeprom.o
- .debug_loc     0x000000000001107b       0x6f build_flappy_bird/link_hal.o
- .debug_loc     0x00000000000110ea      0x4b2 build_flappy_bird/link.o
- .debug_loc     0x000000000001159c      0x399 build_flappy_bird/link_mac.o
- .debug_loc     0x0000000000011935      0x4be build_flappy_bird/link_phy.o
- .debug_loc     0x0000000000011df3      0x230 build_flappy_bird/link_data.o
- .debug_loc     0x0000000000012023      0x43c build_flappy_bird/wiring_digital.o
- .debug_loc     0x000000000001245f     0x13b8 build_flappy_bird/Print.o
- .debug_loc     0x0000000000013817      0x1e2 build_flappy_bird/HardwareSerial.o
- .debug_loc     0x00000000000139f9       0x84 build_flappy_bird/HardwareSerial2.o
- .debug_loc     0x0000000000013a7d      0x538 build_flappy_bird/SPI.o
- .debug_loc     0x0000000000013fb5      0x935 build_flappy_bird/Wire.o
- .debug_loc     0x00000000000148ea      0x418 build_flappy_bird/twi.o
- .debug_loc     0x0000000000014d02       0xfd build_flappy_bird/mini_cpp.o
+ .debug_loc     0x000000000000c388      0x351 build_flappy_bird/scr_startup.o
+ .debug_loc     0x000000000000c6d9       0x99 build_flappy_bird/scr_charts_game.o
+ .debug_loc     0x000000000000c772      0x2ee build_flappy_bird/scr_flappy_bird.o
+ .debug_loc     0x000000000000ca60       0x25 build_flappy_bird/task_system.o
+ .debug_loc     0x000000000000ca85      0x401 build_flappy_bird/app_eeprom.o
+ .debug_loc     0x000000000000ce86      0x288 build_flappy_bird/app_bsp.o
+ .debug_loc     0x000000000000d10e       0x89 build_flappy_bird/app_bird.o
+ .debug_loc     0x000000000000d197     0x1098 build_flappy_bird/shell.o
+ .debug_loc     0x000000000000e22f       0x61 build_flappy_bird/task_shell.o
+ .debug_loc     0x000000000000e290       0x32 build_flappy_bird/task_life.o
+ .debug_loc     0x000000000000e2c2      0x433 build_flappy_bird/task_fw.o
+ .debug_loc     0x000000000000e6f5       0x25 build_flappy_bird/task_display.o
+ .debug_loc     0x000000000000e71a      0x18f build_flappy_bird/task_if.o
+ .debug_loc     0x000000000000e8a9       0xf8 build_flappy_bird/task_uart_if.o
+ .debug_loc     0x000000000000e9a1      0x267 build_flappy_bird/view_render.o
+ .debug_loc     0x000000000000ec08      0x14c build_flappy_bird/screen_manager.o
+ .debug_loc     0x000000000000ed54     0x18c8 build_flappy_bird/Adafruit_GFX.o
+ .debug_loc     0x000000000001061c      0x74a build_flappy_bird/Adafruit_oled_drv.o
+ .debug_loc     0x0000000000010d66      0x128 build_flappy_bird/eeprom.o
+ .debug_loc     0x0000000000010e8e       0x6f build_flappy_bird/link_hal.o
+ .debug_loc     0x0000000000010efd      0x4b2 build_flappy_bird/link.o
+ .debug_loc     0x00000000000113af      0x399 build_flappy_bird/link_mac.o
+ .debug_loc     0x0000000000011748      0x4be build_flappy_bird/link_phy.o
+ .debug_loc     0x0000000000011c06      0x230 build_flappy_bird/link_data.o
+ .debug_loc     0x0000000000011e36      0x43c build_flappy_bird/wiring_digital.o
+ .debug_loc     0x0000000000012272     0x13b8 build_flappy_bird/Print.o
+ .debug_loc     0x000000000001362a      0x1e2 build_flappy_bird/HardwareSerial.o
+ .debug_loc     0x000000000001380c       0x84 build_flappy_bird/HardwareSerial2.o
+ .debug_loc     0x0000000000013890      0x538 build_flappy_bird/SPI.o
+ .debug_loc     0x0000000000013dc8      0x935 build_flappy_bird/Wire.o
+ .debug_loc     0x00000000000146fd      0x418 build_flappy_bird/twi.o
+ .debug_loc     0x0000000000014b15       0xfd build_flappy_bird/mini_cpp.o
 
 .debug_aranges  0x0000000000000000     0x20b8
  .debug_aranges
@@ -5404,7 +5404,7 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_aranges
                 0x0000000000002058       0x60 build_flappy_bird/mini_cpp.o
 
-.debug_ranges   0x0000000000000000     0x2a68
+.debug_ranges   0x0000000000000000     0x2a98
  .debug_ranges  0x0000000000000000       0x10 build_flappy_bird/fsm.o
  .debug_ranges  0x0000000000000010       0xf0 build_flappy_bird/task.o
  .debug_ranges  0x0000000000000100       0x90 build_flappy_bird/timer.o
@@ -5441,41 +5441,41 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_ranges  0x00000000000015a8      0x2d8 build_flappy_bird/scr_idle.o
  .debug_ranges  0x0000000000001880       0x70 build_flappy_bird/scr_menu_game.o
  .debug_ranges  0x00000000000018f0       0x18 build_flappy_bird/scr_game_setting.o
- .debug_ranges  0x0000000000001908       0x68 build_flappy_bird/scr_startup.o
- .debug_ranges  0x0000000000001970       0x18 build_flappy_bird/scr_charts_game.o
- .debug_ranges  0x0000000000001988       0xa0 build_flappy_bird/scr_flappy_bird.o
- .debug_ranges  0x0000000000001a28       0x10 build_flappy_bird/task_system.o
- .debug_ranges  0x0000000000001a38       0xa0 build_flappy_bird/app_eeprom.o
- .debug_ranges  0x0000000000001ad8       0x28 build_flappy_bird/app.o
- .debug_ranges  0x0000000000001b00       0x20 build_flappy_bird/app_bsp.o
- .debug_ranges  0x0000000000001b20       0x28 build_flappy_bird/app_bird.o
- .debug_ranges  0x0000000000001b48      0x118 build_flappy_bird/shell.o
- .debug_ranges  0x0000000000001c60       0x18 build_flappy_bird/task_shell.o
- .debug_ranges  0x0000000000001c78       0x10 build_flappy_bird/task_life.o
- .debug_ranges  0x0000000000001c88       0x78 build_flappy_bird/task_fw.o
- .debug_ranges  0x0000000000001d00       0x10 build_flappy_bird/task_display.o
- .debug_ranges  0x0000000000001d10       0x28 build_flappy_bird/task_if.o
- .debug_ranges  0x0000000000001d38       0x10 build_flappy_bird/task_uart_if.o
- .debug_ranges  0x0000000000001d48       0x48 build_flappy_bird/view_render.o
- .debug_ranges  0x0000000000001d90       0x38 build_flappy_bird/screen_manager.o
- .debug_ranges  0x0000000000001dc8      0x230 build_flappy_bird/Adafruit_GFX.o
- .debug_ranges  0x0000000000001ff8      0x108 build_flappy_bird/Adafruit_oled_drv.o
- .debug_ranges  0x0000000000002100       0x20 build_flappy_bird/eeprom.o
- .debug_ranges  0x0000000000002120       0x28 build_flappy_bird/link_hal.o
- .debug_ranges  0x0000000000002148       0xf0 build_flappy_bird/link.o
- .debug_ranges  0x0000000000002238      0x180 build_flappy_bird/link_mac.o
- .debug_ranges  0x00000000000023b8      0x150 build_flappy_bird/link_phy.o
- .debug_ranges  0x0000000000002508       0xb0 build_flappy_bird/link_data.o
- .debug_ranges  0x00000000000025b8       0x20 build_flappy_bird/wiring_digital.o
- .debug_ranges  0x00000000000025d8      0x1e8 build_flappy_bird/Print.o
- .debug_ranges  0x00000000000027c0       0x50 build_flappy_bird/HardwareSerial.o
- .debug_ranges  0x0000000000002810       0x38 build_flappy_bird/HardwareSerial2.o
- .debug_ranges  0x0000000000002848       0x88 build_flappy_bird/SPI.o
- .debug_ranges  0x00000000000028d0       0xf0 build_flappy_bird/Wire.o
- .debug_ranges  0x00000000000029c0       0x58 build_flappy_bird/twi.o
- .debug_ranges  0x0000000000002a18       0x50 build_flappy_bird/mini_cpp.o
+ .debug_ranges  0x0000000000001908       0x98 build_flappy_bird/scr_startup.o
+ .debug_ranges  0x00000000000019a0       0x18 build_flappy_bird/scr_charts_game.o
+ .debug_ranges  0x00000000000019b8       0xa0 build_flappy_bird/scr_flappy_bird.o
+ .debug_ranges  0x0000000000001a58       0x10 build_flappy_bird/task_system.o
+ .debug_ranges  0x0000000000001a68       0xa0 build_flappy_bird/app_eeprom.o
+ .debug_ranges  0x0000000000001b08       0x28 build_flappy_bird/app.o
+ .debug_ranges  0x0000000000001b30       0x20 build_flappy_bird/app_bsp.o
+ .debug_ranges  0x0000000000001b50       0x28 build_flappy_bird/app_bird.o
+ .debug_ranges  0x0000000000001b78      0x118 build_flappy_bird/shell.o
+ .debug_ranges  0x0000000000001c90       0x18 build_flappy_bird/task_shell.o
+ .debug_ranges  0x0000000000001ca8       0x10 build_flappy_bird/task_life.o
+ .debug_ranges  0x0000000000001cb8       0x78 build_flappy_bird/task_fw.o
+ .debug_ranges  0x0000000000001d30       0x10 build_flappy_bird/task_display.o
+ .debug_ranges  0x0000000000001d40       0x28 build_flappy_bird/task_if.o
+ .debug_ranges  0x0000000000001d68       0x10 build_flappy_bird/task_uart_if.o
+ .debug_ranges  0x0000000000001d78       0x48 build_flappy_bird/view_render.o
+ .debug_ranges  0x0000000000001dc0       0x38 build_flappy_bird/screen_manager.o
+ .debug_ranges  0x0000000000001df8      0x230 build_flappy_bird/Adafruit_GFX.o
+ .debug_ranges  0x0000000000002028      0x108 build_flappy_bird/Adafruit_oled_drv.o
+ .debug_ranges  0x0000000000002130       0x20 build_flappy_bird/eeprom.o
+ .debug_ranges  0x0000000000002150       0x28 build_flappy_bird/link_hal.o
+ .debug_ranges  0x0000000000002178       0xf0 build_flappy_bird/link.o
+ .debug_ranges  0x0000000000002268      0x180 build_flappy_bird/link_mac.o
+ .debug_ranges  0x00000000000023e8      0x150 build_flappy_bird/link_phy.o
+ .debug_ranges  0x0000000000002538       0xb0 build_flappy_bird/link_data.o
+ .debug_ranges  0x00000000000025e8       0x20 build_flappy_bird/wiring_digital.o
+ .debug_ranges  0x0000000000002608      0x1e8 build_flappy_bird/Print.o
+ .debug_ranges  0x00000000000027f0       0x50 build_flappy_bird/HardwareSerial.o
+ .debug_ranges  0x0000000000002840       0x38 build_flappy_bird/HardwareSerial2.o
+ .debug_ranges  0x0000000000002878       0x88 build_flappy_bird/SPI.o
+ .debug_ranges  0x0000000000002900       0xf0 build_flappy_bird/Wire.o
+ .debug_ranges  0x00000000000029f0       0x58 build_flappy_bird/twi.o
+ .debug_ranges  0x0000000000002a48       0x50 build_flappy_bird/mini_cpp.o
 
-.debug_line     0x0000000000000000    0x240f8
+.debug_line     0x0000000000000000    0x2410f
  .debug_line    0x0000000000000000      0x18c build_flappy_bird/fsm.o
  .debug_line    0x000000000000018c      0x9e5 build_flappy_bird/task.o
  .debug_line    0x0000000000000b71      0x599 build_flappy_bird/timer.o
@@ -5513,44 +5513,44 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_line    0x000000000000ee17      0xf8b build_flappy_bird/scr_idle.o
  .debug_line    0x000000000000fda2      0x867 build_flappy_bird/scr_menu_game.o
  .debug_line    0x0000000000010609      0x862 build_flappy_bird/scr_game_setting.o
- .debug_line    0x0000000000010e6b      0xbb1 build_flappy_bird/scr_startup.o
- .debug_line    0x0000000000011a1c      0x864 build_flappy_bird/scr_charts_game.o
- .debug_line    0x0000000000012280      0x3e6 build_flappy_bird/screens_bitmap.o
- .debug_line    0x0000000000012666      0xae5 build_flappy_bird/scr_flappy_bird.o
- .debug_line    0x000000000001314b      0x53d build_flappy_bird/task_system.o
- .debug_line    0x0000000000013688      0x7bb build_flappy_bird/app_eeprom.o
- .debug_line    0x0000000000013e43      0xc34 build_flappy_bird/app.o
- .debug_line    0x0000000000014a77      0x4cd build_flappy_bird/app_non_clear_ram.o
- .debug_line    0x0000000000014f44      0x69e build_flappy_bird/app_bsp.o
- .debug_line    0x00000000000155e2      0x50a build_flappy_bird/app_bird.o
- .debug_line    0x0000000000015aec     0x1462 build_flappy_bird/shell.o
- .debug_line    0x0000000000016f4e      0x648 build_flappy_bird/task_shell.o
- .debug_line    0x0000000000017596      0x568 build_flappy_bird/task_life.o
- .debug_line    0x0000000000017afe      0xb1f build_flappy_bird/task_fw.o
- .debug_line    0x000000000001861d      0x490 build_flappy_bird/task_list.o
- .debug_line    0x0000000000018aad      0x5bc build_flappy_bird/task_display.o
- .debug_line    0x0000000000019069      0x57f build_flappy_bird/task_if.o
- .debug_line    0x00000000000195e8      0x5ee build_flappy_bird/task_uart_if.o
- .debug_line    0x0000000000019bd6      0x7c1 build_flappy_bird/view_render.o
- .debug_line    0x000000000001a397      0x730 build_flappy_bird/screen_manager.o
- .debug_line    0x000000000001aac7     0x14a1 build_flappy_bird/Adafruit_GFX.o
- .debug_line    0x000000000001bf68      0xb82 build_flappy_bird/Adafruit_oled_drv.o
- .debug_line    0x000000000001caea      0x4c9 build_flappy_bird/eeprom.o
- .debug_line    0x000000000001cfb3      0x5b9 build_flappy_bird/link_hal.o
- .debug_line    0x000000000001d56c      0x9b3 build_flappy_bird/link.o
- .debug_line    0x000000000001df1f      0xbfb build_flappy_bird/link_mac.o
- .debug_line    0x000000000001eb1a      0xd3c build_flappy_bird/link_phy.o
- .debug_line    0x000000000001f856      0x809 build_flappy_bird/link_data.o
- .debug_line    0x000000000002005f      0x6b7 build_flappy_bird/wiring_digital.o
- .debug_line    0x0000000000020716      0xaad build_flappy_bird/Print.o
- .debug_line    0x00000000000211c3      0x6dc build_flappy_bird/HardwareSerial.o
- .debug_line    0x000000000002189f      0x68e build_flappy_bird/HardwareSerial2.o
- .debug_line    0x0000000000021f2d      0x7b1 build_flappy_bird/SPI.o
- .debug_line    0x00000000000226de      0xabc build_flappy_bird/Wire.o
- .debug_line    0x000000000002319a      0x8d0 build_flappy_bird/twi.o
- .debug_line    0x0000000000023a6a      0x68e build_flappy_bird/mini_cpp.o
+ .debug_line    0x0000000000010e6b      0xbbb build_flappy_bird/scr_startup.o
+ .debug_line    0x0000000000011a26      0x864 build_flappy_bird/scr_charts_game.o
+ .debug_line    0x000000000001228a      0x3e6 build_flappy_bird/screens_bitmap.o
+ .debug_line    0x0000000000012670      0xaf2 build_flappy_bird/scr_flappy_bird.o
+ .debug_line    0x0000000000013162      0x53d build_flappy_bird/task_system.o
+ .debug_line    0x000000000001369f      0x7bb build_flappy_bird/app_eeprom.o
+ .debug_line    0x0000000000013e5a      0xc34 build_flappy_bird/app.o
+ .debug_line    0x0000000000014a8e      0x4cd build_flappy_bird/app_non_clear_ram.o
+ .debug_line    0x0000000000014f5b      0x69e build_flappy_bird/app_bsp.o
+ .debug_line    0x00000000000155f9      0x50a build_flappy_bird/app_bird.o
+ .debug_line    0x0000000000015b03     0x1462 build_flappy_bird/shell.o
+ .debug_line    0x0000000000016f65      0x648 build_flappy_bird/task_shell.o
+ .debug_line    0x00000000000175ad      0x568 build_flappy_bird/task_life.o
+ .debug_line    0x0000000000017b15      0xb1f build_flappy_bird/task_fw.o
+ .debug_line    0x0000000000018634      0x490 build_flappy_bird/task_list.o
+ .debug_line    0x0000000000018ac4      0x5bc build_flappy_bird/task_display.o
+ .debug_line    0x0000000000019080      0x57f build_flappy_bird/task_if.o
+ .debug_line    0x00000000000195ff      0x5ee build_flappy_bird/task_uart_if.o
+ .debug_line    0x0000000000019bed      0x7c1 build_flappy_bird/view_render.o
+ .debug_line    0x000000000001a3ae      0x730 build_flappy_bird/screen_manager.o
+ .debug_line    0x000000000001aade     0x14a1 build_flappy_bird/Adafruit_GFX.o
+ .debug_line    0x000000000001bf7f      0xb82 build_flappy_bird/Adafruit_oled_drv.o
+ .debug_line    0x000000000001cb01      0x4c9 build_flappy_bird/eeprom.o
+ .debug_line    0x000000000001cfca      0x5b9 build_flappy_bird/link_hal.o
+ .debug_line    0x000000000001d583      0x9b3 build_flappy_bird/link.o
+ .debug_line    0x000000000001df36      0xbfb build_flappy_bird/link_mac.o
+ .debug_line    0x000000000001eb31      0xd3c build_flappy_bird/link_phy.o
+ .debug_line    0x000000000001f86d      0x809 build_flappy_bird/link_data.o
+ .debug_line    0x0000000000020076      0x6b7 build_flappy_bird/wiring_digital.o
+ .debug_line    0x000000000002072d      0xaad build_flappy_bird/Print.o
+ .debug_line    0x00000000000211da      0x6dc build_flappy_bird/HardwareSerial.o
+ .debug_line    0x00000000000218b6      0x68e build_flappy_bird/HardwareSerial2.o
+ .debug_line    0x0000000000021f44      0x7b1 build_flappy_bird/SPI.o
+ .debug_line    0x00000000000226f5      0xabc build_flappy_bird/Wire.o
+ .debug_line    0x00000000000231b1      0x8d0 build_flappy_bird/twi.o
+ .debug_line    0x0000000000023a81      0x68e build_flappy_bird/mini_cpp.o
 
-.debug_str      0x0000000000000000    0x107fa
+.debug_str      0x0000000000000000    0x107fe
  .debug_str     0x0000000000000000      0x1be build_flappy_bird/fsm.o
                                         0x252 (size before relaxing)
  .debug_str     0x00000000000001be      0x564 build_flappy_bird/task.o
@@ -5625,77 +5625,77 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
                                        0x1853 (size before relaxing)
  .debug_str     0x000000000000a4c0      0x12a build_flappy_bird/scr_game_setting.o
                                        0x18b3 (size before relaxing)
- .debug_str     0x000000000000a5ea      0x138 build_flappy_bird/scr_startup.o
-                                       0x1a61 (size before relaxing)
- .debug_str     0x000000000000a722      0x106 build_flappy_bird/scr_charts_game.o
+ .debug_str     0x000000000000a5ea      0x15d build_flappy_bird/scr_startup.o
+                                       0x1a7d (size before relaxing)
+ .debug_str     0x000000000000a747      0x106 build_flappy_bird/scr_charts_game.o
                                        0x1979 (size before relaxing)
- .debug_str     0x000000000000a828      0x10f build_flappy_bird/screens_bitmap.o
+ .debug_str     0x000000000000a84d       0xfc build_flappy_bird/screens_bitmap.o
                                         0xe04 (size before relaxing)
- .debug_str     0x000000000000a937      0x257 build_flappy_bird/scr_flappy_bird.o
+ .debug_str     0x000000000000a949      0x249 build_flappy_bird/scr_flappy_bird.o
                                        0x1a1f (size before relaxing)
- .debug_str     0x000000000000ab8e       0xa8 build_flappy_bird/task_system.o
+ .debug_str     0x000000000000ab92       0xa8 build_flappy_bird/task_system.o
                                         0x5cb (size before relaxing)
- .debug_str     0x000000000000ac36      0x160 build_flappy_bird/app_eeprom.o
+ .debug_str     0x000000000000ac3a      0x160 build_flappy_bird/app_eeprom.o
                                         0x669 (size before relaxing)
- .debug_str     0x000000000000ad96      0xf1d build_flappy_bird/app.o
+ .debug_str     0x000000000000ad9a      0xf1d build_flappy_bird/app.o
                                        0x2c48 (size before relaxing)
- .debug_str     0x000000000000bcb3       0x22 build_flappy_bird/app_non_clear_ram.o
+ .debug_str     0x000000000000bcb7       0x22 build_flappy_bird/app_non_clear_ram.o
                                         0x3cf (size before relaxing)
- .debug_str     0x000000000000bcd5       0xa0 build_flappy_bird/app_bsp.o
+ .debug_str     0x000000000000bcd9       0xa0 build_flappy_bird/app_bsp.o
                                         0x88d (size before relaxing)
- .debug_str     0x000000000000bd75       0xac build_flappy_bird/app_bird.o
+ .debug_str     0x000000000000bd79       0xac build_flappy_bird/app_bird.o
                                         0x7f2 (size before relaxing)
- .debug_str     0x000000000000be21      0x3ee build_flappy_bird/shell.o
+ .debug_str     0x000000000000be25      0x3ee build_flappy_bird/shell.o
                                        0x1ae7 (size before relaxing)
- .debug_str     0x000000000000c20f       0x49 build_flappy_bird/task_shell.o
+ .debug_str     0x000000000000c213       0x49 build_flappy_bird/task_shell.o
                                         0x69d (size before relaxing)
- .debug_str     0x000000000000c258       0x3b build_flappy_bird/task_life.o
+ .debug_str     0x000000000000c25c       0x3b build_flappy_bird/task_life.o
                                         0x555 (size before relaxing)
- .debug_str     0x000000000000c293      0x356 build_flappy_bird/task_fw.o
+ .debug_str     0x000000000000c297      0x356 build_flappy_bird/task_fw.o
                                         0xf5c (size before relaxing)
- .debug_str     0x000000000000c5e9       0x1a build_flappy_bird/task_list.o
+ .debug_str     0x000000000000c5ed       0x1a build_flappy_bird/task_list.o
                                         0x5d0 (size before relaxing)
- .debug_str     0x000000000000c603       0x75 build_flappy_bird/task_display.o
+ .debug_str     0x000000000000c607       0x75 build_flappy_bird/task_display.o
                                        0x120c (size before relaxing)
- .debug_str     0x000000000000c678       0x4e build_flappy_bird/task_if.o
+ .debug_str     0x000000000000c67c       0x4e build_flappy_bird/task_if.o
                                         0x67f (size before relaxing)
- .debug_str     0x000000000000c6c6      0x14a build_flappy_bird/task_uart_if.o
+ .debug_str     0x000000000000c6ca      0x14a build_flappy_bird/task_uart_if.o
                                         0x78e (size before relaxing)
- .debug_str     0x000000000000c810      0x1b9 build_flappy_bird/view_render.o
+ .debug_str     0x000000000000c814      0x1b9 build_flappy_bird/view_render.o
                                        0x1157 (size before relaxing)
- .debug_str     0x000000000000c9c9      0x155 build_flappy_bird/screen_manager.o
+ .debug_str     0x000000000000c9cd      0x155 build_flappy_bird/screen_manager.o
                                        0x14b2 (size before relaxing)
- .debug_str     0x000000000000cb1e      0x785 build_flappy_bird/Adafruit_GFX.o
+ .debug_str     0x000000000000cb22      0x785 build_flappy_bird/Adafruit_GFX.o
                                        0x197e (size before relaxing)
- .debug_str     0x000000000000d2a3      0x637 build_flappy_bird/Adafruit_oled_drv.o
+ .debug_str     0x000000000000d2a7      0x637 build_flappy_bird/Adafruit_oled_drv.o
                                        0x160d (size before relaxing)
- .debug_str     0x000000000000d8da       0x21 build_flappy_bird/eeprom.o
+ .debug_str     0x000000000000d8de       0x21 build_flappy_bird/eeprom.o
                                         0x3b3 (size before relaxing)
- .debug_str     0x000000000000d8fb       0xdd build_flappy_bird/link_hal.o
+ .debug_str     0x000000000000d8ff       0xdd build_flappy_bird/link_hal.o
                                         0x4ff (size before relaxing)
- .debug_str     0x000000000000d9d8      0x3e4 build_flappy_bird/link.o
+ .debug_str     0x000000000000d9dc      0x3e4 build_flappy_bird/link.o
                                         0xcf8 (size before relaxing)
- .debug_str     0x000000000000ddbc      0x556 build_flappy_bird/link_mac.o
+ .debug_str     0x000000000000ddc0      0x556 build_flappy_bird/link_mac.o
                                         0xfa4 (size before relaxing)
- .debug_str     0x000000000000e312      0x46a build_flappy_bird/link_phy.o
+ .debug_str     0x000000000000e316      0x46a build_flappy_bird/link_phy.o
                                         0xe67 (size before relaxing)
- .debug_str     0x000000000000e77c       0xe9 build_flappy_bird/link_data.o
+ .debug_str     0x000000000000e780       0xe9 build_flappy_bird/link_data.o
                                         0x604 (size before relaxing)
- .debug_str     0x000000000000e865       0x56 build_flappy_bird/wiring_digital.o
+ .debug_str     0x000000000000e869       0x56 build_flappy_bird/wiring_digital.o
                                         0xed5 (size before relaxing)
- .debug_str     0x000000000000e8bb      0x330 build_flappy_bird/Print.o
+ .debug_str     0x000000000000e8bf      0x330 build_flappy_bird/Print.o
                                        0x10a9 (size before relaxing)
- .debug_str     0x000000000000ebeb     0x1145 build_flappy_bird/HardwareSerial.o
+ .debug_str     0x000000000000ebef     0x1145 build_flappy_bird/HardwareSerial.o
                                        0x1f7e (size before relaxing)
- .debug_str     0x000000000000fd30       0xc1 build_flappy_bird/HardwareSerial2.o
+ .debug_str     0x000000000000fd34       0xc1 build_flappy_bird/HardwareSerial2.o
                                        0x1fb6 (size before relaxing)
- .debug_str     0x000000000000fdf1       0xfb build_flappy_bird/SPI.o
+ .debug_str     0x000000000000fdf5       0xfb build_flappy_bird/SPI.o
                                         0x9d8 (size before relaxing)
- .debug_str     0x000000000000feec      0x6d5 build_flappy_bird/Wire.o
+ .debug_str     0x000000000000fef0      0x6d5 build_flappy_bird/Wire.o
                                        0x24c1 (size before relaxing)
- .debug_str     0x00000000000105c1       0xee build_flappy_bird/twi.o
+ .debug_str     0x00000000000105c5       0xee build_flappy_bird/twi.o
                                        0x1401 (size before relaxing)
- .debug_str     0x00000000000106af      0x14b build_flappy_bird/mini_cpp.o
+ .debug_str     0x00000000000106b3      0x14b build_flappy_bird/mini_cpp.o
                                         0x977 (size before relaxing)
 
 .comment        0x0000000000000000       0x49
