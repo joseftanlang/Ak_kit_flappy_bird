@@ -1,0 +1,6 @@
+sources/driver/buzzer/buzzer.c:83:6:BUZZER_Init	56	static
+sources/driver/buzzer/buzzer.c:156:6:BUZZER_Disable	0	static
+sources/driver/buzzer/buzzer.c:136:6:BUZZER_Enable	8	static
+sources/driver/buzzer/buzzer.c:50:6:buzzer_irq	16	static
+sources/driver/buzzer/buzzer.c:180:6:BUZZER_PlaySound	0	static
+sources/driver/buzzer/buzzer.c:189:6:BUZZER_Sleep	0	static
