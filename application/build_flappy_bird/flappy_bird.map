@@ -210,7 +210,7 @@ Discarded input sections
                 0x0000000000000000       0x30 build_flappy_bird/tsm.o
  .debug_ranges  0x0000000000000000       0x20 build_flappy_bird/tsm.o
  .debug_line    0x0000000000000000      0x2ca build_flappy_bird/tsm.o
- .debug_str     0x0000000000000000      0x314 build_flappy_bird/tsm.o
+ .debug_str     0x0000000000000000      0x315 build_flappy_bird/tsm.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/tsm.o
  .debug_frame   0x0000000000000000       0x6c build_flappy_bird/tsm.o
  .ARM.attributes
@@ -347,7 +347,7 @@ Discarded input sections
                 0x0000000000000000       0x38 build_flappy_bird/gpio_output.o
  .debug_ranges  0x0000000000000000       0x28 build_flappy_bird/gpio_output.o
  .debug_line    0x0000000000000000      0x234 build_flappy_bird/gpio_output.o
- .debug_str     0x0000000000000000      0x240 build_flappy_bird/gpio_output.o
+ .debug_str     0x0000000000000000      0x241 build_flappy_bird/gpio_output.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/gpio_output.o
  .debug_frame   0x0000000000000000       0x60 build_flappy_bird/gpio_output.o
  .ARM.attributes
@@ -591,7 +591,7 @@ Discarded input sections
                 0x0000000000000000       0x80 build_flappy_bird/stm32l1xx_syscfg.o
  .debug_ranges  0x0000000000000000       0x70 build_flappy_bird/stm32l1xx_syscfg.o
  .debug_line    0x0000000000000000      0x63a build_flappy_bird/stm32l1xx_syscfg.o
- .debug_str     0x0000000000000000      0x4ab build_flappy_bird/stm32l1xx_syscfg.o
+ .debug_str     0x0000000000000000      0x4ac build_flappy_bird/stm32l1xx_syscfg.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/stm32l1xx_syscfg.o
  .debug_frame   0x0000000000000000       0xf4 build_flappy_bird/stm32l1xx_syscfg.o
  .ARM.attributes
@@ -930,7 +930,7 @@ Discarded input sections
                 0x0000000000000000      0x1d0 build_flappy_bird/stm32l1xx_rtc.o
  .debug_ranges  0x0000000000000000      0x1c0 build_flappy_bird/stm32l1xx_rtc.o
  .debug_line    0x0000000000000000     0x162c build_flappy_bird/stm32l1xx_rtc.o
- .debug_str     0x0000000000000000      0xb72 build_flappy_bird/stm32l1xx_rtc.o
+ .debug_str     0x0000000000000000      0xb73 build_flappy_bird/stm32l1xx_rtc.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/stm32l1xx_rtc.o
  .debug_frame   0x0000000000000000      0x4a0 build_flappy_bird/stm32l1xx_rtc.o
  .ARM.attributes
@@ -1056,7 +1056,7 @@ Discarded input sections
                 0x0000000000000000       0x50 build_flappy_bird/stm32l1xx_comp.o
  .debug_ranges  0x0000000000000000       0x40 build_flappy_bird/stm32l1xx_comp.o
  .debug_line    0x0000000000000000      0x39c build_flappy_bird/stm32l1xx_comp.o
- .debug_str     0x0000000000000000      0x2d6 build_flappy_bird/stm32l1xx_comp.o
+ .debug_str     0x0000000000000000      0x2d7 build_flappy_bird/stm32l1xx_comp.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/stm32l1xx_comp.o
  .debug_frame   0x0000000000000000       0x88 build_flappy_bird/stm32l1xx_comp.o
  .ARM.attributes
@@ -1104,7 +1104,7 @@ Discarded input sections
                 0x0000000000000000       0x90 build_flappy_bird/stm32l1xx_dac.o
  .debug_ranges  0x0000000000000000       0x80 build_flappy_bird/stm32l1xx_dac.o
  .debug_line    0x0000000000000000      0x596 build_flappy_bird/stm32l1xx_dac.o
- .debug_str     0x0000000000000000      0x490 build_flappy_bird/stm32l1xx_dac.o
+ .debug_str     0x0000000000000000      0x491 build_flappy_bird/stm32l1xx_dac.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/stm32l1xx_dac.o
  .debug_frame   0x0000000000000000      0x150 build_flappy_bird/stm32l1xx_dac.o
  .ARM.attributes
@@ -1187,7 +1187,7 @@ Discarded input sections
                 0x0000000000000000       0x28 build_flappy_bird/dtostrf.o
  .debug_ranges  0x0000000000000000       0x58 build_flappy_bird/dtostrf.o
  .debug_line    0x0000000000000000      0x367 build_flappy_bird/dtostrf.o
- .debug_str     0x0000000000000000      0x2b9 build_flappy_bird/dtostrf.o
+ .debug_str     0x0000000000000000      0x2ba build_flappy_bird/dtostrf.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/dtostrf.o
  .debug_frame   0x0000000000000000       0x68 build_flappy_bird/dtostrf.o
  .ARM.attributes
@@ -1202,7 +1202,7 @@ Discarded input sections
                 0x0000000000000000       0x20 build_flappy_bird/hooks.o
  .debug_ranges  0x0000000000000000       0x10 build_flappy_bird/hooks.o
  .debug_line    0x0000000000000000       0x68 build_flappy_bird/hooks.o
- .debug_str     0x0000000000000000       0xfe build_flappy_bird/hooks.o
+ .debug_str     0x0000000000000000       0xff build_flappy_bird/hooks.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/hooks.o
  .debug_frame   0x0000000000000000       0x20 build_flappy_bird/hooks.o
  .ARM.attributes
@@ -1336,7 +1336,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build_flappy_bird/app_data.o
  .debug_line    0x0000000000000000      0x321 build_flappy_bird/app_data.o
- .debug_str     0x0000000000000000      0x323 build_flappy_bird/app_data.o
+ .debug_str     0x0000000000000000      0x324 build_flappy_bird/app_data.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/app_data.o
  .ARM.attributes
                 0x0000000000000000       0x2d build_flappy_bird/app_data.o
@@ -1381,7 +1381,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build_flappy_bird/view_item.o
  .debug_line    0x0000000000000000       0x1d build_flappy_bird/view_item.o
- .debug_str     0x0000000000000000      0x19a build_flappy_bird/view_item.o
+ .debug_str     0x0000000000000000      0x19b build_flappy_bird/view_item.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/view_item.o
  .ARM.attributes
                 0x0000000000000000       0x2d build_flappy_bird/view_item.o
@@ -1433,7 +1433,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build_flappy_bird/glcdfont.o
  .debug_line    0x0000000000000000       0x4e build_flappy_bird/glcdfont.o
- .debug_str     0x0000000000000000      0x142 build_flappy_bird/glcdfont.o
+ .debug_str     0x0000000000000000      0x143 build_flappy_bird/glcdfont.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/glcdfont.o
  .ARM.attributes
                 0x0000000000000000       0x2d build_flappy_bird/glcdfont.o
@@ -1484,7 +1484,7 @@ Discarded input sections
                 0x0000000000000000       0x28 build_flappy_bird/wiring_shift.o
  .debug_ranges  0x0000000000000000       0x18 build_flappy_bird/wiring_shift.o
  .debug_line    0x0000000000000000      0x561 build_flappy_bird/wiring_shift.o
- .debug_str     0x0000000000000000      0xd65 build_flappy_bird/wiring_shift.o
+ .debug_str     0x0000000000000000      0xd66 build_flappy_bird/wiring_shift.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/wiring_shift.o
  .debug_frame   0x0000000000000000       0x54 build_flappy_bird/wiring_shift.o
  .ARM.attributes
@@ -1567,7 +1567,7 @@ Discarded input sections
                 0x0000000000000000       0x90 build_flappy_bird/Stream.o
  .debug_ranges  0x0000000000000000      0x158 build_flappy_bird/Stream.o
  .debug_line    0x0000000000000000      0xab0 build_flappy_bird/Stream.o
- .debug_str     0x0000000000000000     0x1cdf build_flappy_bird/Stream.o
+ .debug_str     0x0000000000000000     0x1ce0 build_flappy_bird/Stream.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/Stream.o
  .debug_frame   0x0000000000000000      0x1d8 build_flappy_bird/Stream.o
  .ARM.attributes
@@ -1750,7 +1750,7 @@ Discarded input sections
                 0x0000000000000000      0x298 build_flappy_bird/WString.o
  .debug_ranges  0x0000000000000000      0x590 build_flappy_bird/WString.o
  .debug_line    0x0000000000000000     0x1998 build_flappy_bird/WString.o
- .debug_str     0x0000000000000000     0x1b8b build_flappy_bird/WString.o
+ .debug_str     0x0000000000000000     0x1b8c build_flappy_bird/WString.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/WString.o
  .debug_frame   0x0000000000000000      0x820 build_flappy_bird/WString.o
  .ARM.attributes
@@ -1777,7 +1777,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build_flappy_bird/WMath.o
  .debug_ranges  0x0000000000000000       0x38 build_flappy_bird/WMath.o
  .debug_line    0x0000000000000000      0x565 build_flappy_bird/WMath.o
- .debug_str     0x0000000000000000      0xd8c build_flappy_bird/WMath.o
+ .debug_str     0x0000000000000000      0xd8d build_flappy_bird/WMath.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/WMath.o
  .debug_frame   0x0000000000000000       0x88 build_flappy_bird/WMath.o
  .ARM.attributes
@@ -1796,7 +1796,7 @@ Discarded input sections
                 0x0000000000000000       0x38 build_flappy_bird/itoa.o
  .debug_ranges  0x0000000000000000       0x28 build_flappy_bird/itoa.o
  .debug_line    0x0000000000000000      0x1d7 build_flappy_bird/itoa.o
- .debug_str     0x0000000000000000      0x1f7 build_flappy_bird/itoa.o
+ .debug_str     0x0000000000000000      0x1f8 build_flappy_bird/itoa.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/itoa.o
  .debug_frame   0x0000000000000000       0x7c build_flappy_bird/itoa.o
  .ARM.attributes
@@ -1833,7 +1833,7 @@ Discarded input sections
                 0x0000000000000000       0x68 build_flappy_bird/IPAddress.o
  .debug_ranges  0x0000000000000000       0x70 build_flappy_bird/IPAddress.o
  .debug_line    0x0000000000000000      0x7b6 build_flappy_bird/IPAddress.o
- .debug_str     0x0000000000000000     0x1cd8 build_flappy_bird/IPAddress.o
+ .debug_str     0x0000000000000000     0x1cd9 build_flappy_bird/IPAddress.o
  .comment       0x0000000000000000       0x4a build_flappy_bird/IPAddress.o
  .debug_frame   0x0000000000000000       0xe4 build_flappy_bird/IPAddress.o
  .ARM.attributes
@@ -1982,7 +1982,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000       0x14 build_flappy_bird/sys_ctrl.o
  .debug_aranges
                 0x0000000000000000       0x20 build_flappy_bird/sys_ctrl.o
- .debug_str     0x0000000000000000       0x67 build_flappy_bird/sys_ctrl.o
+ .debug_str     0x0000000000000000       0x68 build_flappy_bird/sys_ctrl.o
  .ARM.attributes
                 0x0000000000000000       0x1b build_flappy_bird/sys_ctrl.o
  .text          0x0000000000000000        0x0 /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/lib/thumb/v7-m/nofp/libc.a(lib_a-atof.o)
@@ -5575,153 +5575,153 @@ LOAD /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-n
  .debug_line    0x0000000000023413      0x8d0 build_flappy_bird/twi.o
  .debug_line    0x0000000000023ce3      0x68e build_flappy_bird/mini_cpp.o
 
-.debug_str      0x0000000000000000    0x10931
- .debug_str     0x0000000000000000      0x1be build_flappy_bird/fsm.o
-                                        0x252 (size before relaxing)
- .debug_str     0x00000000000001be      0x577 build_flappy_bird/task.o
-                                        0x883 (size before relaxing)
- .debug_str     0x0000000000000735      0x1d5 build_flappy_bird/timer.o
-                                        0x5e4 (size before relaxing)
- .debug_str     0x000000000000090a      0x34e build_flappy_bird/message.o
-                                        0x688 (size before relaxing)
- .debug_str     0x0000000000000c58       0x41 build_flappy_bird/log_queue.o
-                                        0x20b (size before relaxing)
- .debug_str     0x0000000000000c99       0x9c build_flappy_bird/fifo.o
-                                        0x2b1 (size before relaxing)
- .debug_str     0x0000000000000d35      0x148 build_flappy_bird/ring_buffer.o
-                                        0x344 (size before relaxing)
- .debug_str     0x0000000000000e7d       0x90 build_flappy_bird/utils.o
-                                        0x25e (size before relaxing)
- .debug_str     0x0000000000000f0d      0x152 build_flappy_bird/xprintf.o
-                                        0x2be (size before relaxing)
- .debug_str     0x000000000000105f       0x5d build_flappy_bird/cmd_line.o
-                                        0x203 (size before relaxing)
- .debug_str     0x00000000000010bc       0xb2 build_flappy_bird/button.o
-                                        0x256 (size before relaxing)
- .debug_str     0x000000000000116e      0x14b build_flappy_bird/flash.o
-                                        0x2de (size before relaxing)
- .debug_str     0x00000000000012b9       0x9f build_flappy_bird/led.o
-                                        0x247 (size before relaxing)
- .debug_str     0x0000000000001358      0xa8f build_flappy_bird/buzzer.o
-                                        0xcc7 (size before relaxing)
- .debug_str     0x0000000000001de7       0x25 build_flappy_bird/buzzer_music.o
-                                        0x292 (size before relaxing)
- .debug_str     0x0000000000001e0c      0x24a build_flappy_bird/sys_dbg.o
-                                        0x669 (size before relaxing)
- .debug_str     0x0000000000002056      0x156 build_flappy_bird/sys_boot.o
-                                        0x38c (size before relaxing)
- .debug_str     0x00000000000021ac      0x1a8 build_flappy_bird/stm32l1xx_gpio.o
-                                        0x504 (size before relaxing)
- .debug_str     0x0000000000002354      0x49e build_flappy_bird/stm32l1xx_rcc.o
-                                        0x735 (size before relaxing)
- .debug_str     0x00000000000027f2      0x431 build_flappy_bird/stm32l1xx_usart.o
-                                        0x6f5 (size before relaxing)
- .debug_str     0x0000000000002c23      0x36a build_flappy_bird/stm32l1xx_spi.o
-                                        0x662 (size before relaxing)
- .debug_str     0x0000000000002f8d      0x193 build_flappy_bird/misc.o
-                                        0x3f4 (size before relaxing)
- .debug_str     0x0000000000003120      0x1d5 build_flappy_bird/stm32l1xx_exti.o
-                                        0x372 (size before relaxing)
- .debug_str     0x00000000000032f5      0x882 build_flappy_bird/stm32l1xx_tim.o
-                                        0xc99 (size before relaxing)
- .debug_str     0x0000000000003b77      0x61f build_flappy_bird/stm32l1xx_adc.o
-                                        0x832 (size before relaxing)
- .debug_str     0x0000000000004196      0x1cf build_flappy_bird/stm32l1xx_pwr.o
-                                        0x40e (size before relaxing)
- .debug_str     0x0000000000004365      0x617 build_flappy_bird/stm32l1xx_flash.o
-                                        0x807 (size before relaxing)
- .debug_str     0x000000000000497c       0xf0 build_flappy_bird/stm32l1xx_iwdg.o
-                                        0x292 (size before relaxing)
- .debug_str     0x0000000000004a6c      0x3ae build_flappy_bird/stm32l1xx_i2c.o
-                                        0x6b4 (size before relaxing)
- .debug_str     0x0000000000004e1a       0x70 build_flappy_bird/platform.o
-                                        0x258 (size before relaxing)
- .debug_str     0x0000000000004e8a      0x3a0 build_flappy_bird/system.o
+.debug_str      0x0000000000000000    0x10932
+ .debug_str     0x0000000000000000      0x1bf build_flappy_bird/fsm.o
+                                        0x253 (size before relaxing)
+ .debug_str     0x00000000000001bf      0x577 build_flappy_bird/task.o
                                         0x884 (size before relaxing)
- .debug_str     0x000000000000522a      0x404 build_flappy_bird/sys_cfg.o
-                                       0x1320 (size before relaxing)
- .debug_str     0x000000000000562e      0x3cd build_flappy_bird/io_cfg.o
-                                       0x124e (size before relaxing)
- .debug_str     0x00000000000059fb       0x37 build_flappy_bird/system_stm32l1xx.o
-                                        0x36e (size before relaxing)
- .debug_str     0x0000000000005a32     0x491c build_flappy_bird/scr_idle.o
-                                       0x4ffd (size before relaxing)
- .debug_str     0x000000000000a34e      0x172 build_flappy_bird/scr_menu_game.o
-                                       0x1853 (size before relaxing)
- .debug_str     0x000000000000a4c0      0x12a build_flappy_bird/scr_game_setting.o
-                                       0x18b3 (size before relaxing)
- .debug_str     0x000000000000a5ea      0x149 build_flappy_bird/scr_startup.o
-                                       0x1a69 (size before relaxing)
- .debug_str     0x000000000000a733      0x106 build_flappy_bird/scr_charts_game.o
-                                       0x1979 (size before relaxing)
- .debug_str     0x000000000000a839       0xfc build_flappy_bird/screens_bitmap.o
-                                        0xe04 (size before relaxing)
- .debug_str     0x000000000000a935      0x2fa build_flappy_bird/scr_flappy_bird.o
-                                       0x1ad1 (size before relaxing)
- .debug_str     0x000000000000ac2f       0xa8 build_flappy_bird/task_system.o
-                                        0x5cb (size before relaxing)
- .debug_str     0x000000000000acd7      0x160 build_flappy_bird/app_eeprom.o
-                                        0x669 (size before relaxing)
- .debug_str     0x000000000000ae37      0xf1d build_flappy_bird/app.o
-                                       0x2c48 (size before relaxing)
- .debug_str     0x000000000000bd54       0x22 build_flappy_bird/app_non_clear_ram.o
-                                        0x3cf (size before relaxing)
- .debug_str     0x000000000000bd76      0x16b build_flappy_bird/app_bsp.o
-                                       0x166a (size before relaxing)
- .debug_str     0x000000000000bee1       0xdc build_flappy_bird/app_bird.o
-                                       0x11b8 (size before relaxing)
- .debug_str     0x000000000000bfbd      0x3ee build_flappy_bird/shell.o
-                                       0x1ab8 (size before relaxing)
- .debug_str     0x000000000000c3ab       0x49 build_flappy_bird/task_shell.o
-                                        0x69d (size before relaxing)
- .debug_str     0x000000000000c3f4       0x3b build_flappy_bird/task_life.o
-                                        0x555 (size before relaxing)
- .debug_str     0x000000000000c42f      0x356 build_flappy_bird/task_fw.o
-                                        0xf5c (size before relaxing)
- .debug_str     0x000000000000c785       0x1a build_flappy_bird/task_list.o
-                                        0x5d0 (size before relaxing)
- .debug_str     0x000000000000c79f       0x45 build_flappy_bird/task_display.o
-                                       0x120c (size before relaxing)
- .debug_str     0x000000000000c7e4       0x4e build_flappy_bird/task_if.o
-                                        0x67f (size before relaxing)
- .debug_str     0x000000000000c832      0x14a build_flappy_bird/task_uart_if.o
-                                        0x78e (size before relaxing)
- .debug_str     0x000000000000c97c      0x1b9 build_flappy_bird/view_render.o
-                                       0x1157 (size before relaxing)
- .debug_str     0x000000000000cb35      0x11a build_flappy_bird/screen_manager.o
-                                       0x14b2 (size before relaxing)
- .debug_str     0x000000000000cc4f      0x78b build_flappy_bird/Adafruit_GFX.o
-                                       0x197e (size before relaxing)
- .debug_str     0x000000000000d3da      0x637 build_flappy_bird/Adafruit_oled_drv.o
-                                       0x160d (size before relaxing)
- .debug_str     0x000000000000da11       0x21 build_flappy_bird/eeprom.o
-                                        0x3b3 (size before relaxing)
- .debug_str     0x000000000000da32       0xdd build_flappy_bird/link_hal.o
-                                        0x4ff (size before relaxing)
- .debug_str     0x000000000000db0f      0x3e4 build_flappy_bird/link.o
-                                        0xcf8 (size before relaxing)
- .debug_str     0x000000000000def3      0x556 build_flappy_bird/link_mac.o
-                                        0xfa4 (size before relaxing)
- .debug_str     0x000000000000e449      0x46a build_flappy_bird/link_phy.o
-                                        0xe67 (size before relaxing)
- .debug_str     0x000000000000e8b3       0xe9 build_flappy_bird/link_data.o
-                                        0x604 (size before relaxing)
- .debug_str     0x000000000000e99c       0x56 build_flappy_bird/wiring_digital.o
-                                        0xed5 (size before relaxing)
- .debug_str     0x000000000000e9f2      0x330 build_flappy_bird/Print.o
-                                       0x10a9 (size before relaxing)
- .debug_str     0x000000000000ed22     0x1145 build_flappy_bird/HardwareSerial.o
-                                       0x1f7e (size before relaxing)
- .debug_str     0x000000000000fe67       0xc1 build_flappy_bird/HardwareSerial2.o
-                                       0x1fb6 (size before relaxing)
- .debug_str     0x000000000000ff28       0xfb build_flappy_bird/SPI.o
-                                        0x9d8 (size before relaxing)
- .debug_str     0x0000000000010023      0x6d5 build_flappy_bird/Wire.o
-                                       0x24c1 (size before relaxing)
- .debug_str     0x00000000000106f8       0xee build_flappy_bird/twi.o
-                                       0x1401 (size before relaxing)
- .debug_str     0x00000000000107e6      0x14b build_flappy_bird/mini_cpp.o
-                                        0x977 (size before relaxing)
+ .debug_str     0x0000000000000736      0x1d5 build_flappy_bird/timer.o
+                                        0x5e5 (size before relaxing)
+ .debug_str     0x000000000000090b      0x34e build_flappy_bird/message.o
+                                        0x689 (size before relaxing)
+ .debug_str     0x0000000000000c59       0x41 build_flappy_bird/log_queue.o
+                                        0x20c (size before relaxing)
+ .debug_str     0x0000000000000c9a       0x9c build_flappy_bird/fifo.o
+                                        0x2b2 (size before relaxing)
+ .debug_str     0x0000000000000d36      0x148 build_flappy_bird/ring_buffer.o
+                                        0x345 (size before relaxing)
+ .debug_str     0x0000000000000e7e       0x90 build_flappy_bird/utils.o
+                                        0x25f (size before relaxing)
+ .debug_str     0x0000000000000f0e      0x152 build_flappy_bird/xprintf.o
+                                        0x2bf (size before relaxing)
+ .debug_str     0x0000000000001060       0x5d build_flappy_bird/cmd_line.o
+                                        0x204 (size before relaxing)
+ .debug_str     0x00000000000010bd       0xb2 build_flappy_bird/button.o
+                                        0x257 (size before relaxing)
+ .debug_str     0x000000000000116f      0x14b build_flappy_bird/flash.o
+                                        0x2df (size before relaxing)
+ .debug_str     0x00000000000012ba       0x9f build_flappy_bird/led.o
+                                        0x248 (size before relaxing)
+ .debug_str     0x0000000000001359      0xa8f build_flappy_bird/buzzer.o
+                                        0xcc8 (size before relaxing)
+ .debug_str     0x0000000000001de8       0x25 build_flappy_bird/buzzer_music.o
+                                        0x293 (size before relaxing)
+ .debug_str     0x0000000000001e0d      0x24a build_flappy_bird/sys_dbg.o
+                                        0x66a (size before relaxing)
+ .debug_str     0x0000000000002057      0x156 build_flappy_bird/sys_boot.o
+                                        0x38d (size before relaxing)
+ .debug_str     0x00000000000021ad      0x1a8 build_flappy_bird/stm32l1xx_gpio.o
+                                        0x505 (size before relaxing)
+ .debug_str     0x0000000000002355      0x49e build_flappy_bird/stm32l1xx_rcc.o
+                                        0x736 (size before relaxing)
+ .debug_str     0x00000000000027f3      0x431 build_flappy_bird/stm32l1xx_usart.o
+                                        0x6f6 (size before relaxing)
+ .debug_str     0x0000000000002c24      0x36a build_flappy_bird/stm32l1xx_spi.o
+                                        0x663 (size before relaxing)
+ .debug_str     0x0000000000002f8e      0x193 build_flappy_bird/misc.o
+                                        0x3f5 (size before relaxing)
+ .debug_str     0x0000000000003121      0x1d5 build_flappy_bird/stm32l1xx_exti.o
+                                        0x373 (size before relaxing)
+ .debug_str     0x00000000000032f6      0x882 build_flappy_bird/stm32l1xx_tim.o
+                                        0xc9a (size before relaxing)
+ .debug_str     0x0000000000003b78      0x61f build_flappy_bird/stm32l1xx_adc.o
+                                        0x833 (size before relaxing)
+ .debug_str     0x0000000000004197      0x1cf build_flappy_bird/stm32l1xx_pwr.o
+                                        0x40f (size before relaxing)
+ .debug_str     0x0000000000004366      0x617 build_flappy_bird/stm32l1xx_flash.o
+                                        0x808 (size before relaxing)
+ .debug_str     0x000000000000497d       0xf0 build_flappy_bird/stm32l1xx_iwdg.o
+                                        0x293 (size before relaxing)
+ .debug_str     0x0000000000004a6d      0x3ae build_flappy_bird/stm32l1xx_i2c.o
+                                        0x6b5 (size before relaxing)
+ .debug_str     0x0000000000004e1b       0x70 build_flappy_bird/platform.o
+                                        0x259 (size before relaxing)
+ .debug_str     0x0000000000004e8b      0x3a0 build_flappy_bird/system.o
+                                        0x885 (size before relaxing)
+ .debug_str     0x000000000000522b      0x404 build_flappy_bird/sys_cfg.o
+                                       0x1321 (size before relaxing)
+ .debug_str     0x000000000000562f      0x3cd build_flappy_bird/io_cfg.o
+                                       0x124f (size before relaxing)
+ .debug_str     0x00000000000059fc       0x37 build_flappy_bird/system_stm32l1xx.o
+                                        0x36f (size before relaxing)
+ .debug_str     0x0000000000005a33     0x491c build_flappy_bird/scr_idle.o
+                                       0x4ffe (size before relaxing)
+ .debug_str     0x000000000000a34f      0x172 build_flappy_bird/scr_menu_game.o
+                                       0x1854 (size before relaxing)
+ .debug_str     0x000000000000a4c1      0x12a build_flappy_bird/scr_game_setting.o
+                                       0x18b4 (size before relaxing)
+ .debug_str     0x000000000000a5eb      0x149 build_flappy_bird/scr_startup.o
+                                       0x1a6a (size before relaxing)
+ .debug_str     0x000000000000a734      0x106 build_flappy_bird/scr_charts_game.o
+                                       0x197a (size before relaxing)
+ .debug_str     0x000000000000a83a       0xfc build_flappy_bird/screens_bitmap.o
+                                        0xe05 (size before relaxing)
+ .debug_str     0x000000000000a936      0x2fa build_flappy_bird/scr_flappy_bird.o
+                                       0x1ad2 (size before relaxing)
+ .debug_str     0x000000000000ac30       0xa8 build_flappy_bird/task_system.o
+                                        0x5cc (size before relaxing)
+ .debug_str     0x000000000000acd8      0x160 build_flappy_bird/app_eeprom.o
+                                        0x66a (size before relaxing)
+ .debug_str     0x000000000000ae38      0xf1d build_flappy_bird/app.o
+                                       0x2c49 (size before relaxing)
+ .debug_str     0x000000000000bd55       0x22 build_flappy_bird/app_non_clear_ram.o
+                                        0x3d0 (size before relaxing)
+ .debug_str     0x000000000000bd77      0x16b build_flappy_bird/app_bsp.o
+                                       0x166b (size before relaxing)
+ .debug_str     0x000000000000bee2       0xdc build_flappy_bird/app_bird.o
+                                       0x11b9 (size before relaxing)
+ .debug_str     0x000000000000bfbe      0x3ee build_flappy_bird/shell.o
+                                       0x1ab9 (size before relaxing)
+ .debug_str     0x000000000000c3ac       0x49 build_flappy_bird/task_shell.o
+                                        0x69e (size before relaxing)
+ .debug_str     0x000000000000c3f5       0x3b build_flappy_bird/task_life.o
+                                        0x556 (size before relaxing)
+ .debug_str     0x000000000000c430      0x356 build_flappy_bird/task_fw.o
+                                        0xf5d (size before relaxing)
+ .debug_str     0x000000000000c786       0x1a build_flappy_bird/task_list.o
+                                        0x5d1 (size before relaxing)
+ .debug_str     0x000000000000c7a0       0x45 build_flappy_bird/task_display.o
+                                       0x120d (size before relaxing)
+ .debug_str     0x000000000000c7e5       0x4e build_flappy_bird/task_if.o
+                                        0x680 (size before relaxing)
+ .debug_str     0x000000000000c833      0x14a build_flappy_bird/task_uart_if.o
+                                        0x78f (size before relaxing)
+ .debug_str     0x000000000000c97d      0x1b9 build_flappy_bird/view_render.o
+                                       0x1158 (size before relaxing)
+ .debug_str     0x000000000000cb36      0x11a build_flappy_bird/screen_manager.o
+                                       0x14b3 (size before relaxing)
+ .debug_str     0x000000000000cc50      0x78b build_flappy_bird/Adafruit_GFX.o
+                                       0x197f (size before relaxing)
+ .debug_str     0x000000000000d3db      0x637 build_flappy_bird/Adafruit_oled_drv.o
+                                       0x160e (size before relaxing)
+ .debug_str     0x000000000000da12       0x21 build_flappy_bird/eeprom.o
+                                        0x3b4 (size before relaxing)
+ .debug_str     0x000000000000da33       0xdd build_flappy_bird/link_hal.o
+                                        0x500 (size before relaxing)
+ .debug_str     0x000000000000db10      0x3e4 build_flappy_bird/link.o
+                                        0xcf9 (size before relaxing)
+ .debug_str     0x000000000000def4      0x556 build_flappy_bird/link_mac.o
+                                        0xfa5 (size before relaxing)
+ .debug_str     0x000000000000e44a      0x46a build_flappy_bird/link_phy.o
+                                        0xe68 (size before relaxing)
+ .debug_str     0x000000000000e8b4       0xe9 build_flappy_bird/link_data.o
+                                        0x605 (size before relaxing)
+ .debug_str     0x000000000000e99d       0x56 build_flappy_bird/wiring_digital.o
+                                        0xed6 (size before relaxing)
+ .debug_str     0x000000000000e9f3      0x330 build_flappy_bird/Print.o
+                                       0x10aa (size before relaxing)
+ .debug_str     0x000000000000ed23     0x1145 build_flappy_bird/HardwareSerial.o
+                                       0x1f7f (size before relaxing)
+ .debug_str     0x000000000000fe68       0xc1 build_flappy_bird/HardwareSerial2.o
+                                       0x1fb7 (size before relaxing)
+ .debug_str     0x000000000000ff29       0xfb build_flappy_bird/SPI.o
+                                        0x9d9 (size before relaxing)
+ .debug_str     0x0000000000010024      0x6d5 build_flappy_bird/Wire.o
+                                       0x24c2 (size before relaxing)
+ .debug_str     0x00000000000106f9       0xee build_flappy_bird/twi.o
+                                       0x1402 (size before relaxing)
+ .debug_str     0x00000000000107e7      0x14b build_flappy_bird/mini_cpp.o
+                                        0x978 (size before relaxing)
 
 .comment        0x0000000000000000       0x49
  .comment       0x0000000000000000       0x49 build_flappy_bird/fsm.o
