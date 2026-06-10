@@ -27,8 +27,8 @@
 static int bird_x = bird_start_x;
 static int bird_y = bird_start_y;
 static int bird_vy = 0;
-static int pillar_gap = 50;      /* gap height between top and bottom pillar */
-static int pillar_gap_top = 7;   /* y-position where the gap starts */
+static int pillar_gap = 50;    /* gap height between top and bottom pillar */
+static int pillar_gap_top = 7; /* y-position where the gap starts */
 static int pillar_x = pillar_start_x;
 static int prev_pillar_x = pillar_x;
 static int pillar_type = 0;
@@ -182,6 +182,11 @@ static void check_collision()
             flappy_score_save();
         }
     }
+    // also check collision with top and bottom of screen (ground and ceiling)
+    if (bird_y <= 0 || bird_y + bird_height >= SCREEN_HEIGHT)
+    {
+        game_over = 1;
+    }
 }
 
 static void flappy_load_settings()
@@ -227,7 +232,7 @@ static void flappy_score_save()
 }
 
 static void view_scr_flappy_bird()
-{
+{   
     /* update physics/state on each render call */
     if (!game_over)
     {
@@ -236,7 +241,6 @@ static void view_scr_flappy_bird()
         check_collision();
     }
 
-    view_render.clear();
     view_render.fillScreen(BLACK);
     /* Draw pillars */
     flappy_bird_pilliar_below();
@@ -246,19 +250,22 @@ static void view_scr_flappy_bird()
     /* Draw score */
     view_render.setTextSize(1);
     view_render.setTextColor(WHITE);
-    view_render.setCursor(0, 0);
+    view_render.setCursor(0, 2);
     view_render.print("SCORE:");
     view_render.print(score);
-    view_render.setCursor(78, 0);
+    view_render.setCursor(78, 2);
     view_render.print("BEST:");
     view_render.print(best_score);
+    view_render.drawRoundRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 7, WHITE);
     if (game_over)
     {
         view_render.clear();
-        view_render.setCursor(7, 40);
+        view_render.setCursor(7, 2);
         view_render.setTextSize(2);
         view_render.print("GAME OVER");
-        view_render.drawBitmap((SCREEN_WIDTH / 2) - 8, (SCREEN_HEIGHT / 2) - 8, icon_restart, 15, 15, 0);
+        view_render.setCursor(7, 22);
+        view_render.setTextSize(1);
+        view_render.print("Press Mode to Menu");
     }
 }
 
@@ -288,13 +295,14 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
     {
         /* stop periodic updates when leaving screen */
         timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
+        view_render_display_off();
         break;
     }
 
     case AC_DISPLAY_BUTTON_UP_PRESSED:
     {
         APP_DBG_SIG("Press Up Button\n");
-        if (game_over)
+        if (game_over == 1)
         {
             /* restart game */
             game_over = 0;
@@ -314,21 +322,20 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
 
     case AC_DISPLAY_BUTTON_DOWN_PRESSED:
     {
-        APP_DBG_SIG("Press Down Button\n");
-        SCREEN_TRAN(scr_idle_handle, &scr_idle);
+        if (game_over == 1)
+        {
+            game_over = 0;
+            SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
+        }
         break;
     }
 
     case AC_DISPLAY_BUTTON_MODE_PRESSED:
     {
         APP_DBG_SIG("Press Mode Button\n");
-        if (game_over)
+        if (game_over == 1)
         {
             SCREEN_TRAN(scr_charts_game_handle, &scr_charts_game);
-        }
-        else
-        {
-            SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
         }
         break;
     }
@@ -336,6 +343,7 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
     case AC_DISPLAY_FLAPPY_TICK:
     {
         /* periodic update tick: rendering is handled by screen manager dispatch */
+
         break;
     }
 

@@ -21,8 +21,8 @@ FLASH_BASE_ADDR_VAL = 0x08000000
 NAME_MODULE = flappy_bird
 PROJECT = $(NAME_MODULE)
 
-GCC_PATH		= /home/josef/Downloads/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux/gcc-arm-none-eabi-10.3-2021.10
-PROGRAMER_PATH		= /home/josef/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
+GCC_PATH		= ${HOME}/tools/gcc-arm-none-eabi-10.3-2021.10
+PROGRAMER_PATH		= ${HOME}/tools/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
 OPENOCD_CFG_PATH	= /usr/local/share/openocd/scripts/board/stm32ldiscovery.cfg
 
 # App start address, that need sync with declare in linker file and interrupt vector table.
@@ -59,6 +59,7 @@ IF_LINK_OPTION = -DIF_LINK_UART_EN
 # Include sources file
 include sources/ak/Makefile.mk
 include sources/app/Makefile.mk
+include sources/app/game/Makefile.mk
 include sources/common/Makefile.mk
 include sources/driver/Makefile.mk
 include sources/sys/Makefile.mk
@@ -215,7 +216,7 @@ LDFLAGS	=	-Map=$(OBJECTS_DIR)/$(PROJECT).map	\
 		$(LIBC) $(LIBM) $(LIBSTDCPP_NANO) $(LIBGCC) $(LIBGCOV) $(LIBFPU) $(LIBRDPMON)
 
 all: create $(TARGET)
-	@$(MAKE) --no-print-directory info
+	@$(MAKE) --no-print-directory info 
 
 create:
 	$(Print) CREATE $(OBJECTS_DIR) folder

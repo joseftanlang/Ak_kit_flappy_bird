@@ -90,16 +90,16 @@ void view_scr_startup()
 	view_render.setCursor(TITLE_X + 2, title_y + 18);
 	view_render.print("BIRD");
 
-	// subtitle / hint
+	// subtitle
 	static const char *subtitle = "Press to start";
-	int reveal = (startup_phase >= 3) ? (phase_counter / 1) : (startup_anim_frame / 4);
+	int reveal = (startup_phase >= 3) ? (phase_counter / 1) : (startup_anim_frame / 2);
 	if (reveal > (int)strlen(subtitle))
 		reveal = strlen(subtitle);
 	char buf[32];
 	memcpy(buf, subtitle, reveal);
 	buf[reveal] = '\0';
 	view_render.setTextSize(1);
-	view_render.setCursor(14, 54);
+	view_render.setCursor(6, 54);
 	view_render.print(buf);
 
 	view_render.update();

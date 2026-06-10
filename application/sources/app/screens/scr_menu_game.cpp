@@ -75,8 +75,8 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 		menu_index = 0;
 	} break;
 
-	case AC_DISPLAY_BUTTON_UP_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_RELEASED\n");
+	case AC_DISPLAY_BUTTON_UP_PRESSED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_PRESSED\n");
 		if (menu_index == 0) {
 			menu_index = 3;
 		}
@@ -86,14 +86,14 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	} break;
 
-	case AC_DISPLAY_BUTTON_DOWN_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_RELEASED\n");
+	case AC_DISPLAY_BUTTON_DOWN_PRESSED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_PRESSED\n");
 		menu_index = (menu_index + 1) % 4;
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	} break;
 
-	case AC_DISPLAY_BUTTON_MODE_RELEASED: {
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
+	case AC_DISPLAY_BUTTON_MODE_PRESSED: {
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_PRESSED\n");
 		if (menu_index == 0) {
 			menu_go_idle();
 		}
@@ -108,6 +108,7 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 		}
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	} break;
+
 
 	default:
 		break;

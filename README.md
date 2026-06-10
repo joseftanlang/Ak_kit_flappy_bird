@@ -251,6 +251,10 @@ The generated artifacts are placed under `application/build_flappy_bird/`, inclu
 - `application/make.cmd` exists to make local cleanup easier on Windows.
 - A GNU Make binary is still required for full builds.
 - Tool paths in the Makefile are configured for the ARM GCC and STM32Cube/OpenOCD setup used by this project.
+- If you want to make your README.md to be better resolution photo or gif go to `resource/tools/python3.py` then use that code by going into the root of this project folder and type 
+```sh
+python3 resources/tools/python3.py -t zoom -v 4 -i image location(old) -o image location (new)
+```
 
 ## Flashing
 
