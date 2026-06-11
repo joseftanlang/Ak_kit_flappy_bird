@@ -232,7 +232,7 @@ static void flappy_score_save()
 }
 
 static void view_scr_flappy_bird()
-{   
+{
     /* update physics/state on each render call */
     if (!game_over)
     {
@@ -267,6 +267,7 @@ static void view_scr_flappy_bird()
         view_render.setTextSize(1);
         view_render.print("Press Mode to Menu");
     }
+    view_render.update();
 }
 
 // To make the bird keep flapping up to stay in the air, if never press up button the bird will slwoly go down.
@@ -293,9 +294,15 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
 
     case SCREEN_EXIT:
     {
-        /* stop periodic updates when leaving screen */
+        APP_DBG_SIG("FLAPPY SCREEN_EXIT\n");
+
         timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
+
+        game_over = 0;
+        bird_vy = 0;
+
         view_render_display_off();
+
         break;
     }
 
@@ -322,10 +329,14 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
 
     case AC_DISPLAY_BUTTON_DOWN_PRESSED:
     {
+        APP_DBG("Before SCREEN_TRAN\n");
         if (game_over == 1)
         {
+            timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
+            view_render_display_off();
             game_over = 0;
             SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
+            APP_DBG("Before SCREEN_TRAN\n");
         }
         break;
     }
@@ -334,7 +345,10 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
     {
         APP_DBG_SIG("Press Mode Button\n");
         if (game_over == 1)
-        {
+        {   
+            game_over = 0;
+            timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
+            view_render_display_off();
             SCREEN_TRAN(scr_charts_game_handle, &scr_charts_game);
         }
         break;
