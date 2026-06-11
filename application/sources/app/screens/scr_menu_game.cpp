@@ -1,10 +1,10 @@
 #include "scr_menu_game.h"
 
 static const char* const menu_items[] = {
-	"Idle",
+	"Flappy Bird",
 	"Score",
 	"Setting",
-	"Flappy Bird",
+	// "Flappy Bird",
 };
 
 static uint8_t menu_index = 0;
@@ -34,7 +34,7 @@ static void view_scr_menu_game() {
 	view_render.print("MENU");
 
 	view_render.setTextSize(1);
-	for (uint8_t i = 0; i < 4; i++) {
+	for (uint8_t i = 0; i < 3; i++) {
 		int y = 22 + (i * 10);
 		if (i == menu_index) {
 			view_render.fillRoundRect(6, y - 1, 116, 10, 3, WHITE);
@@ -78,7 +78,7 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 	case AC_DISPLAY_BUTTON_UP_PRESSED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_PRESSED\n");
 		if (menu_index == 0) {
-			menu_index = 3;
+			menu_index = 2;
 		}
 		else {
 			menu_index--;
@@ -88,23 +88,22 @@ void scr_menu_game_handle(ak_msg_t* msg) {
 
 	case AC_DISPLAY_BUTTON_DOWN_PRESSED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_PRESSED\n");
-		menu_index = (menu_index + 1) % 4;
+		menu_index = (menu_index + 1) % 3;
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	} break;
 
 	case AC_DISPLAY_BUTTON_MODE_PRESSED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_PRESSED\n");
 		if (menu_index == 0) {
-			menu_go_idle();
+			menu_go_flappy_bird();
 		}
 		else if (menu_index == 1) {
 			menu_go_score();
 		}
 		else if (menu_index == 2) {
 			menu_go_setting();
-		}
-		else {
-			menu_go_flappy_bird();
+		} else {
+			menu_go_idle();
 		}
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	} break;

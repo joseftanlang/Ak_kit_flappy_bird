@@ -211,14 +211,14 @@ void scr_startup_handle(ak_msg_t *msg)
 	}
 	break;
 
-	case AC_DISPLAY_SHOW_STARTUP_LOGO:
-	{
-		APP_DBG_SIG("AC_DISPLAY_SHOW_STARTUP_LOGO\n");
-		// Stop automatic transition; leave animation stopped and wait for user input
-		timer_remove_attr(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG);
-		startup_phase = 4; // mark idle/complete — wait for user button to go next
-	}
-	break;
+	// case AC_DISPLAY_SHOW_STARTUP_LOGO:
+	// {
+	// 	APP_DBG_SIG("AC_DISPLAY_SHOW_STARTUP_LOGO\n");
+	// 	// Stop automatic transition; leave animation stopped and wait for user input
+	// 	timer_remove_attr(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG);
+	// 	startup_phase = 4;
+	// }
+	// break;
 
 	default:
 		break;

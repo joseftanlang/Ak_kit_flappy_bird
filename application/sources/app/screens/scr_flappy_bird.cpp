@@ -250,7 +250,7 @@ static void view_scr_flappy_bird()
     /* Draw score */
     view_render.setTextSize(1);
     view_render.setTextColor(WHITE);
-    view_render.setCursor(0, 2);
+    view_render.setCursor(8, 2);
     view_render.print("SCORE:");
     view_render.print(score);
     view_render.setCursor(78, 2);
@@ -265,7 +265,13 @@ static void view_scr_flappy_bird()
         view_render.print("GAME OVER");
         view_render.setCursor(7, 22);
         view_render.setTextSize(1);
-        view_render.print("Press Mode to Menu");
+        view_render.print("Press DOWN to Menu");
+        view_render.setCursor(7, 34);
+        view_render.setTextSize(1);
+        view_render.print("Press MODE to Score");
+        view_render.setCursor(7, 46);
+        view_render.setTextSize(1);
+        view_render.print("Press UP to Reset");
     }
     view_render.update();
 }
