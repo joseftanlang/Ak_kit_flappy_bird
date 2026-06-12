@@ -1,4 +1,0 @@
-sources/app/app_bird.cpp:18:6:void bird_id(ak_msg_t*)	8	static
-sources/app/app_bird.cpp:30:6:void bird_up_button(ak_msg_t*)	0	static
-sources/app/app_bird.cpp:36:6:void bird_pillar(ak_msg_t*)	0	static
-sources/app/app_bird.cpp:44:6:void bird_score(ak_msg_t*)	0	static

@@ -1,4 +1,0 @@
-sources/app/app_bsp.cpp:29:23:uint8_t active_button_task_id()	8	static
-sources/app/app_bsp.cpp:41:6:void btn_mode_callback(void*)	8	static
-sources/app/app_bsp.cpp:72:6:void btn_up_callback(void*)	8	static
-sources/app/app_bsp.cpp:105:6:void btn_down_callback(void*)	8	static

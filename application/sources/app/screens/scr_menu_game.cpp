@@ -26,6 +26,7 @@ view_screen_t scr_menu_game = {
 	.focus_item = 0,
 };
 
+// main view function to render the game menu
 static void view_scr_menu_game() {
 	view_render.clear();
 	view_render.setTextSize(2);

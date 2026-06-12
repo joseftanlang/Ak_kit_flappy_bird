@@ -8,8 +8,7 @@ view_dynamic_t dyn_view_item_game_setting = {
 	{
 		.item_type = ITEM_TYPE_DYNAMIC,
 	},
-	view_scr_game_setting
-};
+	view_scr_game_setting};
 
 view_screen_t scr_game_setting = {
 	&dyn_view_item_game_setting,
@@ -19,7 +18,9 @@ view_screen_t scr_game_setting = {
 	.focus_item = 0,
 };
 
-static void view_scr_game_setting() {
+// main view function to render the game settings screen
+static void view_scr_game_setting()
+{
 	view_render.clear();
 	view_render.setTextColor(WHITE);
 	view_render.setTextSize(2);
@@ -35,10 +36,13 @@ static void view_scr_game_setting() {
 	view_render.print("Bird Speed:");
 	view_render.print(settingdata.meteoroid_speed);
 
-	if (setting_index == 0) {
+	// highlight the selected setting
+	if (setting_index == 0)
+	{
 		view_render.drawRect(6, 19, 116, 12, WHITE);
 	}
-	else {
+	else
+	{
 		view_render.drawRect(6, 33, 116, 12, WHITE);
 	}
 
@@ -47,55 +51,76 @@ static void view_scr_game_setting() {
 	view_render.update();
 }
 
-static void setting_save_and_exit() {
+// save settings to EEPROM and return to menu screen
+static void setting_save_and_exit()
+{
 	ar_game_setting_write(&settingdata);
 	scr_idle_set_return_screen(scr_menu_game_handle, &scr_menu_game);
 	SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
 }
 
-void scr_game_setting_handle(ak_msg_t* msg) {
-	switch (msg->sig) {
-	case SCREEN_ENTRY: {
+// handle screen events like button presses and screen entry/exit
+void scr_game_setting_handle(ak_msg_t *msg)
+{
+	switch (msg->sig)
+	{
+	case SCREEN_ENTRY:
+	{
 		APP_DBG_SIG("SCREEN_ENTRY\n");
 		view_render.initialize();
 		view_render_display_on();
 		ar_game_setting_read(&settingdata);
 		setting_index = 0;
-	} break;
+	}
+	break;
 
-	case AC_DISPLAY_BUTTON_UP_RELEASED: {
+	case AC_DISPLAY_BUTTON_UP_RELEASED:
+	{
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_RELEASED\n");
 		setting_index = 0;
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
-	} break;
+	}
+	break;
 
-	case AC_DISPLAY_BUTTON_DOWN_RELEASED: {
+	case AC_DISPLAY_BUTTON_DOWN_RELEASED:
+	{
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_RELEASED\n");
 		setting_index = 1;
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
-	} break;
+	}
+	break;
 
-	case AC_DISPLAY_BUTTON_MODE_RELEASED: {
+	case AC_DISPLAY_BUTTON_MODE_RELEASED:
+	{
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
-		if (setting_index == 0) {
+		// toggle sound setting or cycle through speed settings based on which setting is selected
+		if (setting_index == 0)
+		{
 			settingdata.silent = !settingdata.silent;
 			BUZZER_Sleep(settingdata.silent);
 		}
-		else {
+		else
+		{
 			settingdata.meteoroid_speed++;
-			if (settingdata.meteoroid_speed > AR_GAME_SETTING_METEOROID_SPEED_MAX) {
+			if (settingdata.meteoroid_speed > AR_GAME_SETTING_METEOROID_SPEED_MAX)
+			{
 				settingdata.meteoroid_speed = AR_GAME_SETTING_METEOROID_SPEED_MIN;
 			}
 		}
 		ar_game_setting_write(&settingdata);
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
-	} break;
+	}
+	break;
 
-	case AC_DISPLAY_BUTTON_MODE_LONG_PRESSED: {
+	case AC_DISPLAY_BUTTON_UP_LONG_PRESSED:
+	case AC_DISPLAY_BUTTON_DOWN_LONG_PRESSED:
+	case AC_DISPLAY_BUTTON_MODE_LONG_PRESSED:
+	{
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_LONG_PRESSED\n");
 		setting_save_and_exit();
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
-	} break;
+	}
+	break;
 
 	default:
 		break;
