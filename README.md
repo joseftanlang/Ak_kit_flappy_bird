@@ -1,19 +1,13 @@
 # AK flappy bird Game for AK Embedded Base Kit
 <div align="center">
-  <a href="https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu">
-    <img src="https://github.com/joseftanlang/ak-kit-worm-game/raw/main/hardware/images/ak-foundation-logo.png" width="240"/>
-  </a>
+  <video src="resources/images/flappy_game_demo.mp4" width="500" controls>
+    Your browser does not support the video tag.
+  </video>
 </div>
-
 
 This repository contains the firmware for the flappy bird game that runs on the AK Embedded Base Kit with STM32L151. The project is a hands-on example of event-driven embedded programming: the screen, buttons, buzzer, timers, EEPROM, and task scheduler work together to present a complete game loop rather than a single demo screen.
 
-The board is designed for embedded learning and prototyping. It combines a 1.54" OLED display, 3 push buttons, a buzzer, RS485, Qwiic, and Grove connectivity so you can study interaction, timing, persistence, and modular firmware architecture on real hardware.
-<div align="center">
-  <a href="https://epcb.vn/products/ak-embedded-base-kit-lap-trinh-nhung-vi-dieu-khien-mcu">
-    <img src="https://cdn.hstatic.net/products/1000362368/ak-base-kit-stm32l151-version-3_fa74487475c646cd958135d7295db7d8_master.jpg" width="480"/>
-  </a>
-</div>
+The board is designed for embedded learning and prototyping. It combines a 1.54" OLED display, 3 push buttonsand buzzer so you can study interaction, timing, persistence, and modular firmware architecture on real hardware.
 
 ## Quick Start
 
@@ -37,6 +31,7 @@ Use this table to jump to major sections in this README.
 - [Hardware Context](#hardware-context)
 - [Memory Map](#memory-map)
 - [Game Flow](#game-flow)
+- [Game Sequence Logic](#game-flow)
 - [Game design](#game-design)
 - [Internal Game IDs and Tasks](#internal-game-ids-and-tasks)
 - [Settings](#settings)
@@ -105,6 +100,13 @@ The game is organized as a screen-driven application:
 6. If the player crashes or wins, the game shows an overlay.
 7. The player can move to the score chart screen or back out to the menu.
 
+## Game Sequence Logic
+
+This is the game sequence logic about the Flappy Bird Game.
+There are 3 stages: Game Start, Game Play and Game Over. It is all about the sequence of the different stages of the Flappy Bird Game. It shows the steps and alignment of the signals (non-dotted line(s)) and data (dotted line(s)). There are a total of 8 different object used in this game from "Player" to "End". 
+<div align="center">
+  <img src="resources/images/FPT-flappy-bird.drawio.png" alt="Startup 1" />
+</div>
 
 ## Game design
 
@@ -124,20 +126,6 @@ The startup screen shows the board and firmware identity, provides a brief boot 
 </div>
 
 The menu screen is the central hub. Menu entries are arranged vertically and can be navigated with Up/Down; Mode enters or confirms. Visual highlights and simple icons make it easy to pick modes (Start Game, Settings, Charts). Menu animations are subtle to keep the UI responsive.
-
-### flappy bird Game (Playfield)
-<div align="center">
-  <img src="resources/images/bitmap/flappy_bird.png" alt="flappy bird Game" width="512" height="256" />
-</div>
-
-This is the core gameplay screen. The player controls the flappy bird with Up/Down to fly. Pillar appear as targets; hitting the flappy bird and the gmae ends. The HUD is intentionally minimal: score, lives (if enabled), and a small status indicator for buzzer/music.
-
-### Game Over / Result
-<div align="center">
-  <img src="resources/images/bitmap/podium.png " alt="Game Over" width="512" height="256" />
-</div>
-
-When the player crashes the flappy bird , an overlay appears with the final score and options to retry or return to the menu. A short buzzer melody and a crisp visual overlay emphasize the result while preserving the final playfield for reference.
 
 ### Settings Screen
 <div align="center">

@@ -47,7 +47,7 @@ static void view_scr_game_setting()
 	}
 
 	view_render.setCursor(10, 54);
-	view_render.print("MODE save");
+	view_render.print("LONG MODE save");
 	view_render.update();
 }
 
@@ -74,25 +74,25 @@ void scr_game_setting_handle(ak_msg_t *msg)
 	}
 	break;
 
-	case AC_DISPLAY_BUTTON_UP_RELEASED:
+	case AC_DISPLAY_BUTTON_UP_PRESSED:
 	{
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_RELEASED\n");
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_PRESSED\n");
 		setting_index = 0;
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	}
 	break;
 
-	case AC_DISPLAY_BUTTON_DOWN_RELEASED:
+	case AC_DISPLAY_BUTTON_DOWN_PRESSED:
 	{
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_RELEASED\n");
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_DOWN_PRESSED\n");
 		setting_index = 1;
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	}
 	break;
 
-	case AC_DISPLAY_BUTTON_MODE_RELEASED:
+	case AC_DISPLAY_BUTTON_MODE_PRESSED:
 	{
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
+		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_PRESSED\n");
 		// toggle sound setting or cycle through speed settings based on which setting is selected
 		if (setting_index == 0)
 		{
