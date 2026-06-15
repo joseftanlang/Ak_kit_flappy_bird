@@ -112,13 +112,13 @@ There are 3 stages: Game Start, Game Play and Game Over. It is all about the seq
 
 The game UI is structured into a few clear screens that guide the player from power-on to gameplay, settings, and score review. Each screen is designed to be compact and readable on the small OLED while providing the player with clear feedback and control.
 
-### Startup Screen
+<!-- ### Startup Screen
 <div align="center">
   <img src="resources/images/flappy_startup.png" alt="Startup 1" width="512" height="256" />
 </div>
 
 
-The startup screen shows the board and firmware identity, provides a brief boot animation and offers entry into the main app menu. It confirms hardware is initialized (display, buttons, buzzer) and gives a short visual cue if saved settings or scores were loaded successfully.
+The startup screen shows the board and firmware identity, provides a brief boot animation and offers entry into the main app menu. It confirms hardware is initialized (display, buttons, buzzer) and gives a short visual cue if saved settings or scores were loaded successfully. -->
 
 ### Menu Screen
 <div align="center">
