@@ -1,7 +1,7 @@
 # AK flappy bird Game for AK Embedded Base Kit
 <div align="center">
-  <img src="resources/images/flappy_bird_game.gif" width="500" controls>
-  </img>
+  <video src="resources/images/flappy_game_demo.mp4" width="500" controls>
+  </video>
 </div>
 
 This repository contains the firmware for the flappy bird game that runs on the AK Embedded Base Kit with STM32L151. The project is a hands-on example of event-driven embedded programming: the screen, buttons, buzzer, timers, EEPROM, and task scheduler work together to present a complete game loop rather than a single demo screen.
