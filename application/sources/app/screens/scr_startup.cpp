@@ -1,7 +1,7 @@
 #include "scr_startup.h"
 
 #define STARTUP_ANIM_SIG (AR_GAME_DEFINE_SIG + 40)
-#define STARTUP_ANIM_INTERVAL_MS (80)
+#define STARTUP_ANIM_INTERVAL_MS (100)
 
 static uint8_t startup_anim_frame = 0;
 static uint8_t startup_phase = 0; // 0=bg,1=logo-in,2=particles,3=title,4=idle
@@ -125,10 +125,10 @@ void scr_startup_handle(ak_msg_t *msg)
 		startup_phase = 0;
 		phase_counter = 0;
 		timer_set(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG, STARTUP_ANIM_INTERVAL_MS, TIMER_PERIODIC);
-		timer_set(AC_TASK_DISPLAY_ID,
-				  AC_DISPLAY_SHOW_STARTUP_LOGO,
-				  AC_DISPLAY_STARTUP_INTERVAL,
-				  TIMER_ONE_SHOT);
+		// timer_set(AC_TASK_DISPLAY_ID,
+		// 		  AC_DISPLAY_SHOW_STARTUP_LOGO,
+		// 		  AC_DISPLAY_STARTUP_INTERVAL,
+		// 		  TIMER_ONE_SHOT);
 		// Read setting
 		ar_game_setting_read(&settingdata);
 		BUZZER_Sleep(settingdata.silent);
