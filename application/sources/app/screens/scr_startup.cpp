@@ -221,18 +221,9 @@ void scr_startup_handle(ak_msg_t *msg)
 	}
 	break;
 
-	case AC_DISPLAY_BUTTON_MODE_RELEASED:
-	{
-		APP_DBG_SIG("AC_DISPLAY_BUTTON_MODE_RELEASED\n");
-		// user pressed a button -> stop animation and transition
-		timer_remove_attr(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG);
-		SCREEN_TRAN(scr_menu_game_handle, &scr_menu_game);
-		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
-	}
-	break;
-
-	case AC_DISPLAY_BUTTON_UP_RELEASED:
-	case AC_DISPLAY_BUTTON_DOWN_RELEASED:
+	case AC_DISPLAY_BUTTON_MODE_PRESSED:
+	case AC_DISPLAY_BUTTON_UP_PRESSED:
+	case AC_DISPLAY_BUTTON_DOWN_PRESSED:
 	{
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP/DOWN_RELEASED -> transit\n");
 		timer_remove_attr(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG);

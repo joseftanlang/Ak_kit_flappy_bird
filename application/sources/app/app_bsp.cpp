@@ -43,8 +43,8 @@ void btn_mode_callback(void* b) {
 	switch (me_b->state) {
 	case BUTTON_SW_STATE_PRESSED: {
 		APP_DBG("[%s] BUTTON_SW_STATE_PRESSED\n", __func__);
-		// mode_button_target_task = active_button_task_id();
-		// post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_PRESSED);
+		mode_button_target_task = active_button_task_id();
+		post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_PRESSED);
 	} break;
 
 	case BUTTON_SW_STATE_LONG_PRESSED: {
@@ -52,17 +52,17 @@ void btn_mode_callback(void* b) {
 		post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_LONG_PRESSED);
 	} break;
 
-	case BUTTON_SW_STATE_RELEASED: {
-		APP_DBG("[%s] BUTTON_SW_STATE_RELEASED\n", __func__);
-		post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_RELEASED);
-		mode_button_target_task = AC_TASK_DISPLAY_ID;
+	// case BUTTON_SW_STATE_RELEASED: {
+	// 	APP_DBG("[%s] BUTTON_SW_STATE_RELEASED\n", __func__);
+	// 	post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_RELEASED);
+	// 	mode_button_target_task = AC_TASK_DISPLAY_ID;
 
 		// Reset timer show idle screen
-		timer_set(	AC_TASK_DISPLAY_ID, \
-					AC_DISPLAY_SHOW_IDLE, \
-					AC_DISPLAY_IDLE_INTERVAL, \
-					TIMER_ONE_SHOT);
-	} break;
+	// 	timer_set(	AC_TASK_DISPLAY_ID, \
+	// 				AC_DISPLAY_SHOW_IDLE, \
+	// 				AC_DISPLAY_IDLE_INTERVAL, \
+	// 				TIMER_ONE_SHOT);
+	// } break;
 
 	default:
 		break;

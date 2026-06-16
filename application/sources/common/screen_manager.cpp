@@ -29,18 +29,17 @@ static void scr_mng_render_screen() {
 
 	/* Render screen if render interval is reached or first time render */
 	if (screen_render_started || \
-		(time_diff >= AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS)) \
-	{
+		(time_diff >= AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS)) {
 		screen_render_started = false;
 		screen_last_render_ms = current_ms;
 		view_render_screen(view_screen);
 	}
 	else {
 		// Timer set to trigger next rendering when render interval is reached
-		timer_set(	AC_TASK_DISPLAY_ID, \
-					AC_DISPLAY_RENDER_SCREEN, \
-					AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS - time_diff, \
-					TIMER_ONE_SHOT);
+		timer_set(AC_TASK_DISPLAY_ID,
+				  AC_DISPLAY_RENDER_SCREEN,
+				  AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS - time_diff,
+				  TIMER_ONE_SHOT);
 	}
 }
 
