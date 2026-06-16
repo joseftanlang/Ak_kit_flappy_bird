@@ -117,7 +117,7 @@ The game is organized as a screen-driven application:
 This is the game sequence logic about the Flappy Bird Game.
 There are 3 stages: Game Start, Game Play and Game Over. It is all about the sequence of the different stages of the Flappy Bird Game. It shows the steps and alignment of the signals (non-dotted line(s)) and data (dotted line(s)). There are a total of 8 different object used in this game from "Player" to "End".
 <div align="center" style = "border: 15px">
-  <img src="resources/images/FPT-flappy-bird.drawio.png" alt="Startup 1" />
+  <img src="resources/images/FPT-flappy-bird_notr.drawio.png" alt="Startup 1" />
 </div>
 
 ## Game design
