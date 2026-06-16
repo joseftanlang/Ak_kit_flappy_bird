@@ -69,6 +69,8 @@ The important part of this project is not only the gameplay itself, but how the 
 
 That structure makes the firmware easier to reason about and is a good reference if you are studying cooperative embedded state machines.
 
+Additional: You can use the keyboard to control the Ak Kit by using the 'W', 'S', 'A', 'D' for up,down,left,right respectively. But would need to connect using the USB-C cable to a device and connect that device to the keyboard.
+
 ## Main Features
 
 - OLED-based flappy bird gameplay with a clean animated screen.
@@ -114,7 +116,7 @@ The game is organized as a screen-driven application:
 
 This is the game sequence logic about the Flappy Bird Game.
 There are 3 stages: Game Start, Game Play and Game Over. It is all about the sequence of the different stages of the Flappy Bird Game. It shows the steps and alignment of the signals (non-dotted line(s)) and data (dotted line(s)). There are a total of 8 different object used in this game from "Player" to "End".
-<div align="center">
+<div align="center" style = "border: 15px">
   <img src="resources/images/FPT-flappy-bird.drawio.png" alt="Startup 1" />
 </div>
 
