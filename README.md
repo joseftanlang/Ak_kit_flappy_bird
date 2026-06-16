@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Flappy Bird Demo](resources/images/flappy_bird_game.gif)
+[![Flappy Bird Demo](resources/images/AK_Embedded_Base_Kit_STM32L151.webp)](resources/videos/flappy_game_demo_tiny.mp4)
 
 🎮 [Watch Demo Video](https://github.com/user-attachments/assets/26fb5207-f02f-4ef4-97e2-a4f5a2ba14ae)
 </div>
