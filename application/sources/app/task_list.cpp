@@ -22,9 +22,9 @@ const task_t app_task_table[] = {
 	/* Bird Game */
 	/*************************************************************************/
 	{AC_BIRD_DISPLAY_ID			,	TASK_PRI_LEVEL_2	,	bird_id			     },
-	{AC_BIRD_INPUT_UP_BUTTON	,	TASK_PRI_LEVEL_1	,	bird_up_button	     },
-	{AC_BIRD_PILLAR 			,	TASK_PRI_LEVEL_5	,	bird_pillar		     },
-	{AC_BIRD_SCORE  			,	TASK_PRI_LEVEL_5	,	bird_score           },
+	{AC_BIRD_INPUT_UP_BUTTON	,	TASK_PRI_LEVEL_3	,	bird_up_button	     },
+	{AC_BIRD_PILLAR 			,	TASK_PRI_LEVEL_3	,	bird_pillar		     },
+	{AC_BIRD_SCORE  			,	TASK_PRI_LEVEL_3	,	bird_score           },
 
 	/*************************************************************************/
 	/* LINK TASK */

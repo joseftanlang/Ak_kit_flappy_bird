@@ -70,6 +70,7 @@ extern void task_display(ak_msg_t*);
 
 /* Bird Game tasks */
 extern void bird_id(ak_msg_t*);
+extern void bird_game_task(ak_msg_t*);
 extern void bird_up_button(ak_msg_t*);
 extern void bird_pillar(ak_msg_t*);
 extern void bird_score(ak_msg_t*);

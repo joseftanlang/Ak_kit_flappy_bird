@@ -1,4 +1,5 @@
 #include "scr_startup.h"
+#include "app.h"
 
 #define STARTUP_ANIM_SIG (AR_GAME_DEFINE_SIG + 40)
 #define STARTUP_ANIM_INTERVAL_MS (100)
@@ -41,6 +42,7 @@ void view_scr_startup()
 	view_render.clear();
 	view_render.setTextSize(1);
 	view_render.setTextColor(WHITE);
+    g_controller_mode = 1;
 
 	// simple noisy sky background (subtle)
 	for (int y = 0; y < 64; y++)
@@ -55,22 +57,49 @@ void view_scr_startup()
 
 	// moving pipes (parallax) - non-interactive animation for startup
 	const int p_w = 10;
-	// create a few pipe columns with offsets based on frame
-	for (int i = 0; i < 3; i++)
+
+	// move pillar from right to left 
+	int base_x = 128 - (startup_anim_frame % 150);
+
+	// fixed gap size for simplicity, since it's just a background element and not meant to be challenging
+	int gap = 40;
+
+	// triangle-wave motion for smooth up/down movement 
+	int t = startup_anim_frame % 32;
+
+	int top_h;
+
+	// oscillate top pipe height between 8 and 23 pixels to create a floating effect
+	if (t < 16)
 	{
-		int speed = 1 + (i & 1); // slight speed variation
-		int base_x = 128 - ((startup_anim_frame * speed) % 150) + i * 48;
-		int gap = 36 + ((i * 7 + startup_anim_frame) % 12); // vary gap a bit
-		int top_h = 8 + ((i * 3 + startup_anim_frame) % 18);
-		// only draw if on screen
-		if (base_x > -p_w && base_x < 128)
-		{
-			view_render.fillRect(base_x, 0, p_w, top_h, WHITE);
-			view_render.fillRect(base_x - 3, top_h - 3, p_w + 6, 3, WHITE);
-			int bottom_y = top_h + gap;
-			view_render.fillRect(base_x, bottom_y, p_w, 64 - bottom_y, WHITE);
-			view_render.fillRect(base_x - 3, bottom_y, p_w + 6, 3, WHITE);
-		}
+		top_h = 8 + t; // 8 -> 23
+	}
+	else
+	{
+		top_h = 8 + (31 - t); // 23 -> 8
+	}
+
+	// only draw if within screen bounds (with some margin for width) triangle up n down motion for smooth floating effect
+	if (base_x > -p_w && base_x < 128)
+	{
+		// top pipe
+		view_render.fillRect(base_x, 0, p_w, top_h, WHITE);
+		view_render.fillRect(base_x - 3, top_h - 3, p_w + 6, 3, WHITE);
+
+		// bottom pipe
+		int bottom_y = top_h + gap;
+
+		view_render.fillRect(base_x,
+							 bottom_y,
+							 p_w,
+							 64 - bottom_y,
+							 WHITE);
+
+		view_render.fillRect(base_x - 3,
+							 bottom_y,
+							 p_w + 6,
+							 3,
+							 WHITE);
 	}
 
 	// bird bob + simple wing-flap effect (vertical oscillation)
@@ -99,7 +128,7 @@ void view_scr_startup()
 	memcpy(buf, subtitle, reveal);
 	buf[reveal] = '\0';
 	view_render.setTextSize(1);
-	view_render.setCursor(6, 54);
+	view_render.setCursor(25, 54);
 	view_render.print(buf);
 
 	view_render.update();
@@ -113,6 +142,7 @@ void scr_startup_handle(ak_msg_t *msg)
 		APP_DBG_SIG("AC_DISPLAY_INITIAL\n");
 		view_render.initialize();
 		view_render_display_on();
+        g_controller_mode = 1;
 		startup_anim_frame = 0;
 		// initialize particles
 		for (int i = 0; i < STARTUP_PARTICLES; i++)
@@ -211,14 +241,14 @@ void scr_startup_handle(ak_msg_t *msg)
 	}
 	break;
 
-	// case AC_DISPLAY_SHOW_STARTUP_LOGO:
-	// {
-	// 	APP_DBG_SIG("AC_DISPLAY_SHOW_STARTUP_LOGO\n");
-	// 	// Stop automatic transition; leave animation stopped and wait for user input
-	// 	timer_remove_attr(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG);
-	// 	startup_phase = 4;
-	// }
-	// break;
+		// case AC_DISPLAY_SHOW_STARTUP_LOGO:
+		// {
+		// 	APP_DBG_SIG("AC_DISPLAY_SHOW_STARTUP_LOGO\n");
+		// 	// Stop automatic transition; leave animation stopped and wait for user input
+		// 	timer_remove_attr(AC_TASK_DISPLAY_ID, STARTUP_ANIM_SIG);
+		// 	startup_phase = 4;
+		// }
+		// break;
 
 	default:
 		break;

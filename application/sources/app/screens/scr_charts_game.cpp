@@ -62,6 +62,7 @@ void scr_charts_game_handle(ak_msg_t* msg) {
 		view_render_display_on();
 		// Read score 
 		ar_game_score_read(&gamescore_charts);
+		g_controller_mode = 1;
 	}break;
 
 	case AC_DISPLAY_BUTTON_MODE_PRESSED: {
@@ -70,7 +71,7 @@ void scr_charts_game_handle(ak_msg_t* msg) {
 		BUZZER_PlaySound(BUZZER_SOUND_CLICK);
 	} break;
 
-	case AC_DISPLAY_BUTTON_UP_LONG_PRESSED: {
+	case AC_DISPLAY_BUTTON_MODE_LONG_PRESSED: {
 		APP_DBG_SIG("AC_DISPLAY_BUTTON_UP_LONG_PRESSED\n");
 		// Reset score charts
 		gamescore_charts.score_1st = 0;

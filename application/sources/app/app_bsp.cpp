@@ -43,8 +43,8 @@ void btn_mode_callback(void* b) {
 	switch (me_b->state) {
 	case BUTTON_SW_STATE_PRESSED: {
 		APP_DBG("[%s] BUTTON_SW_STATE_PRESSED\n", __func__);
-		mode_button_target_task = active_button_task_id();
-		post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_PRESSED);
+		// mode_button_target_task = active_button_task_id();
+		// post_button_event_to_task(mode_button_target_task, AC_DISPLAY_BUTTON_MODE_PRESSED);
 	} break;
 
 	case BUTTON_SW_STATE_LONG_PRESSED: {

@@ -1,11 +1,13 @@
 # AK flappy bird Game for AK Embedded Base Kit
 
-
+<video controls width="500" align="center"> 
+  <source src="https://github.com/user-attachments/assets/26fb5207-f02f-4ef4-97e2-a4f5a2ba14ae" type="video/mp4">
+</video>
 
 <div align="center">
-  <video width="500" controls>
-    <source src="https://github.com/user-attachments/assets/26fb5207-f02f-4ef4-97e2-a4f5a2ba14ae" type="video/mp4">
-  </video>
+  <img src="resources/images/flappy_bird_game.gif" width="500" controls>
+  </img>
+
 </div>
 
 <div align="center">
@@ -111,7 +113,7 @@ The game is organized as a screen-driven application:
 ## Game Sequence Logic
 
 This is the game sequence logic about the Flappy Bird Game.
-There are 3 stages: Game Start, Game Play and Game Over. It is all about the sequence of the different stages of the Flappy Bird Game. It shows the steps and alignment of the signals (non-dotted line(s)) and data (dotted line(s)). There are a total of 8 different object used in this game from "Player" to "End". 
+There are 3 stages: Game Start, Game Play and Game Over. It is all about the sequence of the different stages of the Flappy Bird Game. It shows the steps and alignment of the signals (non-dotted line(s)) and data (dotted line(s)). There are a total of 8 different object used in this game from "Player" to "End".
 <div align="center">
   <img src="resources/images/FPT-flappy-bird.drawio.png" alt="Startup 1" />
 </div>
@@ -121,14 +123,15 @@ There are 3 stages: Game Start, Game Play and Game Over. It is all about the seq
 The game UI is structured into a few clear screens that guide the player from power-on to gameplay, settings, and score review. Each screen is designed to be compact and readable on the small OLED while providing the player with clear feedback and control.
 
 ### Startup Screen
+
 <div align="center">
   <img src="resources/images/flappy_startup.png" alt="Startup 1" width="512" height="256" />
 </div>
 
-
 The startup screen shows the board and firmware identity, provides a brief boot animation and offers entry into the main app menu. It confirms hardware is initialized (display, buttons, buzzer) and gives a short visual cue if saved settings or scores were loaded successfully.
 
 ### Menu Screen
+
 <div align="center">
   <img src="resources/images/flappy_bird.gif" alt="Menu 1" width="512" height="256" />
 </div>
@@ -136,6 +139,7 @@ The startup screen shows the board and firmware identity, provides a brief boot 
 The menu screen is the central hub. Menu entries are arranged vertically and can be navigated with Up/Down; Mode enters or confirms. Visual highlights and simple icons make it easy to pick modes (Start Game, Settings, Charts). Menu animations are subtle to keep the UI responsive.
 
 ### Settings Screen
+
 <div align="center">
   <img src="resources/images/flappy_setting.png" alt="Settings 1" width="512" height="256" />
 </div>
@@ -159,7 +163,7 @@ Design notes
 
 The phrase “game ID” in this codebase is best understood as the internal task ID used by the scheduler. These are not player-facing IDs; they are numeric identifiers that let the firmware route messages to the correct task.
 
-The IDs are declared in [application/sources/app/task_list.h](application/sources/app/task_list.h). 
+The IDs are declared in [application/sources/app/task_list.h](application/sources/app/task_list.h).
 The main game-related entries are:
 
 - `AC_BIRD_DISPLAY_ID`          - to display the bird game.
@@ -247,7 +251,8 @@ The generated artifacts are placed under `application/build_flappy_bird/`, inclu
 - `application/make.cmd` exists to make local cleanup easier on Windows.
 - A GNU Make binary is still required for full builds.
 - Tool paths in the Makefile are configured for the ARM GCC and STM32Cube/OpenOCD setup used by this project.
-- If you want to make your README.md to be better resolution photo or gif go to `resource/tools/python3.py` then use that code by going into the root of this project folder and type 
+- If you want to make your README.md to be better resolution photo or gif go to `resource/tools/python3.py` then use that code by going into the root of this project folder and type
+
 ```sh
 python3 resources/tools/python3.py -t zoom -v 4 -i image location(old) -o image location (new)
 ```

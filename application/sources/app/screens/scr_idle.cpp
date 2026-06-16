@@ -1,4 +1,5 @@
 #include "scr_idle.h"
+#include "app.h"
 
 /*****************************************************************************/
 /* Variable and Class Declaration - idle */
@@ -130,6 +131,8 @@ void scr_idle_handle(ak_msg_t* msg) {
 			new_ball.id = ball::total++;
 			v_idle_ball.push_back(new_ball);
 		}
+
+		g_controller_mode = 1;
 
 		// Remove timer show idle screen 
 		timer_remove_attr(AC_TASK_DISPLAY_ID, AC_DISPLAY_SHOW_IDLE);

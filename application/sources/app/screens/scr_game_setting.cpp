@@ -1,4 +1,5 @@
 #include "scr_game_setting.h"
+#include "app.h"
 
 static uint8_t setting_index = 0;
 
@@ -71,6 +72,7 @@ void scr_game_setting_handle(ak_msg_t *msg)
 		view_render_display_on();
 		ar_game_setting_read(&settingdata);
 		setting_index = 0;
+		g_controller_mode = 1;
 	}
 	break;
 

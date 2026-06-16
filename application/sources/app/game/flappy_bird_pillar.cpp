@@ -14,9 +14,6 @@ void Pillar::init()
     gapTop = 6;
 
     type = 0;
-
-    baseSpeed = 1;
-    speed = baseSpeed;
 }
 
 // set pillar speed based on user setting, and apply it to current speed as well

@@ -119,7 +119,7 @@ enum {
 #define AC_DISPLAY_IDLE_INTERVAL										(5000)
 #define AC_DISPLAY_LOGO_INTERVAL										(10000)
 #define AC_DISPLAY_SHOW_IDLE_BALL_MOVING_UPDATE_INTERAL					(150)
-#define AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS					(50) /* 50ms => Max 20 FPS */
+#define AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS					(50) 
 
 /* define signal */
 enum {
@@ -161,6 +161,8 @@ enum {
 	/* Firmware update signals */
 	AC_DISPLAY_SHOW_FW_UPDATE,
 	AC_DISPLAY_SHOW_FW_UPDATE_ERR,
+
+	controller_mode,
 };
 
 /*****************************************************************************/
@@ -179,6 +181,9 @@ extern const app_info_t app_info;
 
 extern void* app_get_boot_share_data();
 extern int  main_app();
+
+//keyboard
+extern volatile bool g_controller_mode;
 
 #ifdef __cplusplus
 }

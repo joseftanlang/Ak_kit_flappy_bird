@@ -6,6 +6,7 @@
 
 #include "screen_manager.h"
 #include "app_eeprom.h"
+#include "app.h"
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
@@ -28,17 +29,16 @@ static void check_collision();
 static void view_scr_flappy_bird();
 
 view_dynamic_t dyn_view_item_flappy_bird =
-{
-    { .item_type = ITEM_TYPE_DYNAMIC },
-    view_scr_flappy_bird
-};
+    {
+        {.item_type = ITEM_TYPE_DYNAMIC},
+        view_scr_flappy_bird};
 
 view_screen_t scr_flappy_bird =
-{
-    &dyn_view_item_flappy_bird,
-    ITEM_NULL,
-    ITEM_NULL,
-    .focus_item = 0,
+    {
+        &dyn_view_item_flappy_bird,
+        ITEM_NULL,
+        ITEM_NULL,
+        .focus_item = 0,
 };
 
 // load game settings from EEPROM and apply to pillar speed
@@ -64,6 +64,13 @@ static void flappy_score_save()
     ar_game_score_read(&flappy_scores);
 
     flappy_scores.score_now = score;
+
+    if (flappy_scores.score_now == flappy_scores.score_1st ||
+        flappy_scores.score_now == flappy_scores.score_2nd ||
+        flappy_scores.score_now == flappy_scores.score_3rd)
+    {
+        return;
+    }
 
     if (flappy_scores.score_now > flappy_scores.score_1st)
     {
@@ -189,6 +196,7 @@ static void view_scr_flappy_bird()
 
         view_render.setCursor(7, 46);
         view_render.print("Press UP to Reset");
+        timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
     }
 
     view_render.update();
@@ -211,6 +219,7 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
 
         score = 0;
         game_over = 0;
+        g_controller_mode = 1;
 
         prev_pillar_x = pillar.x;
 
@@ -219,16 +228,17 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
             AC_DISPLAY_FLAPPY_TICK,
             AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS,
             TIMER_PERIODIC);
-
         break;
     }
 
     case SCREEN_EXIT:
     {
         timer_remove_attr(AC_BIRD_DISPLAY_ID, AC_DISPLAY_FLAPPY_TICK);
+        g_controller_mode = 0;
         view_render_display_off();
         break;
     }
+
 
     case AC_DISPLAY_BUTTON_UP_PRESSED:
     {
@@ -241,6 +251,11 @@ void scr_flappy_bird_handle(ak_msg_t *msg)
             score = 0;
             game_over = 0;
             prev_pillar_x = pillar.x;
+            timer_set(
+                AC_BIRD_DISPLAY_ID,
+                AC_DISPLAY_FLAPPY_TICK,
+                AC_DISPLAY_MINIMUM_SCREEN_RENDER_INTERVAL_MS,
+                TIMER_PERIODIC);
         }
         else
         {
